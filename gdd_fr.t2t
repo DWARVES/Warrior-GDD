@@ -16,21 +16,48 @@ Dans cette partie sont présentés les différents objectifs fixés initialement
 
 == Règles du jeu ==
 
-=== Sélection des personnages ===
+=== Déroulement d'une partie ===
+
+Project Warrior consiste comme vu dans la présentation en un jeu de combat dynamique reprenant de nombreuses mécaniques de SSB. Étudions le déroulement d'une partie "Mêlée" en local au travers d'un des joueurs pour mieux comprendre :
+
+- Le joueur choisit parmi une liste de "héros" charismatiques celui qu'il souhaite incarner ;
+- Il choisit ensuite dans quel stage (appelé aussi terrain) il souhaite combattre ;
+- Le combat commence : l'objectif est d'éliminer les autres joueurs en les envoyant hors du terrain. Pour cela il est d'abord nécessaire d'affaiblir les ennemis en leur infligeant des pourcentages de dégâts plus ou moins importants selon les attaques utilisées, puis d'asséner une attaque appliquant une force de projection afin de faire totalement sortir l'ennemi de l'écran. Bien-entendu, plus les dégâts ayant été pris par la cible auparavant sont importants, et plus celle-ci sera projetée loin et donc susceptible de mourir.
 
 
+=== Modes de jeu ===
+
+Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépendre du mode de jeu :
+
+- Timelaps : le combat dure pendant un temps défini par le joueur, et celui qui à la fin possède le meilleur score gagne la partie. Le joueur gagne 1 point en tuant un adversaire, c'est-à-dire lorsque celui-ci meurt moins de 10 secondes après avoir pris des dommages venant de son agresseur. La mort entraîne la perte d'un point.
+- SurVies : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
 
 
-== Personnages ==
+=== Classement final ===
 
-Les personnages constituent l'élément central du gameplay puisque le joueur les incarne et les contrôle lors des combats.
+Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en SurVies).
 
-=== Classes ===
+== Système de combat ==
 
+=== Mouvements ===
 
+TODO partie.
 
+=== Attaques ===
+
+==== Physiques ====
+
+Le système de combat de Project Warrior reprend beaucoup d'éléments de celui de SSB, particulièrement au niveau des attaques "normales", que nous appellerons ici attaques physiques (même si certaines animations de personnages peuvent montrer l'utilisation de la magie dans ces attaques). Ces attaques n'ont aucun coût pour le joueur, et existent sous de nombreuses formes à la puissance et aux effets variables suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``A``), qui combinée à une inclinaison du stick plus ou moins forte, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs.
+
+TODO finir partie.
+
+==== Magiques ====
+
+TODO partie.
 
 = FAQ =
+
+Dans cette section peuvent être trouvées des réponses à des questions concernant principalement les choix de Game Design.
 
 == Pourquoi un jeu strictement multijoueurs ? ==
 
