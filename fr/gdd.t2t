@@ -1,0 +1,45 @@
+Project Warrior GDD
+Pablo Donato, Luc Chabassier
+%%date(%d-%m-%Y)
+
+
+
+= Présentation =
+
+Project Warrior est le nom de code pour désigner un projet de jeu de combat multijoueurs développé en C++ par le collectif DWARVES, constituant par ailleurs son premier projet d'envergure. Project Warrior peut être qualifié de Super Smash Bros. like dans la dynamique et le système de combat. Néanmoins il possède ses cactéristiques propres telles qu'une approche beaucoup plus poussée des classes de personnages selon leurs aptitudes au combat (mage, combattant, distance...), avec donc un gameplay où les sorts (attaques spéciales dans SSB) prennent une place plus importante, notamment via leur coût en énergie qui demandent une gestion plus intelligente de leur utilisation. Un soin tout particulier sera aussi apporté au background, à l'univers et donc à l'ambiance générale du jeu afin d'en dégager une personnalité propre, avec des inspirations diverses dont très probablement de la fantasy pour coller le plus possible au système de classes. On cherchera aussi un style de préférence un peu décalé et humoristique, pour conserver l'ambiance "joyeux bordel" propre aux SSB, avec des personnages et des stages totalement nouveaux à la patte graphique et à l'ambiance sonore marquées.
+
+
+
+= Objectifs de développement =
+
+Dans cette partie sont présentés les différents objectifs fixés initialement pour le développement du jeu. Lorsque ils seront tous atteints, Project Warrior atteindra un nouveau stade de développement, qualifié selon le contentement de l'équipe vis-à-vis de la quantité et de la qualité du contenu et des fonctionnalités alors implémentées, mais aussi en fonction des critiques et avis extérieurs de la communauté libre ou de toute personne intéressée par le projet.
+
+== Règles du jeu ==
+
+=== Sélection des personnages ===
+
+
+
+
+== Personnages ==
+
+Les personnages constituent l'élément central du gameplay puisque le joueur les incarne et les contrôle lors des combats.
+
+=== Classes ===
+
+
+
+
+= FAQ =
+
+== Pourquoi un jeu strictement multijoueurs ? ==
+
+Project Warrior est pour le moment prévu en tant que jeu strictement multijoueurs, c'est à dire qu'il faut au minimum 2 joueurs pour profiter du jeu ; il y a plusieurs raisons à cela :
+
+- Créer un mode solo pour un jeu de combat nécessite de coder une IA que le joueur doit défier, avec toutes les difficultés techniques que cela implique
+- Une IA possède forcément des limites au niveau de la difficulté, contrairement à l'adversaire humain
+- Project Warrior se veut avant tout un jeu convivial sur lequel les gens s'amusent à plusieurs et se confrontent directement, ce qui est particulièrement vrai en mode local et ce qui ne se retrouvera pas par exemple dans un mode Classique ou Aventure à la SSB
+- Le multijoueurs permet aussi d'amener une notion de compétitivité qui rajoute énormément de durée de vie au soft si on la développe dans un mode online, avec des duels ou des combats en équipes équilibrées
+
+
+Coder un mode solo serait donc une perte d'énergie et de temps considérable pour un jeu dont les enjeux tournent autour de l'intéraction entre les joueurs. Néanmoins il n'est pas exclu que le joueur puisse s'approprier les personnages et leurs techniques de combat dans un mode de jeu - exceptionnellement - solo, en se défoulant gentiment et sans limites sur une entité inerte similaire au sac de sable de SSB.
