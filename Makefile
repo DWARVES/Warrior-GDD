@@ -3,9 +3,6 @@
 
 
 NAME = gdd
-BROWSER = chromium
-PDFREADER = mupdf
-
 
 
 all: html pdf
@@ -18,7 +15,6 @@ pdf: $(NAME).pdf
 latex: $(NAME).tex
 
 
-
 $(NAME).html: $(NAME).t2t
 	txt2tags -t html -o $@ $<
 
@@ -28,15 +24,6 @@ $(NAME).pdf: $(NAME).tex
 $(NAME).tex: $(NAME).t2t
 	txt2tags -t tex -o $@ $<
 
-
-
-readhtml: html
-	$(BROWSER) $(NAME).html
-
-readpdf: pdf
-	$(PDFREADER) $(NAME).pdf
-
-	
 
 clean: cleantex
 	rm -f $(NAME).pdf $(NAME).html
