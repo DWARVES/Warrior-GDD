@@ -2,7 +2,7 @@
 # Makefile for generating HTML, PDF and LaTeX documents from $(NAME).t2t, using txt2tags
 
 
-NAME = gdd
+NAME = gdd_fr
 
 
 all: html pdf
