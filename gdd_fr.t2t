@@ -4,15 +4,19 @@ Pablo Donato, Luc Chabassier
 
 
 
+
 = Présentation =
 
-Project Warrior est le nom de code pour désigner un projet de jeu de combat multijoueurs développé en C++ par le collectif DWARVES, constituant par ailleurs son premier projet d'envergure. Project Warrior peut être qualifié de Super Smash Bros. like dans la dynamique et le système de combat. Néanmoins il possède ses cactéristiques propres telles qu'une approche beaucoup plus poussée des classes de personnages selon leurs aptitudes au combat (mage, combattant, distance...), avec donc un gameplay où les sorts (attaques spéciales dans SSB) prennent une place plus importante, notamment via leur coût en énergie qui demandent une gestion plus intelligente de leur utilisation. Un soin tout particulier sera aussi apporté au background, à l'univers et donc à l'ambiance générale du jeu afin d'en dégager une personnalité propre, avec des inspirations diverses dont très probablement de la fantasy pour coller le plus possible au système de classes. On cherchera aussi un style de préférence un peu décalé et humoristique, pour conserver l'ambiance "joyeux bordel" propre aux SSB, avec des personnages et des stages totalement nouveaux à la patte graphique et à l'ambiance sonore marquées.
+Project Warrior est le nom de code pour désigner un projet de jeu de combat multijoueurs développé en C++ par le collectif DWARVES, constituant par ailleurs son premier projet d'envergure. Project Warrior peut être qualifié de Super Smash Bros. like dans la dynamique et le système de combat. Néanmoins il possède ses cactéristiques propres telles qu'une approche beaucoup plus poussée des classes de personnages selon leurs aptitudes au combat (mage, combattant, distance...), avec donc un gameplay où les sorts (attaques spéciales dans SSB) prennent une place plus importante, notamment via leur coût en mana qui demande une gestion plus intelligente de leur utilisation. Un soin tout particulier sera aussi apporté au background, à l'univers et donc à l'ambiance générale du jeu afin d'en dégager une personnalité propre, avec des inspirations diverses dont très probablement de la fantasy pour coller le plus possible au système de classes. On cherchera aussi un style de préférence un peu décalé et humoristique, pour conserver l'ambiance "joyeux bordel" propre aux SSB, avec des personnages et des stages totalement nouveaux à la patte graphique et à l'ambiance sonore marquées.
+
 
 
 
 = Objectifs de développement =
 
 Dans cette partie sont présentés les différents objectifs fixés initialement pour le développement du jeu. Lorsque ils seront tous atteints, Project Warrior atteindra un nouveau stade de développement, qualifié selon le contentement de l'équipe vis-à-vis de la quantité et de la qualité du contenu et des fonctionnalités alors implémentées, mais aussi en fonction des critiques et avis extérieurs de la communauté libre ou de toute personne intéressée par le projet.
+
+
 
 == Règles du jeu ==
 
@@ -21,7 +25,7 @@ Dans cette partie sont présentés les différents objectifs fixés initialement
 Project Warrior consiste comme vu dans la présentation en un jeu de combat dynamique reprenant de nombreuses mécaniques de SSB. Étudions le déroulement d'une partie "Mêlée" en local au travers d'un des joueurs pour mieux comprendre :
 
 - Le joueur choisit parmi une liste de "héros" charismatiques celui qu'il souhaite incarner ;
-- Il choisit ensuite dans quel stage (appelé aussi terrain) il souhaite combattre ;
+- Il choisit ensuite dans quel stage (appelé aussi terrain) il souhaite combattre ; un stage est constitué de différentes plateformes sur lesquelles les personnages peuvent se mouvoir ;
 - Le combat commence : l'objectif est d'éliminer les autres joueurs en les envoyant hors du terrain. Pour cela il est d'abord nécessaire d'affaiblir les ennemis en leur infligeant des pourcentages de dégâts plus ou moins importants selon les attaques utilisées, puis d'asséner une attaque appliquant une force de projection afin de faire totalement sortir l'ennemi de l'écran. Bien-entendu, plus les dégâts ayant été pris par la cible auparavant sont importants, et plus celle-ci sera projetée loin et donc susceptible de mourir.
 
 
@@ -37,23 +41,59 @@ Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépen
 
 Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en SurVies).
 
+
+
 == Système de combat ==
+
+Il est important de préciser que Project Warrior est prévu et optimisé pour être joué à la manette ; néanmoins une implémentation du clavier se fera sûrement, tous les joueurs ne possédant pas forcément de manette. Les contrôles au clavier n'ont pas encore été prévus.
+
 
 === Mouvements ===
 
-TODO partie.
+Comme dans SSB, le personnage peut se déplacer dans 2 directions (droite et gauche) en marchant ou en courant selon l'inclinaison du stick, ainsi que sauter en appuyant sur un bouton et redescendre plus rapidement en inclinant fortement le stick vers le bas. Il y a aussi possibilité de double-saut, tout simplement en réappuyant sur le bouton de saut. Les animations des personnages s'adaptent bien évidemment à ses combinaisons de mouvements.
+
 
 === Attaques ===
 
+Ici aussi, le système de combat de Project Warrior reprend beaucoup d'éléments de celui de SSB, particulièrement au niveau des attaques "normales", que nous appellerons ici attaques physiques (même si certaines animations de personnages peuvent montrer l'utilisation de la magie dans ces attaques). Les attaques "spéciales" de SSB, que nous appellerons attaques magiques ou sorts, tiennent dans Project Warrior une place bien plus importante, notamment via la gestion du mana que nous étudierons un peu plus loin.
+
 ==== Physiques ====
 
-Le système de combat de Project Warrior reprend beaucoup d'éléments de celui de SSB, particulièrement au niveau des attaques "normales", que nous appellerons ici attaques physiques (même si certaines animations de personnages peuvent montrer l'utilisation de la magie dans ces attaques). Ces attaques n'ont aucun coût pour le joueur, et existent sous de nombreuses formes à la puissance et aux effets variables suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``A``), qui combinée à une inclinaison du stick plus ou moins forte, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs.
+Ces attaques n'ont aucun coût pour le joueur, et existent sous de nombreuses formes à la puissance et aux effets variables suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs.
 
-TODO finir partie.
+Les effets dépendront des personnages et de leur classe, cf. section "Personnages".
 
 ==== Magiques ====
 
-TODO partie.
+Les attaques magiques se lancent en appuyant sur la touche qui leur est associée (que nous appellerons par convention ``M``) tout en inclinant (ou pas) le stick dans une certaine direction pour choisir le sort à lancer. On compte ainsi 4 sorts par personnage : M, M+Côté, M+Haut et M+Bas.
+
+Les attaques magiques diffèrent des attaques physiques de par un élément essentiel : la jauge de mana. Ainsi l'utilisation d'une compétence magique aura-t-elle un coût lié à sa puissance en termes de dégâts et/ou d'utilité, diminuant les ressources en mana du personnage ; si celui-ci ne possède pas assez de mana pour lancer sa compétence, il doit attendre que sa jauge se recharge. La récupération de mana est assez rapide pour permettre un gameplay dynamique et une utilisation fréquente des sorts, tout en demandant une gestion intelligente de cette ressource de par sa faible quantité. Ainsi un sort infligeant de lourds dégâts de zone et étourdissant brièvement les ennemis sur un mage sera considéré puissant, et pourra par conséquent nécessiter toutes les ressources en mana de ce dernier, empêchant le joueur d'abuser du sort, d'autant plus qu'il devra utiliser d'autres sorts qui retarderont le moment où sa jauge de mana sera pleine. 
+
+Les caractéristiques détaillés des sorts sont présentées dans la section "Personnages".
+
+
+== Personnages ==
+
+TODO intro.
+
+
+=== Classes ===
+
+TODO part.
+
+
+=== Liste des héros ===
+
+TODO part.
+
+
+
+== Stages ==
+
+TODO part.
+
+
+
 
 = FAQ =
 
@@ -69,4 +109,4 @@ Project Warrior est pour le moment prévu en tant que jeu strictement multijoueu
 - Le multijoueurs permet aussi d'amener une notion de compétitivité qui rajoute énormément de durée de vie au soft si on la développe dans un mode online, avec des duels ou des combats en équipes équilibrées
 
 
-Coder un mode solo serait donc une perte d'énergie et de temps considérable pour un jeu dont les enjeux tournent autour de l'intéraction entre les joueurs. Néanmoins il n'est pas exclu que le joueur puisse s'approprier les personnages et leurs techniques de combat dans un mode de jeu - exceptionnellement - solo, en se défoulant gentiment et sans limites sur une entité inerte similaire au sac de sable de SSB.
+Coder un mode solo serait donc une perte d'mana et de temps considérable pour un jeu dont les enjeux tournent autour de l'intéraction entre les joueurs. Néanmoins il n'est pas exclu que le joueur puisse s'approprier les personnages et leurs techniques de combat dans un mode de jeu - exceptionnellement - solo, en se défoulant gentiment et sans limites sur une entité inerte similaire au sac de sable de SSB.
