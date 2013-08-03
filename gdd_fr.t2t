@@ -14,7 +14,7 @@ Project Warrior est le nom de code pour désigner un projet de jeu de combat mul
 
 = Objectifs de développement =
 
-Dans cette partie sont présentés les différents objectifs fixés initialement pour le développement du jeu. Lorsque ils seront tous atteints, Project Warrior atteindra un nouveau stade de développement, qualifié selon le contentement de l'équipe vis-à-vis de la quantité et de la qualité du contenu et des fonctionnalités alors implémentées, mais aussi en fonction des critiques et avis extérieurs de la communauté libre ou de toute personne intéressée par le projet.
+Dans cette partie sont présentés les différents objectifs fixés initialement pour le développement du jeu. Lorsqu'ils seront tous atteints, Project Warrior atteindra un nouveau stade de développement, qualifié selon le contentement de l'équipe vis-à-vis de la quantité et de la qualité du contenu et des fonctionnalités alors implémentées, mais aussi en fonction des critiques et avis extérieurs de la communauté libre ou de toute personne intéressée par le projet.
 
 
 
@@ -50,31 +50,47 @@ Il est important de préciser que Project Warrior est prévu et optimisé pour �
 
 === Mouvements ===
 
-Comme dans SSB, le personnage peut se déplacer dans 2 directions (droite et gauche) en marchant ou en courant selon l'inclinaison du stick, ainsi que sauter en appuyant sur un bouton et redescendre plus rapidement en inclinant fortement le stick vers le bas. Il y a aussi possibilité de double-saut, tout simplement en réappuyant sur le bouton de saut. Les animations des personnages s'adaptent bien évidemment à ses combinaisons de mouvements.
+Comme dans SSB, le personnage peut se déplacer dans 2 directions (droite et gauche) en marchant ou en courant selon l'inclinaison du stick, ainsi que sauter en appuyant sur un bouton et redescendre plus rapidement en inclinant fortement le stick vers le bas. Il y a aussi possibilité de double-saut, tout simplement en réappuyant sur le bouton de saut. Les animations des personnages s'adaptent bien évidemment à ces combinaisons de mouvements.
 
 
 === Attaques ===
 
 Ici aussi, le système de combat de Project Warrior reprend beaucoup d'éléments de celui de SSB, particulièrement au niveau des attaques "normales", que nous appellerons ici attaques physiques (même si certaines animations de personnages peuvent montrer l'utilisation de la magie dans ces attaques). Les attaques "spéciales" de SSB, que nous appellerons attaques magiques ou sorts, tiennent dans Project Warrior une place bien plus importante, notamment via la gestion du mana que nous étudierons un peu plus loin.
+Les attaques étant spécifiques à chaque personnage, leurs caractéristiques sont détaillées dans la section dédiée.
 
 ==== Physiques ====
 
 Ces attaques n'ont aucun coût pour le joueur, et existent sous de nombreuses formes à la puissance et aux effets variables suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs.
 
-Les effets dépendront des personnages et de leur classe, cf. section "Personnages".
-
 ==== Magiques ====
 
 Les attaques magiques se lancent en appuyant sur la touche qui leur est associée (que nous appellerons par convention ``M``) tout en inclinant (ou pas) le stick dans une certaine direction pour choisir le sort à lancer. On compte ainsi 4 sorts par personnage : M, M+Côté, M+Haut et M+Bas.
 
-Les attaques magiques diffèrent des attaques physiques de par un élément essentiel : la jauge de mana. Ainsi l'utilisation d'une compétence magique aura-t-elle un coût lié à sa puissance en termes de dégâts et/ou d'utilité, diminuant les ressources en mana du personnage ; si celui-ci ne possède pas assez de mana pour lancer sa compétence, il doit attendre que sa jauge se recharge. La récupération de mana est assez rapide pour permettre un gameplay dynamique et une utilisation fréquente des sorts, tout en demandant une gestion intelligente de cette ressource de par sa faible quantité. Ainsi un sort infligeant de lourds dégâts de zone et étourdissant brièvement les ennemis sur un mage sera considéré puissant, et pourra par conséquent nécessiter toutes les ressources en mana de ce dernier, empêchant le joueur d'abuser du sort, d'autant plus qu'il devra utiliser d'autres sorts qui retarderont le moment où sa jauge de mana sera pleine. 
+Les attaques magiques diffèrent des attaques physiques de par un élément essentiel : la jauge de mana. Ainsi l'utilisation d'une compétence magique aura-t-elle un coût lié à sa puissance en termes de dégâts et/ou d'utilité, diminuant les ressources en mana du personnage ; si celui-ci ne possède pas assez de mana pour lancer sa compétence, il doit attendre que sa jauge se recharge. La récupération de mana est assez rapide pour permettre un gameplay dynamique et une utilisation fréquente des sorts, tout en demandant une gestion intelligente de cette ressource de par sa faible quantité. Ainsi un sort infligeant de lourds dégâts de zone et étourdissant brièvement les ennemis sera considéré puissant, et pourra par conséquent nécessiter toutes les ressources en mana de ce dernier, empêchant le joueur d'abuser du sort, d'autant plus qu'il devra utiliser d'autres sorts qui retarderont le moment où sa jauge de mana sera pleine. 
 
-Les caractéristiques détaillés des sorts sont présentées dans la section "Personnages".
+
+=== Postures défensives ===
+
+==== Bouclier ====
+
+Le bouclier, tout comme dans SSB, entoure le personnage d'une bulle qui encaisse les attaques ennemies. Néanmoins, son utilisation diffère de par son coût en mana : contrairement à SSB, le bouclier ne se réduira pas tant qu'il n'aura pas encaissé de coups, mais le joueur se voit dans l'obligation de l'activer au bon moment pour éviter de perdre inutilement de sa ressource bleue préférée. Le bouclier guérit automatiquement de ses blessures, mais bien plus lentement que dans SSB ; si un ennemi en vient à bout, alors le joueur est étourdi pendant quelques secondes, puis le bouclier est complètement réinitialisée.
+
+Pour activer le bouclier, on pressera l'une des gâchettes de la manette.
+
+==== Esquives ====
+
+Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un court laps de temps. Les esquives, tout comme le bouclier, coûtent du mana, obligeant le joueur à s'en servir à bon escient. Il existe 4 types d'esquives :
+
+- L'esquive latérale, qui consiste en une esquive effectuée en mouvement sur une courte distance ; le personnage ignore alors toutes les collisions. Elle s'effectue à partir du bouclier en inclinant au maximum le stick vers la gauche ou vers la droite, selon la direction souhaitée.
+- L'esquive latérale aérienne, qui correspond à une esquive latérale effectuée dans les airs. Le personnage ne peut effectuer qu'une seule esquive de ce genre avant de retoucher le sol, pour éviter d'en faire un outil de mobilité et de rattrapage sur le terrain. Aussi, cette esquive réinitialise toutes les forces que le personnage subissait (dont la gravité qui se réapplique donc selon sa position à la fin de l'esquive). Le bouclier n'étant pas utilisable dans les airs, on utilisera les mêmes touches que l'esquive latérale, mais en commençant par incliner le stick.
+- L'esquive statique, équivalente à l'esquive latérale, sans la notion de mouvement. Le coût en mana est moindre. On l'effectue à partir du bouclier en inclinant complètement le stick vers le bas.
+- L'esquive statique aérienne, qui correspond à une esquive statique effectuée dans les airs. Elle conserve les forces déjà appliquées au personnage et s'effectue en appuyant sur le bouton du bouclier.
+
 
 
 == Personnages ==
 
-TODO intro.
+TODO part.
 
 
 
