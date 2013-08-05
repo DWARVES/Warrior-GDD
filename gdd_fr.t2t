@@ -37,6 +37,17 @@ Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépen
 - SurVies : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
 
 
+=== Règles modifiables ===
+
+Certaines règles du jeu sont modifiable avant chaque partie, afin de diversifier l'expérience de jeu :
+
+- Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survies, le nombre de vie peut être différent entre les joueurs.
+- La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
+- Dans le cas d'une partie Survies, il est possible d'ajouter une //mort subite// : les personnages vont automatiquement subir des dégâts si la partie dure trop longtemps.
+- La vitesse de récupération du mana peut aussi être modifiée. Une vitesse plus élevée incitera les joueurs à utiliser plus souvent des attaques spéciales, alors qu'une vitesse plus faible oblige les joueurs à réfléchir plus avant d'utiliser leurs coups spéciaux.
+- Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
+
+
 === Classement final ===
 
 Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en SurVies).
