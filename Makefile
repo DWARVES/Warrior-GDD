@@ -19,13 +19,13 @@ latex: $(NAME).tex
 
 
 $(NAME).html: $(USED).t2t
-	txt2tags -t html -o $@ $<
+	txt2tags -t html --encoding=UTF-8 -o $@ $<
 
 $(NAME).pdf: $(NAME).tex
 	pdflatex $<
 
 $(NAME).tex: $(USED).t2t
-	txt2tags -t tex -o $@ $<
+	txt2tags -t tex --encoding=UTF-8 -o $@ $<
 
 
 clean: cleantex
