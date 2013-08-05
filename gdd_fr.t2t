@@ -100,6 +100,18 @@ TODO part.
 
 
 
+= Détails techniques =
+
+== Languages ==
+
+Ce programme sera codé en C/C++ : la majorité du code sera en //C++11// (la dernière norme, de 2011), avec un code majoritairement orienté-objet, mais certaines parties du code pouront être codées en C, si jugé pertinent. Le jeu devra être portable, au moins entre Linux, Windows et MacOS.
+La partie graphique du jeu sera géré avec la //SDL 1.2// et //OpenGL 2//, des bibliothèques portables. Le son sera lui aussi géré par la //SDL//. Le jeu pourra utiliser d'autres bibliothèques comme //boost// si jugé utile : l'objectif n'est pas d'avoir le moins de dépendances possible.
+
+== Licence ==
+
+L'ensemble du code du jeu sera sous licence GPLv3. À terme la licence pourra évoluer vers une GPLv3+. La licence des autres éléments du jeu tels que les images, les sons et autres ressources est laissée à la discrétion des créateurs de ces ressources. Il doivent néanmoins choisir au minimum une licence de libre distribution (par exemple une CC-BY-NC-ND) si leurs créations doivent être intégrés comme ressources officielles du jeu.
+
+
 
 = FAQ =
 
