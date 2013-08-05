@@ -6,6 +6,7 @@ NAME = gdd
 LANG = fr
 USED = $(NAME)_$(LANG)
 
+FLAGS=--encoding=UTF-8 --toc
 
 
 all: html pdf
@@ -19,13 +20,13 @@ latex: $(NAME).tex
 
 
 $(NAME).html: $(USED).t2t
-	txt2tags -t html --encoding=UTF-8 -o $@ $<
+	txt2tags -t html $(FLAGS) -o $@ $<
 
 $(NAME).pdf: $(NAME).tex
 	pdflatex $<
 
 $(NAME).tex: $(USED).t2t
-	txt2tags -t tex --encoding=UTF-8 -o $@ $<
+	txt2tags -t tex $(FLAGS) -o $@ $<
 
 
 clean: cleantex
