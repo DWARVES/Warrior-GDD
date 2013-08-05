@@ -7,7 +7,7 @@ Pablo Donato, Luc Chabassier
 
 = Présentation =
 
-Project Warrior est le nom de code pour désigner un projet de jeu de combat multijoueurs développé en C++ par le collectif DWARVES, constituant par ailleurs son premier projet d'envergure. Project Warrior peut être qualifié de Super Smash Bros. like dans la dynamique et le système de combat. Néanmoins il possède ses caractéristiques propres telles qu'un gameplay où les sorts (attaques spéciales dans SSB) prennent une place plus importante, notamment via leur coût en mana qui demande une gestion plus intelligente de leur utilisation. Un soin tout particulier sera aussi apporté au background, à l'univers et donc à l'ambiance générale du jeu afin d'en dégager une personnalité propre d'inspirations diverses. On cherchera aussi un style de préférence un peu décalé et humoristique, pour conserver l'ambiance //joyeux bordel// propre aux SSB, avec des personnages et des stages totalement nouveaux à la patte graphique et à l'ambiance sonore marquées.
+Project Warrior est le nom de code pour désigner un projet de jeu de combat multijoueurs développé par le collectif DWARVES, constituant par ailleurs son premier projet d'envergure. Project Warrior peut être qualifié de Super Smash Bros. like dans la dynamique et le système de combat. Néanmoins il possède ses caractéristiques propres telles qu'un gameplay où les sorts (attaques spéciales dans SSB) prennent une place plus importante, notamment via leur coût en mana qui demande une gestion plus intelligente de leur utilisation. Un soin tout particulier sera aussi apporté au background, à l'univers et donc à l'ambiance générale du jeu afin d'en dégager une personnalité propre d'inspirations diverses. On cherchera aussi un style de préférence un peu décalé et humoristique, pour conserver l'ambiance //joyeux bordel// propre aux SSB, avec des personnages et des stages totalement nouveaux à la patte graphique et à l'ambiance sonore marquées.
 
 
 
@@ -105,16 +105,17 @@ TODO tableau récapitulatif
 
 == Stages ==
 
-Les stages sont les terrains dans lesquels les combats ont lieux. Ils doivent dégager une ambiance particulière et leur forme peut fortement influencer la façon de combattre. Les stages ne doivent pas être trop grands car ils peuvent apparaitre entièrement à l'écran si les personnages sont très éloignés. De plus, ils ne doivent pas être complètement fermées car sinon les personnages ne peuvent pas mourrir.
+Les stages sont les terrains dans lesquels les combats ont lieux. Ils doivent dégager une ambiance particulière et leur forme peut fortement influencer la façon de combattre. Les stages ne doivent pas être trop grands car ils peuvent apparaître entièrement à l'écran si les personnages sont très éloignés. De plus, ils ne doivent pas être complètement fermés car sinon les personnages ne peuvent pas mourir.
 
 Les stages possèdent différents éléments :
 
-- Les murs, qui offrent juste un appuit pour les joueurs.
-- Différents types de pièges, qui infligent des dégats lorsque les joueurs les touchent dans une certaine direction (ou plusieurs), comme des pics.
-- Des trampolines, qui font rebondir les personnages qui entrent en contact avec eux.
+- Les murs, qui offrent juste un appui pour les joueurs ;
+- Différents types de pièges, qui infligent des dégâts lorsque les joueurs les touchent dans une certaine direction (ou plusieurs), comme des pics ;
+- Des trampolines, qui font rebondir les personnages qui entrent en contact avec eux ;
+- TODO : faire une liste exhaustive
 
 
-Les stages peuvent être animés, avec des murs qui bougent, formant des plateformes, des pièges qui se referment ... De plus, les stages peuvent changer dynamiquement au cours d'un combat, en fonction du temps, des actions des joueurs ... Cependant, des modifications trop rapides sur un stage peuvent entrainer des bugs, c'est donc aux créateurs des terrains de s'assurer qu'il ne sont pas modifiés trop vite.
+Les stages peuvent être animés, avec des murs qui bougent, formant des plateformes, des pièges qui se referment ... De plus, les stages peuvent changer dynamiquement au cours d'un combat, en fonction du temps, des actions des joueurs... Cependant, des modifications trop rapides sur un stage peuvent entraîner des bugs, c'est donc aux créateurs des terrains de s'assurer qu'il ne sont pas modifiés trop vite.
 
 
 
@@ -122,8 +123,10 @@ Les stages peuvent être animés, avec des murs qui bougent, formant des platefo
 
 == Languages ==
 
-Ce programme sera codé en C/C++ : la majorité du code sera en //C++11// (la dernière norme, de 2011), avec un code majoritairement orienté-objet, mais certaines parties du code pouront être codées en C, si jugé pertinent. Le jeu devra être portable, au moins entre Linux, Windows et MacOS.
-La partie graphique du jeu sera géré avec la //SDL 1.2// et //OpenGL 2//, des bibliothèques portables. Le son sera lui aussi géré par la //SDL//. Le jeu pourra utiliser d'autres bibliothèques comme //boost// si jugé utile : l'objectif n'est pas d'avoir le moins de dépendances possible.
+Ce programme sera codé en C/C++ : la majorité du code sera en //C++11// (la dernière norme, de 2011), avec un code majoritairement orienté-objet, mais certaines parties du code pourront être codées en C, si jugé pertinent. Le jeu devra être portable, au moins entre Linux, Windows et MacOS.
+La partie graphique du jeu sera géré avec la //SDL 1.2// et //OpenGL 2//, des bibliothèques. Le son sera lui aussi géré par la //SDL//.
+Le moteur physique sera programmé à l'aide de la bibliothèque Box2D.
+Le jeu pourra utiliser d'autres bibliothèques comme //boost// si jugé utile : l'objectif n'est pas d'avoir le moins de dépendances possible.
 
 == Licence ==
 
