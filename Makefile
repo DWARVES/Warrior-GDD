@@ -2,7 +2,10 @@
 # Makefile for generating HTML, PDF and LaTeX documents from $(NAME).t2t, using txt2tags
 
 
-NAME = gdd_fr
+NAME = gdd
+LANG = fr
+USED = $(NAME)_$(LANG)
+
 
 
 all: html pdf
@@ -15,13 +18,13 @@ pdf: $(NAME).pdf
 latex: $(NAME).tex
 
 
-$(NAME).html: $(NAME).t2t
+$(NAME).html: $(USED).t2t
 	txt2tags -t html -o $@ $<
 
 $(NAME).pdf: $(NAME).tex
 	pdflatex $<
 
-$(NAME).tex: $(NAME).t2t
+$(NAME).tex: $(USED).t2t
 	txt2tags -t tex -o $@ $<
 
 
