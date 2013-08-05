@@ -33,3 +33,9 @@ clean: cleantex
 
 cleantex:
 	rm -f $(NAME).tex $(NAME).aux $(NAME).log $(NAME).out
+
+
+
+langs :
+	@ls $(NAME)_*.t2t | sed 's/$(NAME)_\([^\.]*\).t2t/\1/'
+
