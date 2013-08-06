@@ -129,6 +129,8 @@ Les stages peuvent être animés, avec des murs qui bougent, formant des platefo
 
 == Programmation ==
 
+=== Outils ===
+
 Ce programme sera codé en C/C++ : la majorité du code sera en //C++11// (la dernière norme, de 2011), avec un code majoritairement orienté-objet, mais certaines parties du code pourront être codées en C, si jugé pertinent. Le jeu devra être portable, au moins entre Linux, Windows et MacOS.
 La partie graphique du jeu sera géré avec la //SDL 1.2// et //OpenGL 2//, des bibliothèques. Le son sera lui aussi géré par la //SDL//.
 Le moteur physique sera programmé à l'aide de la bibliothèque Box2D.
