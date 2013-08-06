@@ -107,7 +107,7 @@ TODO tableau récapitulatif
 
 === Description ===
 
-Les stages sont les terrains dans lesquels les combats ont lieux. Ils doivent dégager une ambiance particulière et leur forme peut fortement influencer la façon de combattre. Les stages ne doivent pas être trop grands car ils peuvent apparaître entièrement à l'écran si les personnages sont très éloignés. De plus, ils ne doivent pas être complètement fermés car sinon les personnages ne peuvent pas mourir.
+Les stages sont les terrains dans lesquels les combats ont lieu. Ils doivent dégager une ambiance particulière et leur forme peut fortement influencer la façon de combattre. Les stages ne doivent pas être trop grands car ils peuvent apparaître entièrement à l'écran si les personnages sont très éloignés. De plus, ils ne doivent pas être complètement fermés car sinon les personnages ne peuvent pas mourir.
 
 
 === Éléments ===
@@ -115,13 +115,13 @@ Les stages sont les terrains dans lesquels les combats ont lieux. Ils doivent d�
 Les stages possèdent différentes éléments, qui possèdent des caractéristiques différentes :
 
 - Chaque élément possède un facteur de rebondissement. Un facteur de 0 correspond à un mur normal, une valeur plus élevée faisant rebondir tout objet mouvant entrant à son contact.
-- Chaque élément peut aussi modifier les personnage qui entre en contact avec lui, en lui infligeant des dégats, en lui enlevant des vies et/ou en lui infligeant un choc dans une direction fixe. L'élément peut aussi modifier le reste du terrain lorqu'un personnage entre en contact avec lui.
-- Les éléments possèdent aussi un facteur de glissement, une valeur de 0 enpêchant tout dérapement, même en pente. 1 correspond à une valeur moyenne.
+- Chaque élément peut aussi modifier les personnages qui entrent en contact avec lui, en lui infligeant des dégâts et/ou en lui infligeant un choc dans une direction fixe. L'élément peut aussi modifier le reste du terrain lorqu'un personnage entre en contact avec lui.
+- Les éléments possèdent aussi un facteur de glissement, une valeur de 0 empêchant tout dérapement, même en pente. 1 correspond à une valeur moyenne.
 
 
-=== Interraction ===
+=== Intéraction ===
 
-Les stages peuvent être animés, avec des murs qui bougent, formant des plateformes, des pièges qui se referment ... De plus, les stages peuvent changer dynamiquement au cours d'un combat, en fonction du temps, des actions des joueurs... Cependant, des modifications trop rapides sur un stage peuvent entraîner des bugs, c'est donc aux créateurs des terrains de s'assurer qu'il ne sont pas modifiés trop vite.
+Les stages peuvent être animés, avec des murs qui bougent, formant des plateformes, des pièges qui se referment... De plus, les stages peuvent changer dynamiquement au cours d'un combat, en fonction du temps, des actions des joueurs... Cependant, des modifications trop rapides sur un stage peuvent entraîner des bugs, c'est donc aux créateurs des terrains de s'assurer qu'il ne sont pas modifiés trop vite.
 
 
 
@@ -135,30 +135,30 @@ Le moteur physique sera programmé à l'aide de la bibliothèque Box2D.
 Le jeu pourra utiliser d'autres bibliothèques comme //boost// si jugé utile : l'objectif n'est pas d'avoir le moins de dépendances possible.
 
 
-== Syntaxe ==
+=== Syntaxe ===
 
-=== Nommage ===
+==== Nommage ====
 
 Les variables commencent par des minuscules. Dans le cas d'une variable composée de plusieurs mots, on met une majuscule au début des chaque mot à l'exception du premier. Par exemple, une variable stockant des vies pourra s'appeler ``nombreDeVies``. Si la variable est un membre privé d'une classe, elle sera préfixée par ``m_``. Si la variable est globale à l'ensemble du programme, elle sera préfixée par ``G_``. Enfin, si elle est globale à un fichier uniquement (c'est à dire déclarée avec ``static``), elle sera préfixée avec ``Gs_``. Dans la mesure du possible, les noms de variable devront être suffisamment explicites pour ne pas nécessiter d'explications. Dans le cas contraire, la description se fera dans un commentaire à la déclaration de la variable.
 
 
-Les constantes globales, ou les defines, sont écrites intégralement en majuscule, et les mots sont séparés par des ``_``. Les nombre maximum de vies pourrait par exemple être nommé ``NOMBRE_MAX_VIES``.
+Les constantes globales, ou les defines, sont écrites intégralement en majuscules, et les mots sont séparés par des ``_``. Le nombre maximum de vies pourrait par exemple être nommé ``NOMBRE_MAX_VIES``.
 
 
 Les fonctions sont nommées de la même façon que les variables. Les classes sont quand à elles nommées de la même façon que les variable normales, à l'exception qu'elles commencent par une majuscule. Il en va de même pour les structures et les énumérations. Les namespaces sont nommés entièrement en minuscule, si possible en un seul mot, sinon les mots sont séparés par des ``_``.
 
 
-=== Placement des accolades ===
+==== Placement des accolades ====
 
-Lors de la créations d'une classe, il y a un retour à la ligne avant les accolades ouvrantes et fermantes. Il en va de même pour la déclarations des fonctions et les blocs simples.
+Lors de la création d'une classe, il y a un retour à la ligne avant les accolades ouvrantes et fermantes. Il en va de même pour la déclaration des fonctions et les blocs simples.
 
 
 Cependant, pour les blocs conditionnels et de boucle, l'accolade est sur la même ligne que la condition ou la boucle. Dans le cas où le contenu du bloc ne fait qu'une ligne, il est possible de ne pas mettre d'accolades. Cependant, même s'il n'y a qu'une instruction, si elle fait plusieurs ligne ou si il y a des commentaires, les accolades sont obligatoires.
 
 
-=== Espaces ===
+==== Espaces ====
 
-Lors d'une copie de valeur, il faut des espaces simples autourt du ``=``. Dans les conditions, les instructions de comparaisons doivent aussi être entourées d'espaces, ainsi que les différents opérateurs. Il ne faut cependant pas d'espaces entre les parenthèses et les conditions intérieurs dans les boucles et les conditions.
+Lors d'une copie de valeur, il faut des espaces simples autourt du ``=``. Dans les conditions, les instructions de comparaison doivent aussi être entourées d'espaces, ainsi que les différents opérateurs. Il ne faut cependant pas d'espaces entre les parenthèses et les conditions intérieures dans les boucles et les conditions.
 
 
 L'indentation n'est pas faite avec des tabulations mais avec 4 espaces.
