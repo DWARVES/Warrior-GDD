@@ -128,6 +128,36 @@ La partie graphique du jeu sera géré avec la //SDL 1.2// et //OpenGL 2//, des 
 Le moteur physique sera programmé à l'aide de la bibliothèque Box2D.
 Le jeu pourra utiliser d'autres bibliothèques comme //boost// si jugé utile : l'objectif n'est pas d'avoir le moins de dépendances possible.
 
+
+== Syntaxe ==
+
+=== Nommage ===
+
+Les variables commencent par des minuscules. Dans le cas d'une variable composée de plusieurs mots, on met une majuscule au début des chaque mot à l'exception du premier. Par exemple, une variable stockant des vies pourra s'appeler ``nombreDeVies``. Si la variable est un membre privé d'une classe, elle sera préfixée par ``m_``. Si la variable est globale à l'ensemble du programme, elle sera préfixée par ``G_``. Enfin, si elle est globale à un fichier uniquement (c'est à dire déclarée avec ``static``), elle sera préfixée avec ``Gs_``. Dans la mesure du possible, les noms de variable devront être suffisamment explicites pour ne pas nécessiter d'explications. Dans le cas contraire, la description se fera dans un commentaire à la déclaration de la variable.
+
+
+Les constantes globales, ou les defines, sont écrites intégralement en majuscule, et les mots sont séparés par des ``_``. Les nombre maximum de vies pourrait par exemple être nommé ``NOMBRE_MAX_VIES``.
+
+
+Les fonctions sont nommées de la même façon que les variables. Les classes sont quand à elles nommées de la même façon que les variable normales, à l'exception qu'elles commencent par une majuscule. Il en va de même pour les structures et les énumérations. Les namespaces sont nommés entièrement en minuscule, si possible en un seul mot, sinon les mots sont séparés par des ``_``.
+
+
+=== Placement des accolades ===
+
+Lors de la créations d'une classe, il y a un retour à la ligne avant les accolades ouvrantes et fermantes. Il en va de même pour la déclarations des fonctions et les blocs simples.
+
+
+Cependant, pour les blocs conditionnels et de boucle, l'accolade est sur la même ligne que la condition ou la boucle. Dans le cas où le contenu du bloc ne fait qu'une ligne, il est possible de ne pas mettre d'accolades. Cependant, même s'il n'y a qu'une instruction, si elle fait plusieurs ligne ou si il y a des commentaires, les accolades sont obligatoires.
+
+
+=== Espaces ===
+
+Lors d'une copie de valeur, il faut des espaces simples autourt du ``=``. Dans les conditions, les instructions de comparaisons doivent aussi être entourées d'espaces, ainsi que les différents opérateurs. Il ne faut cependant pas d'espaces entre les parenthèses et les conditions intérieurs dans les boucles et les conditions.
+
+
+L'indentation n'est pas faite avec des tabulations mais avec 4 espaces.
+
+
 == Licence ==
 
 L'ensemble du code du jeu sera sous licence GPLv3. À terme la licence pourra évoluer vers une GPLv3+. La licence des autres éléments du jeu tels que les images, les sons et autres ressources est laissée à la discrétion des créateurs de ces ressources. Il doivent néanmoins choisir au minimum une licence de libre distribution (par exemple une CC-BY-NC-ND) si leurs créations doivent être intégrés comme ressources officielles du jeu.
