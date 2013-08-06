@@ -107,7 +107,7 @@ Dans un premier temps, l'objectif est de développer 4 personnages équilibrés,
 | Assassin | ``LOW``-``MEDIUM`` | ``HIGH`` | ``LOW`` | ``LOW`` | ``HIGH`` | ``HIGH`` | ``LOW`` | ``HIGH`` | Un personnage opposé à la brute de par son gameplay nerveux et très rapide. Il base quasiment tous ses dégâts sur les attaques physiques, qui possèdent des dégâts assez faibles mais une vitesse d'enchaînement élevée. Sa courte portée l'oblige à être collé à ses ennemis, ce qu'il parvient à faire assez aisément grâce à 2 sorts de mobilité et une grande vitesse de déplacement. |
 | Mage | ``LOW`` | ``MEDIUM`` | ``MEDIUM`` | ``HIGH`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | Un personnage assez équilibré, qui à la différence de l'hybride basera beaucoup de ses dégâts sur les sorts et peu sur les attaques physiques. Sa mobilité n'est pas très grande du fait qu'il ne possède aucun sort prévu à cet effet. |
 
-//Les indicateurs// ``LOW, MEDIUM, HIGH`` //ne sont pas applicables à toutes les attaques et représentent une moyenne générale définissant le gameplay globale du personnage.//
+//Les indicateurs// ``LOW, MEDIUM, HIGH`` //ne sont pas applicables à toutes les attaques et représentent une moyenne générale définissant le gameplay global du personnage.//
 
 
 == Stages ==
