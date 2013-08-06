@@ -105,15 +105,21 @@ TODO tableau récapitulatif
 
 == Stages ==
 
+=== Description ===
+
 Les stages sont les terrains dans lesquels les combats ont lieux. Ils doivent dégager une ambiance particulière et leur forme peut fortement influencer la façon de combattre. Les stages ne doivent pas être trop grands car ils peuvent apparaître entièrement à l'écran si les personnages sont très éloignés. De plus, ils ne doivent pas être complètement fermés car sinon les personnages ne peuvent pas mourir.
 
-Les stages possèdent différents éléments :
 
-- Les murs, qui offrent juste un appui pour les joueurs ;
-- Différents types de pièges, qui infligent des dégâts lorsque les joueurs les touchent dans une certaine direction (ou plusieurs), comme des pics ;
-- Des trampolines, qui font rebondir les personnages qui entrent en contact avec eux ;
-- TODO : faire une liste exhaustive
+=== Éléments ===
 
+Les stages possèdent différentes éléments, qui possèdent des caractéristiques différentes :
+
+- Chaque élément possède un facteur de rebondissement. Un facteur de 0 correspond à un mur normal, une valeur plus élevée faisant rebondir tout objet mouvant entrant à son contact.
+- Chaque élément peut aussi modifier les personnage qui entre en contact avec lui, en lui infligeant des dégats, en lui enlevant des vies et/ou en lui infligeant un choc dans une direction fixe. L'élément peut aussi modifier le reste du terrain lorqu'un personnage entre en contact avec lui.
+- Les éléments possèdent aussi un facteur de glissement, une valeur de 0 enpêchant tout dérapement, même en pente. 1 correspond à une valeur moyenne.
+
+
+=== Interraction ===
 
 Les stages peuvent être animés, avec des murs qui bougent, formant des plateformes, des pièges qui se referment ... De plus, les stages peuvent changer dynamiquement au cours d'un combat, en fonction du temps, des actions des joueurs... Cependant, des modifications trop rapides sur un stage peuvent entraîner des bugs, c'est donc aux créateurs des terrains de s'assurer qu'il ne sont pas modifiés trop vite.
 
