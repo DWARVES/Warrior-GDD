@@ -57,6 +57,11 @@ Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin d
 Il est important de préciser que Project Warrior est prévu et optimisé pour être joué à la manette ; néanmoins une implémentation du clavier se fera sûrement, tous les joueurs ne possédant pas forcément de manette. Les contrôles au clavier n'ont pas encore été prévus.
 
 
+=== Caractéristiques physiques ===
+
+Chaque personnage possède différentes caractéristiques qui influencent la façon dont ils interragissent avec l'environnement et les autres personnages. Chaque personnage possède un poid : plus le poid est élevé, plus le personnage sera lent, mais il sera aussi plus difficile à projeter, et donc à vaincre.
+
+
 === Mouvements ===
 
 Comme dans SSB, le personnage peut se déplacer dans 2 directions (droite et gauche) en marchant ou en courant selon l'inclinaison du stick, ainsi que sauter en appuyant sur un bouton et redescendre plus rapidement en inclinant fortement le stick vers le bas. Il y a aussi possibilité de double-saut, tout simplement en réappuyant sur le bouton de saut. Les animations des personnages s'adaptent bien évidemment à ces combinaisons de mouvements.
