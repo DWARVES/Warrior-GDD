@@ -52,7 +52,7 @@ Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin d
 
 
 
-== Système de combat ==
+== Caractéristiques des personnages ==
 
 Il est important de préciser que Project Warrior est prévu et optimisé pour être joué à la manette ; néanmoins une implémentation du clavier se fera sûrement, tous les joueurs ne possédant pas forcément de manette. Les contrôles au clavier n'ont pas encore été prévus.
 
@@ -97,7 +97,7 @@ Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un
 
 
 
-== Personnages ==
+== Personnages officiels ==
 
 Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents ; voici leurs caractéristiques principales :
 
