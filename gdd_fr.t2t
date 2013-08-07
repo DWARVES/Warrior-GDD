@@ -54,37 +54,50 @@ Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin d
 
 == Système de combat ==
 
-Il est important de préciser que Project Warrior est prévu et optimisé pour être joué à la manette ; néanmoins une implémentation du clavier se fera sûrement, tous les joueurs ne possédant pas forcément de manette. Les contrôles au clavier n'ont pas encore été prévus.
+Il est important de préciser que Project Warrior est prévu et optimisé pour être joué à la manette, les contrôles décrits ici étant les mieux adaptés au gameplay, bien que modifiables par le joueur ; néanmoins une implémentation du clavier se fera sûrement, tous les joueurs ne possédant pas forcément de manette. Les contrôles au clavier n'ont pas encore été prévus.
 
 
 === Mouvements ===
 
 Comme dans SSB, le personnage peut se déplacer dans 2 directions (droite et gauche) en marchant ou en courant selon l'inclinaison du stick, ainsi que sauter en appuyant sur un bouton et redescendre plus rapidement en inclinant fortement le stick vers le bas. Il y a aussi possibilité de double-saut, tout simplement en réappuyant sur le bouton de saut. Les animations des personnages s'adaptent bien évidemment à ces combinaisons de mouvements.
 
+Certains sorts permettent aux personnages qui les maîtrisent de posséder encore plus de mobilité : on appellera alors de manière générique //dash// un sort avec lequel le personnage augmente énormément sa vitesse de déplacement dans une certaine direction pendant un court instant, et //tp// un sort de téléportation qui permet de se déplacer instantanément d'un point A à un point B.
+
 
 === Attaques ===
 
-Ici aussi, le système de combat de Project Warrior reprend beaucoup d'éléments de celui de SSB, particulièrement au niveau des attaques //normales//, que nous appellerons ici attaques physiques (même si certaines animations de personnages peuvent montrer l'utilisation de la magie dans ces attaques). Les attaques //spéciales// de SSB, que nous appellerons attaques magiques ou sorts, tiennent dans Project Warrior une place bien plus importante, notamment via la gestion du mana que nous étudierons un peu plus loin.
-Les attaques étant spécifiques à chaque personnage, leurs caractéristiques sont détaillées dans la section dédiée.
+Les attaques étant spécifiques à chaque personnage, on ne présentera dans cette partie que les caractéristiques inhérentes à tous les personnages. Les descriptions détaillées sont situées dans la partie //Personnages//.
 
 ==== Physiques ====
 
-Ces attaques n'ont aucun coût pour le joueur, et existent sous de nombreuses formes à la puissance et aux effets variables suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs.
+Ces attaques n'ont aucun coût en mana, et existent sous de nombreuses formes à la puissance variable suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs. De par leur caractère //spammable//, les attaques physiques infligent des dégâts uniquement au corps à corps et ne permettent qu'une seule forme de CC : la projection.
 
 ==== Magiques ====
 
-Les attaques magiques se lancent en appuyant sur la touche qui leur est associée (que nous appellerons par convention ``M``) tout en inclinant (ou pas) le stick dans une certaine direction pour choisir le sort à lancer. On compte ainsi 4 sorts par personnage : M, M+Côté, M+Haut et M+Bas.
+Les attaques magiques se lancent en appuyant sur la touche qui leur est associée (que nous appellerons par convention ``M``) tout en inclinant (ou pas) le stick dans une certaine direction pour choisir le sort à lancer. On compte ainsi 4 sorts par personnage : ``M``, ``M+Côté``, ``M+Haut`` et ``M+Bas``.
 
-Les attaques magiques diffèrent des attaques physiques de par un élément essentiel : la jauge de mana. Ainsi l'utilisation d'une compétence magique aura-t-elle un coût lié à sa puissance en termes de dégâts et/ou d'utilité, diminuant les ressources en mana du personnage ; si celui-ci ne possède pas assez de mana pour lancer sa compétence, il doit attendre que sa jauge se recharge. La récupération de mana est assez rapide pour permettre un gameplay dynamique et une utilisation fréquente des sorts, tout en demandant une gestion intelligente de cette ressource de par sa faible quantité. Ainsi un sort infligeant de lourds dégâts de zone et étourdissant brièvement les ennemis sera considéré puissant, et pourra par conséquent nécessiter toutes les ressources en mana de ce dernier, empêchant le joueur d'abuser du sort, d'autant plus qu'il devra utiliser d'autres sorts qui retarderont le moment où sa jauge de mana sera pleine. 
+Les attaques magiques diffèrent des attaques physiques de par un élément essentiel : la jauge de mana. Ainsi l'utilisation d'une compétence magique aura-t-elle un coût lié à sa puissance en termes de dégâts et/ou d'utilité, diminuant les ressources en mana du personnage ; si celui-ci ne possède pas assez de mana pour lancer sa compétence, il doit attendre que sa jauge se recharge. La récupération de mana est assez rapide pour permettre un gameplay dynamique et une utilisation fréquente des sorts, tout en demandant une gestion intelligente de cette ressource de par sa faible quantité. Ainsi un sort infligeant de lourds dégâts de zone et étourdissant brièvement les ennemis sera considéré puissant, et pourra par conséquent nécessiter toutes les ressources en mana du personnage, empêchant le joueur d'abuser du sort, d'autant plus qu'il devra utiliser d'autres sorts qui retarderont le moment où sa jauge de mana sera pleine.
+
+Cette limitation liée au mana permet de donner plus de puissance aux sorts : ils peuvent infliger plus de dégâts que les attaques physiques et/ou appliquer tous les types de CC (un seul par sort biensûr).
+
+==== Smashs ====
+
+Le concept de smash est ici le même que dans SSB, à savoir une attaque au fort potentiel de dégâts et de projection. Pour effectuer un smash, il faut appuyer sur ``P`` tout en inclinant complètement et rapidement le stick dans la direction souhaitée ; si le joueur effectue l'inclinaison en plus d'un dixième de seconde, ou si elle n'est pas maximale, alors l'action sera considérée comme une attaque physique. Il existe donc 3 smash : ``P+Côté``, ``P+Bas``, ``P+Haut``. Pour empêcher le joueur d'abuser des smashs, on leur donnera un temps d'exécution plus long que pour les attaques physiques classiques, ainsi qu'un coût en mana minimal. Il est possible de charger son smash en maintenant les boutons appuyés, rendant ce dernier encore plus puissant, mais laissant par la même occasion plus d'opportunités aux ennemis d'annuler le smash avec certains contrôles, le personnage étant immobile durant la charge. De plus, du mana additionnel est consommé durant la charge. Pour empêcher le joueur d'effectuer des smashs trop puissants, la charge a une durée maximale de 2 secondes.
+
+Toutes ces caractéristiques font en général du smash une attaque à utiliser avec précaution, occasionnellement en tant qu'outils à dégâts, mais principalement en tant que //finisher// afin d'éjecter l'ennemi hors du terrain.
+
+==== Prises ====
+
+Les prises permettent en appuyant sur une gâchette arrière de la manette d'attraper une cible, au corps à corps ou sur une courte distance selon les personnages, puis de la projeter dans la direction choisie avec le stick. Tant que la direction n'est pas choisie, la cible est totalement incapacitée, situation qui peut durer jusqu'à 4 secondes ; ce temps peut néanmoins être drastiquement réduit si la victime se débat énergiquement avec de multiples mouvements de stick.
 
 
 === Postures défensives ===
 
 ==== Bouclier ====
 
-Le bouclier, tout comme dans SSB, entoure le personnage d'une bulle qui encaisse les attaques ennemies. Néanmoins, son utilisation diffère de par son coût en mana : contrairement à SSB, le bouclier ne se réduira pas tant qu'il n'aura pas encaissé de coups, mais le joueur se voit dans l'obligation de l'activer au bon moment pour éviter de perdre inutilement de sa ressource bleue préférée. Le bouclier guérit automatiquement de ses blessures, mais bien plus lentement que dans SSB ; si un ennemi en vient à bout, alors le joueur est étourdi pendant quelques secondes, puis le bouclier est complètement réinitialisée.
+Le bouclier, tout comme dans SSB, entoure le personnage d'une bulle qui encaisse les attaques ennemies. Néanmoins, son utilisation diffère de par son coût en mana : contrairement à SSB, le bouclier ne se réduira pas tant qu'il n'aura pas encaissé de coups, mais le joueur se voit dans l'obligation de l'activer au bon moment pour éviter de perdre inutilement de sa ressource bleue préférée. Le bouclier guérit automatiquement de ses blessures, mais bien plus lentement que dans SSB ; si un ennemi en vient à bout, alors le joueur est étourdi pendant quelques secondes, puis le bouclier est complètement réinitialisé.
 
-Pour activer le bouclier, on pressera l'une des gâchettes de la manette.
+Pour activer le bouclier, on pressera l'une des gâchettes avant de la manette.
 
 ==== Esquives ====
 
@@ -94,6 +107,19 @@ Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un
 - L'esquive latérale aérienne, qui correspond à une esquive latérale effectuée dans les airs. Le personnage ne peut effectuer qu'une seule esquive de ce genre avant de retoucher le sol, pour éviter d'en faire un outil de mobilité et de rattrapage sur le terrain. Aussi, cette esquive réinitialise toutes les forces que le personnage subissait (dont la gravité qui se réapplique donc selon sa position à la fin de l'esquive). Le bouclier n'étant pas utilisable dans les airs, on utilisera les mêmes touches que l'esquive latérale, mais en commençant par incliner le stick.
 - L'esquive statique, équivalente à l'esquive latérale, sans la notion de mouvement. Le coût en mana est moindre. On l'effectue à partir du bouclier en inclinant complètement le stick vers le bas.
 - L'esquive statique aérienne, qui correspond à une esquive statique effectuée dans les airs. Elle conserve les forces déjà appliquées au personnage et s'effectue en appuyant sur le bouton du bouclier.
+
+
+=== Contrôles de foule (CC) ===
+
+Project Warrior exploite un élément de gameplay très courant dans les MOBA mais peu présent dans SSB : les contrôles de foule, abgrégés en CC (Crowd Controls). Plutôt que de faire une longue explication théorique, listons directement dans un joli tableau les différents CC ainsi que leurs effets respectifs :
+
+| **Nom** | **Description** |
+| Projection | Le contrôle le plus courant dans Project Warrior, que nous avons déjà évoqué un peu plus tôt. Comme son nom l'indique, il va appliquer une force sur la cible, la projetant dans une certaine direction avec une certaine puissance. C'est un CC un peu particulier de par son omniprésence dans le jeu qui permet le dynamisme des combats ; de plus, il est essentiel au gameplay puisque c'est en éjectant les adversaires hors du terrain que le joueur obtiendra des kills et s'appropriera la victoire. |
+| Ralentissement | Diminue la vitesse de déplacement de l'ennemi. |
+| Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. |
+| Aveuglement | Empêche l'ennemi d'utiliser ses attaques physiques. |
+| Silence | Empêche l'ennemi d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives). |
+| Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. |
 
 
 
