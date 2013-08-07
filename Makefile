@@ -6,7 +6,7 @@ NAME = gdd
 LANG = fr
 USED = $(NAME)_$(LANG)
 
-FLAGS=--encoding=UTF-8 --toc
+FLAGS=--encoding=UTF-8 --toc --toc-level=3 --enum-title
 
 
 all: html pdf
