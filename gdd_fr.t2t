@@ -1,7 +1,12 @@
 Project Warrior GDD
 Pablo Donato, Luc Chabassier
 %%date(%d-%m-%Y)
-
+%!style(tex):    geometry
+%!postproc(tex): "\\usepackage{geometry}" "\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}"
+%!style(tex):    tabularx
+%!postproc(tex): "\\begin{tabular}" "\\begin{tabularx}{\linewidth}"
+%!postproc(tex): "l\|" "X|"
+%!postproc(tex): "\\end{tabular}"   "\\end{tabularx}"
 
 
 
