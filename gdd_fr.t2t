@@ -90,6 +90,8 @@ Les attaques étant spécifiques à chaque personnage, on ne présentera dans ce
 
 Ces attaques n'ont aucun coût en mana, et existent sous de nombreuses formes à la puissance variable suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs. De par leur caractère //spammable//, les attaques physiques infligent des dégâts uniquement au corps à corps et ne permettent qu'une seule forme de CC : la projection.
 
+Techniquement, une attaque physique constitue en une ou plusieurs //armes// solidaires du corp du personnage associées à un certain nombre de pourcentages et un CC de projection, qui seront infligés à n'importe quel autre personnage qui entre en contact avec les armes.
+
 ==== Magiques ====
 
 Les attaques magiques se lancent en appuyant sur la touche qui leur est associée (que nous appellerons par convention ``M``) tout en inclinant (ou pas) le stick dans une certaine direction pour choisir le sort à lancer. On compte ainsi 4 sorts par personnage : ``M``, ``M+Côté``, ``M+Haut`` et ``M+Bas``.
@@ -98,11 +100,15 @@ Les attaques magiques diffèrent des attaques physiques de par un élément esse
 
 Cette limitation liée au mana permet de donner plus de puissance aux sorts : ils peuvent infliger plus de dégâts que les attaques physiques et/ou appliquer tous les types de CC (un seul par sort biensûr).
 
+Techniquement, une attaque magique consitute en une ou plusieures //armes// pas forcéments solidaires du corp du personnages, qui peuvent donc avoir une trajectoire indépendante de celle de l'attaquant. Ces attaques sont associées à des pourcentages et n'importe quel(s) CC(s). Une attaque magique peut aussi modifier le personnage attaquant, en modifiant temporairement certaines caractéristiques, comme sa vitesse ou son poid, et définitivement certaines, comme les pourcentages, qui peuvent être réduits.
+
 ==== Smashs ====
 
-Le concept de smash est ici le même que dans SSB, à savoir une attaque au fort potentiel de dégâts et de projection. Pour effectuer un smash, il faut appuyer sur ``P`` tout en inclinant complètement et rapidement le stick dans la direction souhaitée ; si le joueur effectue l'inclinaison en plus d'un dixième de seconde, ou si elle n'est pas maximale, alors l'action sera considérée comme une attaque physique. Il existe donc 3 smash : ``P+Côté``, ``P+Bas``, ``P+Haut``. Pour empêcher le joueur d'abuser des smashs, on leur donnera un temps d'exécution plus long que pour les attaques physiques classiques, ainsi qu'un coût en mana minimal. Il est possible de charger son smash en maintenant les boutons appuyés, rendant ce dernier encore plus puissant, mais laissant par la même occasion plus d'opportunités aux ennemis d'annuler le smash avec certains contrôles, le personnage étant immobile durant la charge. De plus, du mana additionnel est consommé durant la charge. Pour empêcher le joueur d'effectuer des smashs trop puissants, la charge a une durée maximale de 2 secondes.
+Le concept de smash est ici le même que dans SSB, à savoir une attaque au fort potentiel de dégâts et de projection. Pour effectuer un smash, il faut appuyer sur ``P`` tout en inclinant complètement et rapidement le stick dans la direction souhaitée ; si le joueur effectue l'inclinaison en plus d'un dixième de seconde, ou si elle n'est pas maximale, alors l'action sera considérée comme une attaque physique. Il existe donc 3 smash : ``P+Côté``, ``P+Bas``, ``P+Haut``. Pour empêcher le joueur d'abuser des smashs, on leur donnera un temps d'exécution plus long que pour les attaques physiques classiques, ainsi qu'un coût en mana minimal. Il est possible de charger son smash en maintenant les boutons appuyés, rendant ce dernier encore plus puissant, mais laissant par la même occasion plus d'opportunités aux ennemis d'annuler le smash avec certains contrôles, le personnage étant immobile durant la charge. De plus, du mana additionnel est consommé durant la charge. Pour empêcher le joueur d'effectuer des smashs trop puissants, la charge a une durée maximale de 2 secondes. Si la barre de mana finit de se vider avant la fin des 2 secondes, le smash est exécuté immédiatement.
 
 Toutes ces caractéristiques font en général du smash une attaque à utiliser avec précaution, occasionnellement en tant qu'outils à dégâts, mais principalement en tant que //finisher// afin d'éjecter l'ennemi hors du terrain.
+
+Techniquement le smash est similaire à une attaque physique simple, c'est à dire une ou plusieurs //armes// solidaires du personnages qui possèdent uniquement des dégâts de pourcentage et un CC de projection. Cependant, les pourcentages et le CC de projection augmentent avec la charge.
 
 ==== Prises ====
 
