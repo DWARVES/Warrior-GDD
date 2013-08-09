@@ -131,12 +131,13 @@ Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un
 
 Project Warrior exploite un élément de gameplay très courant dans les MOBA mais peu présent dans SSB : les contrôles de foule, abgrégés en CC (Crowd Controls). Plutôt que de faire une longue explication théorique, listons directement dans un joli tableau les différents CC ainsi que leurs effets respectifs :
 
-| **Nom** | **Description** |
-| Projection | Le contrôle le plus courant dans Project Warrior, que nous avons déjà évoqué un peu plus tôt. Comme son nom l'indique, il va appliquer une force sur la cible, la projetant dans une certaine direction avec une certaine puissance. C'est un CC un peu particulier de par son omniprésence dans le jeu qui permet le dynamisme des combats ; de plus, il est essentiel au gameplay puisque c'est en éjectant les adversaires hors du terrain que le joueur obtiendra des kills et s'appropriera la victoire. |
+| **Nom**        | **Description** |
+| Projection     | Le contrôle le plus courant dans Project Warrior, que nous avons déjà évoqué un peu plus tôt. Comme son nom l'indique, il va appliquer une force sur la cible, la projetant dans une certaine direction avec une certaine puissance. C'est un CC un peu particulier de par son omniprésence dans le jeu qui permet le dynamisme des combats ; de plus, il est essentiel au gameplay puisque c'est en éjectant les adversaires hors du terrain que le joueur obtiendra des kills et s'appropriera la victoire. |
 | Ralentissement | Diminue la vitesse de déplacement de l'ennemi. |
 | Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. |
-| Aveuglement | Empêche l'ennemi d'utiliser ses attaques physiques. |
-| Silence | Empêche l'ennemi d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives). |
+| Aveuglement    | Empêche l'ennemi d'utiliser ses attaques physiques. |
+| Silence        | Empêche l'ennemi d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
+| Exhaustion     | Vide la jauge de mana de l'ennemi : au contraire du CC silence, le personnage cible peut à nouveaux utiliser ses attaques magiques sitôt que sa barre de mana c'est remplie à nouveau. |
 | Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. |
 
 
