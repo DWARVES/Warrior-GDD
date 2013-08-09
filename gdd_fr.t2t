@@ -69,9 +69,8 @@ Chaque personnage possède différentes caractéristiques qui influencent la fa�
 
 Les personnages sont composés de différents éléments :
 
-- Le //corp//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages, à l'exception de la tête.
-- La //tête//, qui est une zone de faiblesse : les pourcentages reçus ici sont doublés. Malgré son nom, cette zone ne correspond pas forcément à la tête physique du personnage, notamment dans le cas de personnage nom humanoïde.
-- L'//arme//, est la zone qui lorsqu'elle entre en contact avec le corp ou la tête d'autres personnages leur inflige les dégâts. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage.
+- Le //corp//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
+- L'//arme//, est la zone qui lorsqu'elle entre en contact avec le corp d'autres personnages leur inflige les dégâts. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage.
 
 
 Ces zones se déplacent avec les animations et sont misent à jour à chaque FPS. Tous les éléments solidaires peuvent recevoir les CC projection, et en général subissent les mêmes forces. C'est à dire qu'une attaque d'une personnage avec une CC projection qui touche une zone arme solidaire du corp d'un autre personnage lui infligera la CC projection, mais pas les pourcentages.
