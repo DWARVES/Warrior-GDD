@@ -40,3 +40,7 @@ cleantex:
 langs :
 	@ls $(NAME)_*.t2t | sed 's/$(NAME)_\([^\.]*\).t2t/\1/'
 
+plan :
+	@txt2tags -t txt --toc-only $(FLAGS) $(USED).t2t
+
+
