@@ -49,7 +49,6 @@ Certaines règles du jeu sont modifiable avant chaque partie, afin de diversifie
 - Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survies, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de jeu.
 - La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
 - Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
-- Un nombre de ban par joueur peut être fixé : chaque joueur peut interdire un certain nombre de personnages, fixé par cette valeur. Ceci empêche certains joueurs de toujours utiliser les mêmes personnages, et les oblige à diversifier leur maîtrise des différents personnages.
 
 
 === Classement final ===
