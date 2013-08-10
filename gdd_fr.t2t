@@ -155,10 +155,11 @@ Chaque personnage possède un poids : plus le poids est élevé, plus le personn
 Les personnages sont composés de différents éléments :
 
 - Le //corps//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
-- L'//arme//, est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage.
+- L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
+- Le //bouclier// est une zone d'invincibilité : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Si le corp est intégralement contenu dans cette zone, il est lui aussi immunisé. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir, et elle est aussi utilisée par les parades et autres techniques de protection.
 
 
-Ces zones se déplacent avec les animations et sont mises à jour à chaque FPS. Tous les éléments solidaires peuvent recevoir les CC projection, et en général subissent les mêmes forces. C'est à dire qu'une attaque d'un personnage avec un CC projection qui touche une zone arme solidaire du corps d'un autre personnage lui infligera le CC projection, mais pas les pourcentages.
+Ces zones se déplacent avec les animations et sont mises à jour à chaque FPS.
 
 
 === Liste des personnages ===
