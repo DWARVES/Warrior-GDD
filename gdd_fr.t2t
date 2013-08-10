@@ -58,22 +58,10 @@ Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin d
 
 
 
-== Caractéristiques des personnages ==
+== Système de combat ==
 
 Il est important de préciser que Project Warrior est prévu et optimisé pour être joué à la manette, les contrôles décrits ici étant les mieux adaptés au gameplay, bien que modifiables par le joueur ; néanmoins une implémentation du clavier se fera sûrement, tous les joueurs ne possédant pas forcément de manette. Les contrôles au clavier n'ont pas encore été prévus.
 
-
-=== Caractéristiques physiques ===
-
-Chaque personnage possède différentes caractéristiques qui influencent la façon dont ils interagissent avec l'environnement et les autres personnages. Chaque personnage possède un poids : plus le poids est élevé, plus le personnage sera lent, mais il sera aussi plus difficile à projeter, et donc à vaincre.
-
-Les personnages sont composés de différents éléments :
-
-- Le //corp//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
-- L'//arme//, est la zone qui lorsqu'elle entre en contact avec le corp d'autres personnages leur inflige les dégâts. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage.
-
-
-Ces zones se déplacent avec les animations et sont misent à jour à chaque FPS. Tous les éléments solidaires peuvent recevoir les CC projection, et en général subissent les mêmes forces. C'est à dire qu'une attaque d'une personnage avec une CC projection qui touche une zone arme solidaire du corp d'un autre personnage lui infligera la CC projection, mais pas les pourcentages.
 
 === Mouvements ===
 
@@ -143,12 +131,35 @@ Project Warrior exploite un élément de gameplay très courant dans les MOBA ma
 | Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. |
 | Aveuglement    | Empêche l'ennemi d'utiliser ses attaques physiques. |
 | Silence        | Empêche l'ennemi d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
-| Exhaustion     | Vide la jauge de mana de l'ennemi : au contraire du CC silence, le personnage cible peut à nouveaux utiliser ses attaques magiques sitôt que sa barre de mana c'est remplie à nouveau. |
+| Siphon	     | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela n'empêche pas la cible d'utiliser ses sorts si il lui reste suffisemment de mana. |
 | Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. |
 
 
 
-== Personnages officiels ==
+== Personnages ==
+
+=== Caractéristiques communes ===
+
+Chaque personnage possède différentes caractéristiques qui influencent la façon dont il intéragit avec l'environnement et les autres personnages. 
+
+==== Attaques ====
+
+TODO desription des différentes caractéristiques liées aux attaques (dégâts, vitesse, portée...).
+
+==== Physique ====
+
+Chaque personnage possède un poids : plus le poids est élevé, plus le personnage sera lent, mais il sera aussi plus difficile à projeter, et donc à vaincre.
+
+Les personnages sont composés de différents éléments :
+
+- Le //corps//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
+- L'//arme//, est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage.
+
+
+Ces zones se déplacent avec les animations et sont mises à jour à chaque FPS. Tous les éléments solidaires peuvent recevoir les CC projection, et en général subissent les mêmes forces. C'est à dire qu'une attaque d'un personnage avec un CC projection qui touche une zone arme solidaire du corps d'un autre personnage lui infligera le CC projection, mais pas les pourcentages.
+
+
+=== Liste des personnages ===
 
 Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents ; voici leurs caractéristiques principales :
 
