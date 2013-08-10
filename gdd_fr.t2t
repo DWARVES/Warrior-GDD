@@ -101,7 +101,7 @@ Techniquement le smash est similaire à une attaque physique simple, c'est à di
 
 Les prises permettent en appuyant sur une gâchette arrière de la manette d'attraper une cible, au corps à corps ou sur une courte distance selon les personnages, puis de la projeter dans la direction choisie avec le stick. Tant que la direction n'est pas choisie, la cible est totalement incapacitée, situation qui peut durer jusqu'à 4 secondes ; ce temps peut néanmoins être drastiquement réduit si la victime se débat énergiquement avec de multiples mouvements de stick. De plus, l'attaquant est immobilisé et réduit au silence tant qu'il n'a pas lancé sa cible. Cependant, il peut utiliser ses attaques physiques, qui seront toutes dirigées sur la cible, mais peuvent toucher un autre adversaire passant trop près.
 
-Techniquement, une prise est une zone //arme// solidaire du personnage qui ne possède pas de dégâts de pourcentages ni de CC. La cible est attiré vers le personnage et une immobilisation particulière lui est infligée : elle peut être réduite par des mouvements du stick.
+Techniquement, une prise est une zone //arme// solidaire du personnage qui ne possède pas de dégâts de pourcentages, mais juste un CC lien entre la cible et la zone //arme//. Une foix le lien infligé, l'//arme// retourne vers l'attaquant si nécessaire une foix à proximité une un CC immobilisation réductible avec le stick est infligé. La zone //arme// est supprimée à ce moment là, et donc le CC lien. Si l'attaquant choisit la direction du lancer avec le stick avant la fin du CC immobilisation, ce dernier est annulé et un CC projection est appliqué à la cible.
 
 
 === Postures défensives ===
