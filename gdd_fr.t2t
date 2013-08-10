@@ -112,6 +112,8 @@ Le bouclier, tout comme dans SSB, entoure le personnage d'une bulle qui encaisse
 
 Pour activer le bouclier, on pressera l'une des gâchettes avant de la manette.
 
+Techniquement, le bouclier est une zone //bouclier// avec la forme d'un losange qui englobe complètement le personnage, le rendant invinsible durant son utilisation. Cependant, le personnage est aussi étourdit durant la même période : il ne peut donc attaquer d'aucune manière.
+
 ==== Esquives ====
 
 Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un court laps de temps. Les esquives, tout comme le bouclier, coûtent du mana, obligeant le joueur à s'en servir à bon escient. Il existe 4 types d'esquives :
