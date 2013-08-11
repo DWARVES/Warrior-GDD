@@ -59,7 +59,10 @@ Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin d
 
 == Système de combat ==
 
-Il est important de préciser que Project Warrior est prévu et optimisé pour être joué à la manette, les contrôles décrits ici étant les mieux adaptés au gameplay, bien que modifiables par le joueur ; néanmoins une implémentation du clavier se fera sûrement, tous les joueurs ne possédant pas forcément de manette. Les contrôles au clavier n'ont pas encore été prévus.
+
+=== Contrôles ===
+
+Project Warrior est pensé pour être joué à la manette. Cependant, toutes les touches sont //rebindable// : vous pouvez par exemple assigner les actions au clavier, permettant de jouer avec ce moyen, ou réorganiser les touches sur la manette, voire mélanger les deux.
 
 
 === Mouvements ===
