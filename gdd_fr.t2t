@@ -69,7 +69,7 @@ Project Warrior est conçu pour être joué à la manette. Cependant, toutes les
 
 Comme dans SSB, le personnage peut se déplacer dans 2 directions (droite et gauche) en marchant ou en courant selon l'inclinaison du stick, ainsi que sauter en appuyant sur un bouton et redescendre plus rapidement en inclinant fortement le stick vers le bas. Il y a aussi possibilité de double-saut, tout simplement en réappuyant sur le bouton de saut. Les animations des personnages s'adaptent bien évidemment à ces combinaisons de mouvements.
 
-Certains sorts permettent aux personnages qui les maîtrisent de posséder encore plus de mobilité : on appellera alors de manière générique //dash// un sort avec lequel le personnage augmente énormément sa vitesse de déplacement dans une certaine direction pendant un court instant, et //tp// un sort de téléportation qui permet de se déplacer instantanément d'un point A à un point B.
+Certains sorts permettent aux personnages qui les maîtrisent de posséder encore plus de mobilité : on appellera alors de manière générique //dash// un sort avec lequel le personnage augmente énormément sa vitesse de déplacement dans une certaine direction pendant un court instant.
 
 
 === Attaques ===
@@ -78,7 +78,7 @@ Les attaques étant spécifiques à chaque personnage, on ne présentera dans ce
 
 ==== Physiques ====
 
-Ces attaques n'ont aucun coût en mana, et existent sous de nombreuses formes à la puissance variable suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs. De par leur caractère //spammable//, les attaques physiques infligent des dégâts uniquement au corps à corps et ne permettent qu'une seule forme de CC : la projection.
+Ces attaques n'ont aucun coût en mana, et existent sous de nombreuses formes à la puissance variable suivant les boutons pressés. Comme dans SSB, ces attaques seront associées à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs. De par leur caractère //spammable//, les attaques physiques infligent des dégâts uniquement au corps à corps et ne permettent qu'une seule forme de CC : la projection.
 
 Techniquement, une attaque physique constitue en une ou plusieurs //armes// solidaires du corp du personnage associées à un certain nombre de pourcentages et un CC de projection, qui seront infligés à n'importe quel autre personnage qui entre en contact avec les armes.
 
@@ -96,7 +96,7 @@ Techniquement, une attaque magique consitute en une ou plusieures //armes// pas 
 
 Le concept de smash est ici le même que dans SSB, à savoir une attaque au fort potentiel de dégâts et de projection. Pour effectuer un smash, il faut appuyer sur ``P`` tout en inclinant complètement et rapidement le stick dans la direction souhaitée ; si le joueur effectue l'inclinaison en plus d'un dixième de seconde, ou si elle n'est pas maximale, alors l'action sera considérée comme une attaque physique. Il existe donc 3 smash : ``P+Côté``, ``P+Bas``, ``P+Haut``. Pour empêcher le joueur d'abuser des smashs, on leur donnera un temps d'exécution plus long que pour les attaques physiques classiques, ainsi qu'un coût en mana minimal. Il est possible de charger son smash en maintenant les boutons appuyés, rendant ce dernier encore plus puissant, mais laissant par la même occasion plus d'opportunités aux ennemis d'annuler le smash avec certains contrôles, le personnage étant immobile durant la charge. De plus, du mana additionnel est consommé durant la charge. Pour empêcher le joueur d'effectuer des smashs trop puissants, la charge a une durée maximale de 2 secondes. Si la barre de mana finit de se vider avant la fin des 2 secondes, le smash est exécuté immédiatement.
 
-Toutes ces caractéristiques font en général du smash une attaque à utiliser avec précaution, occasionnellement en tant qu'outils à dégâts, mais principalement en tant que //finisher// afin d'éjecter l'ennemi hors du terrain.
+Toutes ces caractéristiques font en général du smash une attaque à utiliser avec précaution, occasionnellement en tant qu'outil à dégâts, mais principalement en tant que //finisher// afin d'éjecter l'ennemi hors du terrain.
 
 Techniquement le smash est similaire à une attaque physique simple, c'est à dire une ou plusieurs //armes// solidaires du personnages qui possèdent uniquement des dégâts de pourcentage et un CC de projection. Cependant, les pourcentages et le CC de projection augmentent avec la charge.
 
@@ -133,14 +133,15 @@ Project Warrior exploite un élément de gameplay très courant dans les MOBA ma
 
 | **Nom**        | **Description** |
 | Projection     | Le contrôle le plus courant dans Project Warrior, que nous avons déjà évoqué un peu plus tôt. Comme son nom l'indique, il va appliquer une force sur la cible, la projetant dans une certaine direction avec une certaine puissance. C'est un CC un peu particulier de par son omniprésence dans le jeu qui permet le dynamisme des combats ; de plus, il est essentiel au gameplay puisque c'est en éjectant les adversaires hors du terrain que le joueur obtiendra des kills et s'appropriera la victoire. |
-| Ralentissement | Diminue la vitesse de déplacement de l'ennemi. |
-| Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. |
-| Lien           | L'ennemi est lié à une entité : il ne peut pas s'éloigner de plus d'une certaine distance de cette entité. Si cette distance est nulle, les deux cibles sont collées. |
-| Aveuglement    | Empêche l'ennemi d'utiliser ses attaques physiques. |
-| Silence        | Empêche l'ennemi d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
-| Siphon         | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela n'empêche pas la cible d'utiliser ses sorts si il lui reste suffisemment de mana. |
-| Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. |
+| Ralentissement | Diminue la vitesse de déplacement de la cible. |
+| Immobilisation | Le nom est assez explicite : la cible est tout simplement immobilisée et ne peut donc plus marcher, courir ou sauter ; néanmoins elle peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. |
+| Lien           | La cible est liée à une entité : elle ne peut pas s'éloigner de plus d'une certaine distance de cette entité. Si cette distance est nulle, la cible et l'entité sont collées. |
+| Aveuglement    | Empêche la cible d'utiliser ses attaques physiques. |
+| Silence        | Empêche la cible d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
+| Siphon         | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela ne l'empêche pas d'utiliser ses sorts si il lui reste suffisemment de mana. |
+| Étourdissement | Le contrôle le plus puissant du jeu : la cible est totalement incapacitée, c'est-à-dire à la fois immobilisée, aveuglée et réduite au silence. |
 
+//Les cibles subissant les contrôles sont toujours des personnages.//
 
 
 == Personnages ==
@@ -160,7 +161,7 @@ Chaque personnage possède un poids : plus le poids est élevé, plus le personn
 Les personnages sont composés de différents éléments :
 
 - Le //corps//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
-- L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
+- L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendemment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
 - Le //bouclier// est une zone d'invincibilité : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Si le corp est intégralement contenu dans cette zone, il est lui aussi immunisé. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir, et elle est aussi utilisée par les parades et autres techniques de protection.
 
 
