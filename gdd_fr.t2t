@@ -159,7 +159,7 @@ Les personnages sont composés de différents éléments :
 
 - Le //corps//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
 - L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
-- Le //bouclier// est une zone d'invincibilité : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir.
+- La zone //défense// (ZD) est une zone invincible : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir. Elle peut être indépendante du personnage.
 
 
 Ces zones se déplacent avec les animations et sont mises à jour à chaque FPS.
