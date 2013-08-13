@@ -57,6 +57,20 @@ Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin d
 
 
 
+== Interface graphique ==
+
+Tous les menus sont contrôlables aussi bien à la manette qu'au clavier ou à la souris.
+
+Quand le jeu est lancé, il affiche un menu principal. Depuis ce menu, on peut :
+
+- Lancer une partie. Dans ce cas, on arrive sur l'écran de sélection des personnages. Depuis cet écran peuvent aussi être choisis les périphériques de contrôle et les touches peuvent être rebindées. Si l'on retourne à l'écran principal, les rebinds sont perdus. Depuis ce menu, deux autres sont accessibles :
+ - Un menu pour configurer le mode de jeu et les règles modifiables. On ne peut que retourner à l'écran de sélection des personnages depuis ce menu.
+ - Le choix du stage. Ce menu permet uniquement de choisir le stage. On peut retourner à l'écran précédent mais le choix fait est perdu. Sinon on peut lancer une partie avec les règles, personnages et stage choisis jusqu'à présent. Une fois le combats terminé, on arrive sur un écran final présentant le classement et différentes statistiques. Depuis cet écran, on retourne à l'écran de sélection des personnages.
+- Modifier la configuration. Ce menu permet de choisir la résolution, le volume sonore et différents autres paramètres.
+- Quitter le jeu.
+
+
+
 == Système de combat ==
 
 
