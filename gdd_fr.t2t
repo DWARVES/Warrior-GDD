@@ -234,6 +234,11 @@ Le moteur physique sera programmé à l'aide de la bibliothèque Box2D.
 Le jeu pourra utiliser d'autres bibliothèques comme //boost// si jugé utile : l'objectif n'est pas d'avoir le moins de dépendances possible.
 
 
+=== Scripting ===
+
+Project Warrior devra être scriptable en //lua//. Cette capacité sera utilisée notemment lors du chargement des personnages ou des stages. À cette fin, une API //lua// pour permettre à ces scripts de communiquer avec le programme devra être dévellopée. Elle devra permettre d'accéder au moteur graphique mais aussi au moteur physique et à certaines informations comme les positions des différents personnages.
+
+
 === Syntaxe ===
 
 ==== Nommage ====
