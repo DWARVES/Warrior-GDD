@@ -221,6 +221,29 @@ Les stages possèdent différentes éléments, qui possèdent des caractéristiq
 Les stages peuvent être animés, avec des murs qui bougent, formant des plateformes, des pièges qui se referment... De plus, les stages peuvent changer dynamiquement au cours d'un combat, en fonction du temps, des actions des joueurs... Cependant, des modifications trop rapides sur un stage peuvent entraîner des bugs, c'est donc aux créateurs des terrains de s'assurer qu'il ne sont pas modifiés trop vite.
 
 
+=== Représentation en mémoire ===
+
+Les stages sont tous placés dans le même dossier, dont le contenu est scanné au lancement du jeu. Chaque stage est un dossier contenant une image ``preview.png`` et un fichier texte ``name`` d'une seule ligne, utilisés lors de l'écran de chargement de stage pour le présenter, un script ``stage.lua`` et différentes ressources qui seront chargées et utilisées par le script lors d'une partie sur le terrain. Le nom du dossier n'a pas d'importance, mais il est conseillé de ne pas y inclure de caractère spéciaux, non-ascii ni d'espaces.
+
+Le script ``stage.lua`` est constitué de différentes fonctions qui seront appelées par le programme. La première fonction appelée est la fonction ``init``, sans arguments : elle va initialiser les différentes variables globales du script (si nécessaire), charger les ressources graphiques à travers le moteur graphique, définir les zones de collisions dans le moteur physique, les zones d'apparition des personnages et la taille du maximale du terrain à travers l'interface fournie par le programme.
+
+==== Physique ====
+
+Les zones physique sont les zones de //contact// indiquée au moteur physique. Elles possèdent toutes la caractéristiques décrites dans la section "Éléments".
+
+À chaque zone physique ajoutée au terrain peut aussi être associée deux fonctions du script qui seront respectivement appelées quand un personnage ou une attaque entre en contact avec la zone physique. Ces fonctions reçoivent deux arguments : l'entité en question et le point de contact. Ça permet de faire des terrains dynamiques avec des pièges ou des mur qui prennent des dégâts avant d'être détruit.
+
+Il est aussi possible de créer des zones dites //virtuelles// : ces zones ne sont pas considérées lors des calculs de collision, et ne possèdent dont pas de facteurs de glissement ou de rebondissement. Cependant, on peut leur définir les deux callbacks présenter ci-dessus. Ces zones sont juste des capteurs de présence d'entités. Cependant, leurs fonctions de callback ont trois arguments. Le premier reste le même. Cependant, le second n'est pas un point mais l'intersection de la zone virtuelle et de l'espace de l'entité : c'est leur surface commune. Le troisième est le nombre de fois que la fonction de callback est appelée pour cette collision. En effet, l'entité peut rester à l'intérieur de cette zone et donc la collision peut durer. La fonction sera donc réappellée à chaque FPS jusqu'à la fin de la collision : le troisième argument peut être considéré comme la durée en FPS depuis le début de la collision.
+
+Toutes les zones peuvent être modifiées, ajoutées et/ou supprimées dynamiquement durant la partie. Si la suppression ne pose pas de problème, l'ajout et la modification peuvent. En effet, dans le cas d'un ajout ou d'un déplacement trop rapide, des bugs de collision peuvent apparaitre. Il est donc conseillé de tester l'apparition d'un objet avec une zone virtuelle avant de faire apparaitre une zone de contact. Dans le cas des déplacements, un déplacement (relativement) lent déplacera les entités en contact avec lui, mais un déplacement trop rapide aura les mêmes risques qu'une apparition.
+
+==== Timers ====
+
+Les timers définissent des fonctions de callback qui sont appelées au bout d'un certain temps. Un timer peut être remis à zéro à n'importe quel moment. Un timer remis à zéro par son callback se réappelleras donc à intervalles régulier.
+
+Un exemple d'utilisation serait l'apparition d'une zone de contact : le script va créer une zone virtuelle à la position de la zone de contact avec comme callback une fonction qui remet à zéro le timer et lancer un timer court avec comme callback une fonction qui va supprimer la zone virtuelle et créer la zone de contact. Le timer sera donc remis à zéro tant qu'il y aura une entité dans la zone virtuelle et la zone de contact sera créée quand il n'y aura plus de contact durant le laps de temps du timer.
+
+
 
 = Détails techniques =
 
