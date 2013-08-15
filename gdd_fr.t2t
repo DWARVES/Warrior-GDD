@@ -57,11 +57,18 @@ Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fi
 
 
 
-== Interface graphique ==
+== Menus ==
 
 Tous les menus sont contrôlables aussi bien à la manette qu'au clavier ou à la souris.
 
-Quand le jeu est lancé, il affiche un menu principal. Depuis ce menu, on peut :
+
+=== Menu principal ===
+
+Quand le jeu est lancé, il affiche un menu principal permettant d'accéder aux différents sous-menu présentés ci-dessous.
+
+=== Play ===
+
+Permet d'accéder aux différents modes de jeu disponibles afin de lancer une parti. Un mode de jeu
 
 - Lancer une partie. Dans ce cas, on arrive sur l'écran de sélection des personnages. Depuis cet écran peuvent aussi être choisis les périphériques de contrôle et les touches peuvent être rebindées. Si l'on retourne à l'écran principal, les rebinds sont perdus. Depuis ce menu, deux autres sont accessibles :
  - Un menu pour configurer le mode de combat et les règles modifiables. On ne peut que retourner à l'écran de sélection des personnages depuis ce menu.
@@ -141,31 +148,21 @@ Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un
 
 === Contrôles de foule (CC) ===
 
-Project Warrior exploite un élément de gameplay très courant dans les MOBA mais peu présent dans SSB : les contrôles de foule, abgrégés en CC (Crowd Controls). Plutôt que de faire une longue explication théorique, listons directement dans un joli tableau les différents CC ainsi que leurs effets respectifs :
+Project Warrior exploite un élément de gameplay très courant dans les MOBA mais peu présent dans SSB : les contrôles de foule, abgrégés en CC (Crowd Controls). Plutôt que de faire une longue explication théorique, listons directement dans un joli tableau les différents CC de base ainsi que leurs effets respectifs :
 
 | **Nom**        | **Description** |
 | Projection     | Le contrôle le plus courant dans Project Warrior, que nous avons déjà évoqué un peu plus tôt. Comme son nom l'indique, il va appliquer une force sur la cible, la projetant dans une certaine direction avec une certaine puissance. C'est un CC un peu particulier de par son omniprésence dans le jeu qui permet le dynamisme des combats ; de plus, il est essentiel au gameplay puisque c'est en éjectant les adversaires hors du terrain que le joueur obtiendra des kills et s'appropriera la victoire. |
-<<<<<<< HEAD
 | Ralentissement | Diminue la vitesse de déplacement de la cible. |
-| Immobilisation | Le nom est assez explicite : la cible est tout simplement immobilisée et ne peut donc plus marcher, courir ou sauter ; néanmoins elle peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. |
 | Lien           | La cible est liée à une entité : elle ne peut pas s'éloigner de plus d'une certaine distance de cette entité. Si cette distance est nulle, la cible et l'entité sont collées. |
 | Aveuglement    | Empêche la cible d'utiliser ses attaques physiques. |
 | Silence        | Empêche la cible d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
 | Siphon         | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela ne l'empêche pas d'utiliser ses sorts si il lui reste suffisemment de mana. |
-| Étourdissement | Le contrôle le plus puissant du jeu : la cible est totalement incapacitée, c'est-à-dire à la fois immobilisée, aveuglée et réduite au silence. |
-=======
-| Ralentissement | Diminue la vitesse de déplacement de l'ennemi. |
-| Lien           | L'ennemi est lié à un objet, une zone ou à un autre ennemi : ils ne peuvent pas s'éloigner de plus d'une certaine distance. Si cette distance est 0, les deux cibles sont colées. Le lien peut être indestructible ou se fragiliser chaque fois qu'il est utilisé (à chaque mouvement de stick dans le cas d'un CC lien distance 0) jusqu'à sa destruction complète. |
-| Aveuglement    | Empêche l'ennemi d'utiliser ses attaques physiques. |
-| Silence        | Empêche l'ennemi d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
-| Siphon         | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela n'empêche pas la cible d'utiliser ses sorts si il lui reste suffisemment de mana. |
 
-Il existe d'autres CC qui sont réalisés à partir des CC ci-dessus, ils sont précisés car leurs noms peuvent être utilisés dans le reste de ce document :
+Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donne un nom particulier car ils sont assez courants dans les capacités des personnages. Voici la liste de ces CC plus comlexes :
 
 | **Nom**        | **Description** | **Réalisation** |
-| Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. | Ce CC est en fait un CC lien distance 0 avec une zone attaque statique et non solidaire de l'attaquant. |
-| Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. | Il consiste juste en la combinaison des CC immobilisation, silence et aveuglement. |
->>>>>>> ce59ff5c58a565dd45ec2de1b60660fecf5d3e3f
+| Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. | L'immobilisation est un CC lien distance 0 avec une ZA statique et non solidaire de l'attaquant. |
+| Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. | Il consiste donc en la combinaison des CC immobilisation, aveuglement et silence. |
 
 //Les cibles subissant les contrôles sont toujours des personnages.//
 
@@ -186,17 +183,11 @@ Chaque personnage possède un poids : plus le poids est élevé, plus le personn
 
 Les personnages sont composés de différentes zones :
 
-- Le //corps//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
-<<<<<<< HEAD
-- L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendemment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
-- Le //bouclier// est une zone d'invincibilité : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Si le corp est intégralement contenu dans cette zone, il est lui aussi immunisé. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir, et elle est aussi utilisée par les parades et autres techniques de protection.
-=======
 - L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
 - La zone //défense// (ZD) est une zone invincible : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir. Elle peut être indépendante du personnage.
 
 
 À chacune de ces zones peut être appliqué un masque de collision : elles ne peuvent prendre en compte que les collisions avec le terrain, étant alors qualifiées de zones //fantômes//, au contraire des zones //physiques//, qui elles prennent en compte toutes les animations. Exemple d'utilisation : un projectile qui touche tous les ennemis sur sa trajectoire ; ce sera une ZA fantôme avec des pourcentages, qui ingligera ces dégâts aux personnages qu'elle traverse sans pour autant être stoppée car sa physique fait qu'elle ignore les collisions avec eux.
->>>>>>> ce59ff5c58a565dd45ec2de1b60660fecf5d3e3f
 
 Les zones indépendantes des personnages peuvent ou non ignorer la gravité.
 
