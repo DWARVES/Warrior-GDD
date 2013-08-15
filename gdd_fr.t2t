@@ -34,9 +34,9 @@ Project Warrior consiste comme vu dans la présentation en un jeu de combat dyna
 - Le combat commence : l'objectif est d'éliminer les autres joueurs en les envoyant hors du terrain. Pour cela il est d'abord nécessaire d'affaiblir les ennemis en leur infligeant des pourcentages de dégâts plus ou moins importants selon les attaques utilisées, puis d'asséner une attaque appliquant une force de projection afin de faire totalement sortir l'ennemi de l'écran. Bien-entendu, plus les dégâts ayant été pris par la cible auparavant sont importants, et plus celle-ci sera projetée loin et donc susceptible de mourir.
 
 
-=== Modes de jeu ===
+=== Modes de combat ===
 
-Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépendre du mode de jeu :
+Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépendre du mode de combat :
 
 - Timelaps : le combat dure pendant un temps défini par le joueur, et celui qui à la fin possède le meilleur score gagne la partie. Le joueur gagne 1 point en tuant un adversaire, c'est-à-dire lorsque celui-ci meurt moins de 10 secondes après avoir pris des dommages venant de son agresseur. La mort entraîne la perte d'un point. Si jamais deux ou plus de joueurs possèdent des scores égaux, un combat de //mort subite// sera alors engagé uniquement entre ces joueurs, une attaque suffisamment puissante sur un ennemi le projetant directement hors du terrain.
 - SurVies : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
@@ -46,25 +46,32 @@ Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépen
 
 Certaines règles du jeu sont modifiable avant chaque partie, afin de diversifier l'expérience de jeu :
 
-- Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survies, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de jeu.
+- Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survies, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de combat.
 - La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
 - Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
 
 
 === Classement final ===
 
-Selon le mode de jeu choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en SurVies).
+Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en SurVies).
 
 
 
-== Interface graphique ==
+== Menus ==
 
 Tous les menus sont contrôlables aussi bien à la manette qu'au clavier ou à la souris.
 
-Quand le jeu est lancé, il affiche un menu principal. Depuis ce menu, on peut :
+
+=== Menu principal ===
+
+Quand le jeu est lancé, il affiche un menu principal permettant d'accéder aux différents sous-menu présentés ci-dessous.
+
+=== Play ===
+
+Permet d'accéder aux différents modes de jeu disponibles afin de lancer une parti. Un mode de jeu
 
 - Lancer une partie. Dans ce cas, on arrive sur l'écran de sélection des personnages. Depuis cet écran peuvent aussi être choisis les périphériques de contrôle et les touches peuvent être rebindées. Si l'on retourne à l'écran principal, les rebinds sont perdus. Depuis ce menu, deux autres sont accessibles :
- - Un menu pour configurer le mode de jeu et les règles modifiables. On ne peut que retourner à l'écran de sélection des personnages depuis ce menu.
+ - Un menu pour configurer le mode de combat et les règles modifiables. On ne peut que retourner à l'écran de sélection des personnages depuis ce menu.
  - Le choix du stage. Ce menu permet uniquement de choisir le stage. On peut retourner à l'écran précédent mais le choix fait est perdu. Sinon on peut lancer une partie avec les règles, personnages et stage choisis jusqu'à présent. Une fois le combats terminé, on arrive sur un écran final présentant le classement et différentes statistiques. Depuis cet écran, on retourne à l'écran de sélection des personnages.
 - Modifier la configuration. Ce menu permet de choisir la résolution, le volume sonore et différents autres paramètres.
 - Quitter le jeu.
@@ -76,14 +83,14 @@ Quand le jeu est lancé, il affiche un menu principal. Depuis ce menu, on peut :
 
 === Contrôles ===
 
-Project Warrior est pensé pour être joué à la manette. Cependant, toutes les touches sont //rebindable// : vous pouvez par exemple assigner les actions au clavier, permettant de jouer avec ce moyen, ou réorganiser les touches sur la manette, voire mélanger les deux.
+Project Warrior est conçu pour être joué à la manette. Cependant, toutes les touches sont //rebindables// : vous pouvez par exemple assigner à toutes les actions du jeu des touches du clavier (utile pour les joueurs ne possédant pas de manette), ou assigner des boutons différents de la manette, voire mélanger ces deux contrôleurs.
 
 
 === Mouvements ===
 
 Comme dans SSB, le personnage peut se déplacer dans 2 directions (droite et gauche) en marchant ou en courant selon l'inclinaison du stick, ainsi que sauter en appuyant sur un bouton et redescendre plus rapidement en inclinant fortement le stick vers le bas. Il y a aussi possibilité de double-saut, tout simplement en réappuyant sur le bouton de saut. Les animations des personnages s'adaptent bien évidemment à ces combinaisons de mouvements.
 
-Certains sorts permettent aux personnages qui les maîtrisent de posséder encore plus de mobilité : on appellera alors de manière générique //dash// un sort avec lequel le personnage augmente énormément sa vitesse de déplacement dans une certaine direction pendant un court instant, et //tp// un sort de téléportation qui permet de se déplacer instantanément d'un point A à un point B.
+Certains sorts permettent aux personnages qui les maîtrisent de posséder encore plus de mobilité : on appellera alors de manière générique //dash// un sort avec lequel le personnage augmente énormément sa vitesse de déplacement dans une certaine direction pendant un court instant.
 
 
 === Attaques ===
@@ -92,7 +99,7 @@ Les attaques étant spécifiques à chaque personnage, on ne présentera dans ce
 
 ==== Physiques ====
 
-Ces attaques n'ont aucun coût en mana, et existent sous de nombreuses formes à la puissance variable suivant les boutons pressés. Comme dans SSB, ces attaques seront associés à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs. De par leur caractère //spammable//, les attaques physiques infligent des dégâts uniquement au corps à corps et ne permettent qu'une seule forme de CC : la projection.
+Ces attaques n'ont aucun coût en mana, et existent sous de nombreuses formes à la puissance variable suivant les boutons pressés. Comme dans SSB, ces attaques seront associées à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs. De par leur caractère //spammable//, les attaques physiques infligent des dégâts uniquement au corps à corps et ne permettent qu'une seule forme de CC : la projection.
 
 Techniquement, une attaque physique constitue en une ou plusieurs //armes// solidaires du corp du personnage associées à un certain nombre de pourcentages et un CC de projection, qui seront infligés à n'importe quel autre personnage qui entre en contact avec les armes.
 
@@ -110,7 +117,7 @@ Techniquement, une attaque magique consitute en une ou plusieures //armes// pas 
 
 Le concept de smash est ici le même que dans SSB, à savoir une attaque au fort potentiel de dégâts et de projection. Pour effectuer un smash, il faut appuyer sur ``P`` tout en inclinant complètement et rapidement le stick dans la direction souhaitée ; si le joueur effectue l'inclinaison en plus d'un dixième de seconde, ou si elle n'est pas maximale, alors l'action sera considérée comme une attaque physique. Il existe donc 3 smash : ``P+Côté``, ``P+Bas``, ``P+Haut``. Pour empêcher le joueur d'abuser des smashs, on leur donnera un temps d'exécution plus long que pour les attaques physiques classiques, ainsi qu'un coût en mana minimal. Il est possible de charger son smash en maintenant les boutons appuyés, rendant ce dernier encore plus puissant, mais laissant par la même occasion plus d'opportunités aux ennemis d'annuler le smash avec certains contrôles, le personnage étant immobile durant la charge. De plus, du mana additionnel est consommé durant la charge. Pour empêcher le joueur d'effectuer des smashs trop puissants, la charge a une durée maximale de 2 secondes. Si la barre de mana finit de se vider avant la fin des 2 secondes, le smash est exécuté immédiatement.
 
-Toutes ces caractéristiques font en général du smash une attaque à utiliser avec précaution, occasionnellement en tant qu'outils à dégâts, mais principalement en tant que //finisher// afin d'éjecter l'ennemi hors du terrain.
+Toutes ces caractéristiques font en général du smash une attaque à utiliser avec précaution, occasionnellement en tant qu'outil à dégâts, mais principalement en tant que //finisher// afin d'éjecter l'ennemi hors du terrain.
 
 Techniquement le smash est similaire à une attaque physique simple, c'est à dire une ou plusieurs //armes// solidaires du personnages qui possèdent uniquement des dégâts de pourcentage et un CC de projection. Cependant, les pourcentages et le CC de projection augmentent avec la charge.
 
@@ -141,22 +148,23 @@ Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un
 
 === Contrôles de foule (CC) ===
 
-Project Warrior exploite un élément de gameplay très courant dans les MOBA mais peu présent dans SSB : les contrôles de foule, abgrégés en CC (Crowd Controls). Plutôt que de faire une longue explication théorique, listons directement dans un joli tableau les différents CC ainsi que leurs effets respectifs :
+Project Warrior exploite un élément de gameplay très courant dans les MOBA mais peu présent dans SSB : les contrôles de foule, abgrégés en CC (Crowd Controls). Plutôt que de faire une longue explication théorique, listons directement dans un joli tableau les différents CC de base ainsi que leurs effets respectifs :
 
 | **Nom**        | **Description** |
 | Projection     | Le contrôle le plus courant dans Project Warrior, que nous avons déjà évoqué un peu plus tôt. Comme son nom l'indique, il va appliquer une force sur la cible, la projetant dans une certaine direction avec une certaine puissance. C'est un CC un peu particulier de par son omniprésence dans le jeu qui permet le dynamisme des combats ; de plus, il est essentiel au gameplay puisque c'est en éjectant les adversaires hors du terrain que le joueur obtiendra des kills et s'appropriera la victoire. |
-| Ralentissement | Diminue la vitesse de déplacement de l'ennemi. |
-| Lien           | L'ennemi est lié à un objet, une zone ou à un autre ennemi : ils ne peuvent pas s'éloigner de plus d'une certaine distance. Si cette distance est 0, les deux cibles sont colées. Le lien peut être indestructible ou se fragiliser chaque fois qu'il est utilisé (à chaque mouvement de stick dans le cas d'un CC lien distance 0) jusqu'à sa destruction complète. |
-| Aveuglement    | Empêche l'ennemi d'utiliser ses attaques physiques. |
-| Silence        | Empêche l'ennemi d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
-| Siphon         | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela n'empêche pas la cible d'utiliser ses sorts si il lui reste suffisemment de mana. |
+| Ralentissement | Diminue la vitesse de déplacement de la cible. |
+| Lien           | La cible est liée à une entité : elle ne peut pas s'éloigner de plus d'une certaine distance de cette entité. Si cette distance est nulle, la cible et l'entité sont collées. |
+| Aveuglement    | Empêche la cible d'utiliser ses attaques physiques. |
+| Silence        | Empêche la cible d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
+| Siphon         | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela ne l'empêche pas d'utiliser ses sorts si il lui reste suffisemment de mana. |
 
-Il existe d'autres CC qui sont réalisés à partir des CC ci-dessus, ils sont précisés car leurs noms peuvent être utilisés dans le reste de ce document :
+Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donne un nom particulier car ils sont assez courants dans les capacités des personnages. Voici la liste de ces CC plus comlexes :
 
 | **Nom**        | **Description** | **Réalisation** |
-| Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. | Ce CC est en fait un CC lien distance 0 avec une zone attaque statique et non solidaire de l'attaquant. |
-| Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. | Il consiste juste en la combinaison des CC immobilisation, silence et aveuglement. |
+| Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. | L'immobilisation est un CC lien distance 0 avec une ZA statique et non solidaire de l'attaquant. |
+| Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. | Il consiste donc en la combinaison des CC immobilisation, aveuglement et silence. |
 
+//Les cibles subissant les contrôles sont toujours des personnages.//
 
 
 == Personnages ==
@@ -175,7 +183,6 @@ Chaque personnage possède un poids : plus le poids est élevé, plus le personn
 
 Les personnages sont composés de différentes zones :
 
-- Le //corps//, qui inclut tous les éléments du personnages qui peuvent prendre des pourcentages.
 - L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
 - La zone //défense// (ZD) est une zone invincible : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir. Elle peut être indépendante du personnage.
 
