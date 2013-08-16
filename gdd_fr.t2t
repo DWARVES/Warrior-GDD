@@ -183,6 +183,7 @@ Chaque personnage possède un poids : plus le poids est élevé, plus le personn
 
 Les personnages sont composés de différentes zones :
 
+- Le //corp//, qui inclut tous les éléments du personnage qui peuvent prendre des pourcentages.
 - L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
 - La zone //défense// (ZD) est une zone invincible : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir. Elle peut être indépendante du personnage.
 
@@ -197,7 +198,7 @@ Ces zones se déplacent avec les animations et sont mises à jour à chaque FPS.
 === Liste des personnages ===
 
 Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents ; voici leurs caractéristiques principales :
-
+ 
 | **Classe** | **Dégâts physiques** | **Vitesse des attaques physiques** | **Portée des attaques physiques** | **Dégâts magiques** | **Vitesse des sorts** | **Portée des sorts** | **Poids** | **Vitesse de déplacement** | **Commentaires** |
 | Hybride | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | Il serait l'objectif premier de développement car exploitant la plupart des mécaniques souhaitées (sorts à distance, gapclosers, attaques physiques relativement puissantes...), et possédant des statistiques égales et équilibrées permettant de construire les autres personnages autour de cette moyenne. Au niveau du background, il constituerait probablement le personnage principal. |
 | Brute | ``HIGH`` | ``LOW`` | ``MEDIUM`` | ``HIGH`` | ``LOW`` | ``LOW`` | ``HIGH`` | ``LOW`` | Un personnage possédant d'importants dégâts physiques et magiques, avec une cadence lente pour compenser cette puissance. Aussi, il doit être au corps à corps pour infliger ses dégâts, ce qui n'est pas évident de par sa faible vitesse de déplacement. Un sort de contrôle de portée ``MEDIUM`` ou ``HIGH`` permettrait de se rapprocher plus aisément des adversaires ; il est préférable pour raison de cohérence avec sa physique lourde qu'il ne possède pas de gapcloser. |
