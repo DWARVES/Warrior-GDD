@@ -76,11 +76,11 @@ Quitte le jeu (ferme le programme).
 
 //Custom Melee// est un mode de jeu convivial, ouvert et complet. Voici ces différentes caractéristiques :
 
-=== Multijoueurs ===
+==== Multijoueurs ====
 
 Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4 joueurs, qu'ils soient connectés directement à l'ordinateur via des contrôleurs supplémentaires, ou qu'ils se connectent depuis d'autres postes via TCP/IP. Cela est possible grâce à l'architecture client/serveur adoptée, où un client représente une instance de jeu comptabilisant un ou plusieurs joueurs et devant se connecter, que ce soit en local ou en réseau, à un serveur gérant la partie ; ce serveur est hébergé sur la même machine qu'un des clients.
 
-=== Règles modifiables ===
+==== Règles modifiables ====
 
 En //Custom Melee//, certaines règles du jeu sont modifiables avant chaque partie, afin de diversifier l'expérience de jeu :
 
