@@ -190,7 +190,6 @@ Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donn
 
 == Personnages ==
 
-
 === Caractéristiques communes ===
 
 Chaque personnage possède différentes caractéristiques qui influencent la façon dont il intéragit avec l'environnement et les autres personnages. 
@@ -206,15 +205,65 @@ Chaque personnage possède un poids : plus le poids est élevé, plus le personn
 
 === Liste des personnages ===
 
-Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents ; voici leurs caractéristiques principales :
-
-| **Classe** | **Dégâts physiques** | **Vitesse des attaques physiques** | **Portée des attaques physiques** | **Dégâts magiques** | **Vitesse des sorts** | **Portée des sorts** | **Poids** | **Vitesse de déplacement** | **Commentaires** |
-| Hybride | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | Il serait l'objectif premier de développement car exploitant la plupart des mécaniques souhaitées (sorts à distance, gapclosers, attaques physiques relativement puissantes...), et possédant des statistiques égales et équilibrées permettant de construire les autres personnages autour de cette moyenne. Au niveau du background, il constituerait probablement le personnage principal. |
-| Brute | ``HIGH`` | ``LOW`` | ``MEDIUM`` | ``HIGH`` | ``LOW`` | ``LOW`` | ``HIGH`` | ``LOW`` | Un personnage possédant d'importants dégâts physiques et magiques, avec une cadence lente pour compenser cette puissance. Aussi, il doit être au corps à corps pour infliger ses dégâts, ce qui n'est pas évident de par sa faible vitesse de déplacement. Un sort de contrôle de portée ``MEDIUM`` ou ``HIGH`` permettrait de se rapprocher plus aisément des adversaires ; il est préférable pour raison de cohérence avec sa physique lourde qu'il ne possède pas de gapcloser. |
-| Assassin | ``LOW``-``MEDIUM`` | ``HIGH`` | ``LOW`` | ``LOW`` | ``HIGH`` | ``HIGH`` | ``LOW`` | ``HIGH`` | Un personnage opposé à la brute de par son gameplay nerveux et très rapide. Il base quasiment tous ses dégâts sur les attaques physiques, qui possèdent des dégâts assez faibles mais une vitesse d'enchaînement élevée. Sa courte portée l'oblige à être collé à ses ennemis, ce qu'il parvient à faire assez aisément grâce à 2 sorts de mobilité et une grande vitesse de déplacement. |
-| Mage | ``LOW`` | ``MEDIUM`` | ``MEDIUM`` | ``HIGH`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | Un personnage assez équilibré, qui à la différence de l'hybride basera beaucoup de ses dégâts sur les sorts et peu sur les attaques physiques. Sa mobilité n'est pas très grande du fait qu'il ne possède aucun sort prévu à cet effet. |
+Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents.
 
 //Les indicateurs// ``LOW, MEDIUM, HIGH`` //ne sont pas applicables à toutes les attaques et représentent une moyenne générale définissant le gameplay global du personnage.//
+
+=== Hybride ===
+
+Il serait l'objectif premier de développement car exploitant la plupart des mécaniques souhaitées (sorts à distance, gapclosers, attaques physiques relativement puissantes...), et possédant des statistiques égales et équilibrées permettant de construire les autres personnages autour de cette moyenne. Au niveau du background, il constituerait probablement le personnage principal.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |   ``MEDIUM``   |
+| Vitesse des attaques physiques |   ``MEDIUM``   |
+| Portée des attaques physiques  |   ``MEDIUM``   |
+| Dégâts magiques                |   ``MEDIUM``   |
+| Vitesse des sorts              |   ``MEDIUM``   |
+| Portée des sorts               |   ``MEDIUM``   |
+| Poids                          |   ``MEDIUM``   |
+| Vitesse de déplacement         |   ``MEDIUM``   |
+
+=== Brute ===
+
+Un personnage possédant d'importants dégâts physiques et magiques, avec une cadence lente pour compenser cette puissance. Aussi, il doit être au corps à corps pour infliger ses dégâts, ce qui n'est pas évident de par sa faible vitesse de déplacement. Un sort de contrôle de portée ``MEDIUM`` ou ``HIGH`` permettrait de se rapprocher plus aisément des adversaires ; il est préférable pour raison de cohérence avec sa physique lourde qu'il ne possède pas de gapcloser.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |    ``HIGH``    |
+| Vitesse des attaques physiques |    ``LOW``     |
+| Portée des attaques physiques  |   ``MEDIUM``   |
+| Dégâts magiques                |    ``HIGH``    |
+| Vitesse des sorts              |    ``LOW``     |
+| Portée des sorts               |    ``LOW``     |
+| Poids                          |    ``HIGH``    |
+| Vitesse de déplacement         |    ``LOW``     |
+
+=== Assassin ===
+
+Un personnage opposé à la brute de par son gameplay nerveux et très rapide. Il base quasiment tous ses dégâts sur les attaques physiques, qui possèdent des dégâts assez faibles mais une vitesse d'enchaînement élevée. Sa courte portée l'oblige à être collé à ses ennemis, ce qu'il parvient à faire assez aisément grâce à 2 sorts de mobilité et une grande vitesse de déplacement.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |    ``LOW+``    |
+| Vitesse des attaques physiques |    ``HIGH``    |
+| Portée des attaques physiques  |    ``LOW``     |
+| Dégâts magiques                |    ``LOW``     |
+| Vitesse des sorts              |    ``HIGH``    |
+| Portée des sorts               |    ``HIGH``    |
+| Poids                          |    ``LOW``     |
+| Vitesse de déplacement         |    ``HIGH``    |
+
+=== Mage ===
+
+Un personnage assez équilibré, qui à la différence de l'hybride basera beaucoup de ses dégâts sur les sorts et peu sur les attaques physiques. Sa mobilité n'est pas très grande du fait qu'il ne possède aucun sort prévu à cet effet.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |    ``LOW``     |
+| Vitesse des attaques physiques |   ``MEDIUM``   |
+| Portée des attaques physiques  |   ``MEDIUM``   |
+| Dégâts magiques                |    ``HIGH``    |
+| Vitesse des sorts              |   ``MEDIUM``   |
+| Portée des sorts               |   ``MEDIUM``   |
+| Poids                          |   ``MEDIUM``   |
+| Vitesse de déplacement         |   ``MEDIUM``   |
 
 
 == Stages ==
