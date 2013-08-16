@@ -209,7 +209,7 @@ Dans un premier temps, l'objectif est de développer 4 personnages équilibrés,
 
 //Les indicateurs// ``LOW, MEDIUM, HIGH`` //ne sont pas applicables à toutes les attaques et représentent une moyenne générale définissant le gameplay global du personnage.//
 
-=== Hybride ===
+==== Hybride ====
 
 Il serait l'objectif premier de développement car exploitant la plupart des mécaniques souhaitées (sorts à distance, gapclosers, attaques physiques relativement puissantes...), et possédant des statistiques égales et équilibrées permettant de construire les autres personnages autour de cette moyenne. Au niveau du background, il constituerait probablement le personnage principal.
 
@@ -223,7 +223,7 @@ Il serait l'objectif premier de développement car exploitant la plupart des mé
 | Poids                          |   ``MEDIUM``   |
 | Vitesse de déplacement         |   ``MEDIUM``   |
 
-=== Brute ===
+==== Brute ====
 
 Un personnage possédant d'importants dégâts physiques et magiques, avec une cadence lente pour compenser cette puissance. Aussi, il doit être au corps à corps pour infliger ses dégâts, ce qui n'est pas évident de par sa faible vitesse de déplacement. Un sort de contrôle de portée ``MEDIUM`` ou ``HIGH`` permettrait de se rapprocher plus aisément des adversaires ; il est préférable pour raison de cohérence avec sa physique lourde qu'il ne possède pas de gapcloser.
 
@@ -237,7 +237,7 @@ Un personnage possédant d'importants dégâts physiques et magiques, avec une c
 | Poids                          |    ``HIGH``    |
 | Vitesse de déplacement         |    ``LOW``     |
 
-=== Assassin ===
+==== Assassin ====
 
 Un personnage opposé à la brute de par son gameplay nerveux et très rapide. Il base quasiment tous ses dégâts sur les attaques physiques, qui possèdent des dégâts assez faibles mais une vitesse d'enchaînement élevée. Sa courte portée l'oblige à être collé à ses ennemis, ce qu'il parvient à faire assez aisément grâce à 2 sorts de mobilité et une grande vitesse de déplacement.
 
@@ -251,7 +251,7 @@ Un personnage opposé à la brute de par son gameplay nerveux et très rapide. I
 | Poids                          |    ``LOW``     |
 | Vitesse de déplacement         |    ``HIGH``    |
 
-=== Mage ===
+==== Mage ====
 
 Un personnage assez équilibré, qui à la différence de l'hybride basera beaucoup de ses dégâts sur les sorts et peu sur les attaques physiques. Sa mobilité n'est pas très grande du fait qu'il ne possède aucun sort prévu à cet effet.
 
