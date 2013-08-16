@@ -39,14 +39,14 @@ Project Warrior consiste comme vu dans la présentation en un jeu de combat dyna
 Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépendre du mode de combat :
 
 - Timelaps : le combat dure pendant un temps défini par le joueur, et celui qui à la fin possède le meilleur score gagne la partie. Le joueur gagne 1 point en tuant un adversaire, c'est-à-dire lorsque celui-ci meurt moins de 10 secondes après avoir pris des dommages venant de son agresseur. La mort entraîne la perte d'un point. Si jamais deux ou plus de joueurs possèdent des scores égaux, un combat de //mort subite// sera alors engagé uniquement entre ces joueurs, une attaque suffisamment puissante sur un ennemi le projetant directement hors du terrain.
-- SurVies : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
+- Survie : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
 
 
 
 
 === Classement final ===
 
-Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en SurVies).
+Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en Survie).
 
 
 
@@ -92,7 +92,7 @@ Comme dans SSB, il est aussi possible d'accéder au menu de modification des rè
 
 En //Custom Melee//, certaines règles du jeu sont modifiables avant chaque partie, afin de diversifier l'expérience de jeu :
 
-- Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survies, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de combat.
+- Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survie, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de combat.
 - La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
 - Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
 
