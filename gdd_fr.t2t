@@ -219,7 +219,6 @@ Les stages sont les terrains dans lesquels les combats ont lieu. Ils doivent dé
 Les stages possèdent différentes éléments, qui possèdent des caractéristiques différentes :
 
 - Chaque élément possède un facteur de rebondissement. Un facteur de 0 correspond à un mur normal, une valeur plus élevée faisant rebondir tout objet mouvant entrant à son contact.
-- Chaque élément peut aussi modifier les personnages qui entrent en contact avec lui, en lui infligeant des dégâts et/ou en lui infligeant un choc dans une direction fixe. L'élément peut aussi modifier le reste du terrain lorqu'un personnage entre en contact avec lui.
 - Les éléments possèdent aussi un facteur de glissement, une valeur de 0 empêchant tout dérapement, même en pente. 1 correspond à une valeur moyenne.
 
 
