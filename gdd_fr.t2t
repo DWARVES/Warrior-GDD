@@ -80,6 +80,14 @@ Quitte le jeu (ferme le programme).
 
 Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4 joueurs, qu'ils soient connectés directement à l'ordinateur via des contrôleurs supplémentaires, ou qu'ils se connectent depuis d'autres postes via TCP/IP. Cela est possible grâce à l'architecture client/serveur adoptée, où un client représente une instance de jeu comptabilisant un ou plusieurs joueurs et devant se connecter, que ce soit en local ou en réseau, à un serveur gérant la partie ; ce serveur est hébergé sur la même machine qu'un des clients.
 
+==== Sélection des personnages ====
+
+L'écran de sélection des personnages est similaire dans l'organisation à celui de SSB, à ceci près qu'avant de choisir son personnage, le joueur doit associer son périphérique en maintenant une touche durant 1 seconde, comme cela se fait dans le jeu indépendant //Jamestown//.
+
+Si la partie ne contient pas déjà 4 joueurs en local, un joueur externe peut se connecter en réseau durant la phase de sélection des personnages.
+
+Comme dans SSB, il est aussi possible d'accéder au menu de modification des règles, dont les caractéristiques sont présentées ci-après.
+
 ==== Règles modifiables ====
 
 En //Custom Melee//, certaines règles du jeu sont modifiables avant chaque partie, afin de diversifier l'expérience de jeu :
