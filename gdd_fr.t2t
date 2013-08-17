@@ -27,7 +27,7 @@ Dans cette partie sont présentés les différents objectifs fixés initialement
 
 === Déroulement d'une partie ===
 
-Project Warrior consiste comme vu dans la présentation en un jeu de combat dynamique reprenant de nombreuses mécaniques de SSB. Étudions le déroulement d'une partie //Mêlée// en local au travers d'un des joueurs pour mieux comprendre :
+Project Warrior consiste comme vu dans la présentation en un jeu de combat dynamique reprenant de nombreuses mécaniques de SSB. Étudions le déroulement d'une partie //Local Melee// au travers d'un des joueurs pour mieux comprendre :
 
 - Le joueur choisit parmi une liste de //héros// charismatiques celui qu'il souhaite incarner ;
 - Il choisit ensuite dans quel stage (appelé aussi terrain) il souhaite combattre ; un stage est constitué de différentes plateformes sur lesquelles les personnages peuvent se mouvoir ;
@@ -39,42 +39,62 @@ Project Warrior consiste comme vu dans la présentation en un jeu de combat dyna
 Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépendre du mode de combat :
 
 - Timelaps : le combat dure pendant un temps défini par le joueur, et celui qui à la fin possède le meilleur score gagne la partie. Le joueur gagne 1 point en tuant un adversaire, c'est-à-dire lorsque celui-ci meurt moins de 10 secondes après avoir pris des dommages venant de son agresseur. La mort entraîne la perte d'un point. Si jamais deux ou plus de joueurs possèdent des scores égaux, un combat de //mort subite// sera alors engagé uniquement entre ces joueurs, une attaque suffisamment puissante sur un ennemi le projetant directement hors du terrain.
-- SurVies : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
+- Survie : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
 
 
-=== Règles modifiables ===
-
-Certaines règles du jeu sont modifiable avant chaque partie, afin de diversifier l'expérience de jeu :
-
-- Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survies, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de combat.
-- La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
-- Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
 
 
 === Classement final ===
 
-Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en SurVies).
+Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en Survie).
 
 
 
-== Menus ==
+== Interface ==
 
-Tous les menus sont contrôlables aussi bien à la manette qu'au clavier ou à la souris.
+L'interface est contrôlable aussi bien à la manette qu'au clavier ou à la souris.
 
 
 === Menu principal ===
 
 Quand le jeu est lancé, il affiche un menu principal permettant d'accéder aux différents sous-menu présentés ci-dessous.
 
-=== Play ===
+==== Play ====
 
-Permet d'accéder aux différents modes de jeu disponibles afin de lancer une parti. Un mode de jeu
+Permet d'accéder aux différents modes de jeu disponibles afin de lancer une partie. Dans la version alpha de Project Warrior, on pourra accéder uniquement au mode //Custom Melee//, car c'est le mode de jeu le plus convivial et le plus complet, par conséquent il constitue un choix judicieux en tant qu'objectif premier de développement.
 
-- Lancer une partie. Dans ce cas, on arrive sur l'écran de sélection des personnages. Depuis cet écran peuvent aussi être choisis les périphériques de contrôle et les touches peuvent être rebindées. Si l'on retourne à l'écran principal, les rebinds sont perdus. Depuis ce menu, deux autres sont accessibles :
- - Un menu pour configurer le mode de combat et les règles modifiables. On ne peut que retourner à l'écran de sélection des personnages depuis ce menu.
- - Le choix du stage. Ce menu permet uniquement de choisir le stage. On peut retourner à l'écran précédent mais le choix fait est perdu. Sinon on peut lancer une partie avec les règles, personnages et stage choisis jusqu'à présent. Une fois le combats terminé, on arrive sur un écran final présentant le classement et différentes statistiques. Depuis cet écran, on retourne à l'écran de sélection des personnages.
-- Modifier la configuration. Ce menu permet de choisir la résolution, le volume sonore et différents autres paramètres.
-- Quitter le jeu.
+==== Settings ====
+
+Permet de configurer les paramètres audio, vidéo, ainsi que les paramètres de contrôleurs.
+
+==== Quit ====
+
+Quitte le jeu (ferme le programme).
+
+
+=== Custom Melee ===
+
+//Custom Melee// est un mode de jeu convivial, ouvert et complet. Voici ces différentes caractéristiques :
+
+==== Multijoueurs ====
+
+Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4 joueurs, qu'ils soient connectés directement à l'ordinateur via des contrôleurs supplémentaires, ou qu'ils se connectent depuis d'autres postes via TCP/IP. Cela est possible grâce à l'architecture client/serveur adoptée, où un client représente une instance de jeu comptabilisant un ou plusieurs joueurs et devant se connecter, que ce soit en local ou en réseau, à un serveur gérant la partie ; ce serveur est hébergé sur la même machine qu'un des clients.
+
+==== Sélection des personnages ====
+
+L'écran de sélection des personnages est similaire dans l'organisation à celui de SSB, à ceci près qu'avant de choisir son personnage, le joueur doit associer son périphérique en maintenant une touche durant 1 seconde, comme cela se fait dans le jeu indépendant //Jamestown//.
+
+Si la partie ne contient pas déjà 4 joueurs en local, un joueur externe peut se connecter en réseau durant la phase de sélection des personnages.
+
+Comme dans SSB, il est aussi possible d'accéder au menu de modification des règles, dont les caractéristiques sont présentées ci-après.
+
+==== Règles modifiables ====
+
+En //Custom Melee//, certaines règles du jeu sont modifiables avant chaque partie, afin de diversifier l'expérience de jeu :
+
+- Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survie, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de combat.
+- La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
+- Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
 
 
 
@@ -97,11 +117,20 @@ Certains sorts permettent aux personnages qui les maîtrisent de posséder encor
 
 Les attaques étant spécifiques à chaque personnage, on ne présentera dans cette partie que les caractéristiques inhérentes à tous les personnages. Les descriptions détaillées sont situées dans la partie //Personnages//.
 
+La Zone d'Attaque (ZA) est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire de l'attaquant, elle peut être créée et elle peut se déplacer indépendamment de celui-ci. Elle peut cependant recevoir toute forme de CC, et les transmettre à l'attaquant si le corps est solidaire de la ZA.
+
+On peut appliquer un masque de collision aux zones d'attaques : elles ne peuvent prendre en compte que les collisions avec le terrain, étant alors qualifiées de zones //fantômes//, au contraire des zones //physiques//, qui elles prennent en compte toutes les animations. Exemple d'utilisation : un projectile qui touche tous les ennemis sur sa trajectoire ; ce sera une ZA fantôme avec des pourcentages, qui ingligera ses dégâts aux personnages qu'elle traverse sans pour autant être stoppée car sa physique fait qu'elle ignore les collisions avec eux.
+
+Les zones indépendantes des personnages peuvent ou non ignorer la gravité.
+
+Ces zones se déplacent avec les animations et sont mises à jour à chaque FPS.
+
+
 ==== Physiques ====
 
 Ces attaques n'ont aucun coût en mana, et existent sous de nombreuses formes à la puissance variable suivant les boutons pressés. Comme dans SSB, ces attaques seront associées à une touche spécifique (que nous appellerons par convention ``P``), qui combinée à une inclinaison du stick plus ou moins forte dans une certaine direction, permettra les différentes attaques, variant selon que le personnage soit sur terre ou dans les airs. De par leur caractère //spammable//, les attaques physiques infligent des dégâts uniquement au corps à corps et ne permettent qu'une seule forme de CC : la projection.
 
-Techniquement, une attaque physique constitue en une ou plusieurs //armes// solidaires du corp du personnage associées à un certain nombre de pourcentages et un CC de projection, qui seront infligés à n'importe quel autre personnage qui entre en contact avec les armes.
+Techniquement, une attaque physique consiste en une ou plusieurs ZA solidaires du corps de l'attaquant associées à un certain nombre de pourcentages de dégâts et un CC de projection, qui seront infligés à n'importe quel autre personnage qui entre en contact avec la/les ZA.
 
 ==== Magiques ====
 
@@ -111,7 +140,7 @@ Les attaques magiques diffèrent des attaques physiques de par un élément esse
 
 Cette limitation liée au mana permet de donner plus de puissance aux sorts : ils peuvent infliger plus de dégâts que les attaques physiques et/ou appliquer tous les types de CC (un seul par sort biensûr).
 
-Techniquement, une attaque magique consitute en une ou plusieures //armes// pas forcéments solidaires du corp du personnages, qui peuvent donc avoir une trajectoire indépendante de celle de l'attaquant. Ces attaques sont associées à des pourcentages et n'importe quel(s) CC(s). Une attaque magique peut aussi modifier le personnage attaquant, en modifiant temporairement certaines caractéristiques, comme sa vitesse ou son poid, et définitivement certaines, comme les pourcentages, qui peuvent être réduits.
+Techniquement, une attaque magique consiste en une ou plusieurs ZA solidaires ou non du corps de l'attaquant, qui peuvent donc avoir une trajectoire indépendante de celui-ci. Ces attaques sont associées à des pourcentages et n'importe quel(s) CC(s). Une attaque magique peut aussi modifier le personnage attaquant, en modifiant temporairement certaines caractéristiques, comme sa vitesse ou son poids, et définitivement certaines, comme les pourcentages, qui peuvent être réduits ou augmentés.
 
 ==== Smashs ====
 
@@ -119,13 +148,13 @@ Le concept de smash est ici le même que dans SSB, à savoir une attaque au fort
 
 Toutes ces caractéristiques font en général du smash une attaque à utiliser avec précaution, occasionnellement en tant qu'outil à dégâts, mais principalement en tant que //finisher// afin d'éjecter l'ennemi hors du terrain.
 
-Techniquement le smash est similaire à une attaque physique simple, c'est à dire une ou plusieurs //armes// solidaires du personnages qui possèdent uniquement des dégâts de pourcentage et un CC de projection. Cependant, les pourcentages et le CC de projection augmentent avec la charge.
+Techniquement le smash est similaire à une attaque physique simple, c'est à dire une ou plusieurs ZA solidaires de l'attaquant qui possèdent uniquement des dégâts de pourcentage et un CC de projection. Cependant, les pourcentages et le CC de projection augmentent avec la charge.
 
 ==== Prises ====
 
 Les prises permettent en appuyant sur une gâchette arrière de la manette d'attraper une cible, au corps à corps ou sur une courte distance selon les personnages, puis de la projeter dans la direction choisie avec le stick. Tant que la direction n'est pas choisie, la cible est totalement incapacitée, situation qui peut durer jusqu'à 4 secondes ; ce temps peut néanmoins être drastiquement réduit si la victime se débat énergiquement avec de multiples mouvements de stick. De plus, l'attaquant est immobilisé et réduit au silence tant qu'il n'a pas lancé sa cible. Cependant, il peut utiliser ses attaques physiques, qui seront toutes dirigées sur la cible, mais peuvent toucher un autre adversaire passant trop près.
 
-Techniquement, une prise est une zone //arme// solidaire du personnage qui ne possède pas de dégâts de pourcentages, mais juste un CC lien entre la cible et la zone //arme//. Une foix le lien infligé, l'//arme// retourne vers l'attaquant si nécessaire une foix à proximité une un CC immobilisation réductible avec le stick est infligé. La zone //arme// est supprimée à ce moment là, et donc le CC lien. Si l'attaquant choisit la direction du lancer avec le stick avant la fin du CC immobilisation, ce dernier est annulé et un CC projection est appliqué à la cible.
+Techniquement, une prise est une ZA solidaire du personnage qui ne possède pas de dégâts de pourcentages, mais juste un CC lien entre la cible et la ZA. Une fois le lien infligé, la ZA retourne vers l'attaquant (si nécessaire) puis transforme le lien en immobilisation ; la ZA est supprimée à ce moment là, et donc le CC lien. Si l'attaquant choisit la direction du lancer avec le stick avant la fin de l'immobilisation, ce dernier est annulé et un CC projection est appliqué à la cible.
 
 
 === Postures défensives ===
@@ -158,11 +187,11 @@ Project Warrior exploite un élément de gameplay très courant dans les MOBA ma
 | Silence        | Empêche la cible d'utiliser toute ressource ayant recours au mana (sorts, smashs, bouclier et esquives), mais ne modifie pas le niveau de sa barre de mana, qui continue à se remplir si elle n'était pas pleine. |
 | Siphon         | Vide tout ou partie de la jauge de mana de la cible ; contrairement au silence, cela ne l'empêche pas d'utiliser ses sorts si il lui reste suffisemment de mana. |
 
-Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donne un nom particulier car ils sont assez courants dans les capacités des personnages. Voici la liste de ces CC plus comlexes :
+Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donne un nom particulier car ils sont assez courants dans les capacités des personnages. Voici la liste de ces CC plus complexes :
 
 | **Nom**        | **Description** | **Réalisation** |
-| Immobilisation | Le nom est assez explicite : l'ennemi est tout simplement immobilisé et ne peut donc plus marcher, courir ou sauter ; néanmoins il peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. | L'immobilisation est un CC lien distance 0 avec une ZA statique et non solidaire de l'attaquant. |
-| Étourdissement | Le contrôle le plus puissant du jeu : l'ennemi est totalement incapacité, c'est-à-dire à la fois immobilisé, aveuglé et réduit au silence. | Il consiste donc en la combinaison des CC immobilisation, aveuglement et silence. |
+| Immobilisation | Le nom est assez explicite : la cible est tout simplement immobilisée et ne peut donc plus marcher, courir ou sauter ; néanmoins elle peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. | L'immobilisation est un CC lien distance 0 avec une ZA statique et non solidaire de l'attaquant. |
+| Étourdissement | Le contrôle le plus puissant du jeu : la cible est totalement incapacitée, c'est-à-dire à la fois immobilisée, aveuglée et réduite au silence. | Il consiste donc en la combinaison des CC immobilisation, aveuglement et silence. |
 
 //Les cibles subissant les contrôles sont toujours des personnages.//
 
@@ -181,31 +210,68 @@ TODO desription des différentes caractéristiques liées aux attaques (dégâts
 
 Chaque personnage possède un poids : plus le poids est élevé, plus le personnage sera lent, mais il sera aussi plus difficile à projeter, et donc à vaincre.
 
-Les personnages sont composés de différentes zones :
-
-- Le //corp//, qui inclut tous les éléments du personnage qui peuvent prendre des pourcentages.
-- L'//arme// est la zone qui lorsqu'elle entre en contact avec le corps d'autres personnages leur inflige les dégâts ou un CC. Cette zone n'est pas forcément solidaire du personnage, elle peut être créée et elle peut se déplacer indépendamment du personnage. Elle peut cependant recevoir toute forme de CC, et les transmettre au personnage si le //corp// est solidaire de l'//arme//.
-- La zone //défense// (ZD) est une zone invincible : elle ne peut infliger ni dégât ni CC, mais ne peut cependant en recevoir aucun. Un personnage ne devrait pas avoir de zone de ce type par défaut, mais une attaque spéciale peut y recourir. Elle peut être indépendante du personnage.
-
-
-À chacune de ces zones peut être appliqué un masque de collision : elles ne peuvent prendre en compte que les collisions avec le terrain, étant alors qualifiées de zones //fantômes//, au contraire des zones //physiques//, qui elles prennent en compte toutes les animations. Exemple d'utilisation : un projectile qui touche tous les ennemis sur sa trajectoire ; ce sera une ZA fantôme avec des pourcentages, qui ingligera ces dégâts aux personnages qu'elle traverse sans pour autant être stoppée car sa physique fait qu'elle ignore les collisions avec eux.
-
-Les zones indépendantes des personnages peuvent ou non ignorer la gravité.
-
-Ces zones se déplacent avec les animations et sont mises à jour à chaque FPS.
-
 
 === Liste des personnages ===
 
-Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents ; voici leurs caractéristiques principales :
- 
-| **Classe** | **Dégâts physiques** | **Vitesse des attaques physiques** | **Portée des attaques physiques** | **Dégâts magiques** | **Vitesse des sorts** | **Portée des sorts** | **Poids** | **Vitesse de déplacement** | **Commentaires** |
-| Hybride | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | Il serait l'objectif premier de développement car exploitant la plupart des mécaniques souhaitées (sorts à distance, gapclosers, attaques physiques relativement puissantes...), et possédant des statistiques égales et équilibrées permettant de construire les autres personnages autour de cette moyenne. Au niveau du background, il constituerait probablement le personnage principal. |
-| Brute | ``HIGH`` | ``LOW`` | ``MEDIUM`` | ``HIGH`` | ``LOW`` | ``LOW`` | ``HIGH`` | ``LOW`` | Un personnage possédant d'importants dégâts physiques et magiques, avec une cadence lente pour compenser cette puissance. Aussi, il doit être au corps à corps pour infliger ses dégâts, ce qui n'est pas évident de par sa faible vitesse de déplacement. Un sort de contrôle de portée ``MEDIUM`` ou ``HIGH`` permettrait de se rapprocher plus aisément des adversaires ; il est préférable pour raison de cohérence avec sa physique lourde qu'il ne possède pas de gapcloser. |
-| Assassin | ``LOW``-``MEDIUM`` | ``HIGH`` | ``LOW`` | ``LOW`` | ``HIGH`` | ``HIGH`` | ``LOW`` | ``HIGH`` | Un personnage opposé à la brute de par son gameplay nerveux et très rapide. Il base quasiment tous ses dégâts sur les attaques physiques, qui possèdent des dégâts assez faibles mais une vitesse d'enchaînement élevée. Sa courte portée l'oblige à être collé à ses ennemis, ce qu'il parvient à faire assez aisément grâce à 2 sorts de mobilité et une grande vitesse de déplacement. |
-| Mage | ``LOW`` | ``MEDIUM`` | ``MEDIUM`` | ``HIGH`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | ``MEDIUM`` | Un personnage assez équilibré, qui à la différence de l'hybride basera beaucoup de ses dégâts sur les sorts et peu sur les attaques physiques. Sa mobilité n'est pas très grande du fait qu'il ne possède aucun sort prévu à cet effet. |
+Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents.
 
 //Les indicateurs// ``LOW, MEDIUM, HIGH`` //ne sont pas applicables à toutes les attaques et représentent une moyenne générale définissant le gameplay global du personnage.//
+
+==== Hybride ====
+
+Il serait l'objectif premier de développement car exploitant la plupart des mécaniques souhaitées (sorts à distance, gapclosers, attaques physiques relativement puissantes...), et possédant des statistiques égales et équilibrées permettant de construire les autres personnages autour de cette moyenne. Au niveau du background, il constituerait probablement le personnage principal.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |   ``MEDIUM``   |
+| Vitesse des attaques physiques |   ``MEDIUM``   |
+| Portée des attaques physiques  |   ``MEDIUM``   |
+| Dégâts magiques                |   ``MEDIUM``   |
+| Vitesse des sorts              |   ``MEDIUM``   |
+| Portée des sorts               |   ``MEDIUM``   |
+| Poids                          |   ``MEDIUM``   |
+| Vitesse de déplacement         |   ``MEDIUM``   |
+
+==== Brute ====
+
+Un personnage possédant d'importants dégâts physiques et magiques, avec une cadence lente pour compenser cette puissance. Aussi, il doit être au corps à corps pour infliger ses dégâts, ce qui n'est pas évident de par sa faible vitesse de déplacement. Un sort de contrôle de portée ``MEDIUM`` ou ``HIGH`` permettrait de se rapprocher plus aisément des adversaires ; il est préférable pour raison de cohérence avec sa physique lourde qu'il ne possède pas de gapcloser.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |    ``HIGH``    |
+| Vitesse des attaques physiques |    ``LOW``     |
+| Portée des attaques physiques  |   ``MEDIUM``   |
+| Dégâts magiques                |    ``HIGH``    |
+| Vitesse des sorts              |    ``LOW``     |
+| Portée des sorts               |    ``LOW``     |
+| Poids                          |    ``HIGH``    |
+| Vitesse de déplacement         |    ``LOW``     |
+
+==== Assassin ====
+
+Un personnage opposé à la brute de par son gameplay nerveux et très rapide. Il base quasiment tous ses dégâts sur les attaques physiques, qui possèdent des dégâts assez faibles mais une vitesse d'enchaînement élevée. Sa courte portée l'oblige à être collé à ses ennemis, ce qu'il parvient à faire assez aisément grâce à 2 sorts de mobilité et une grande vitesse de déplacement.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |    ``LOW+``    |
+| Vitesse des attaques physiques |    ``HIGH``    |
+| Portée des attaques physiques  |    ``LOW``     |
+| Dégâts magiques                |    ``LOW``     |
+| Vitesse des sorts              |    ``HIGH``    |
+| Portée des sorts               |    ``HIGH``    |
+| Poids                          |    ``LOW``     |
+| Vitesse de déplacement         |    ``HIGH``    |
+
+==== Mage ====
+
+Un personnage assez équilibré, qui à la différence de l'hybride basera beaucoup de ses dégâts sur les sorts et peu sur les attaques physiques. Sa mobilité n'est pas très grande du fait qu'il ne possède aucun sort prévu à cet effet.
+
+|      **Caractéristique**       |   **Niveau**   |
+| Dégâts physiques               |    ``LOW``     |
+| Vitesse des attaques physiques |   ``MEDIUM``   |
+| Portée des attaques physiques  |   ``MEDIUM``   |
+| Dégâts magiques                |    ``HIGH``    |
+| Vitesse des sorts              |   ``MEDIUM``   |
+| Portée des sorts               |   ``MEDIUM``   |
+| Poids                          |   ``MEDIUM``   |
+| Vitesse de déplacement         |   ``MEDIUM``   |
 
 
 == Stages ==
@@ -236,19 +302,19 @@ Le script ``stage.lua`` est constitué de différentes fonctions qui seront appe
 
 ==== Physique ====
 
-Les zones physique sont les zones de //contact// indiquée au moteur physique. Elles possèdent toutes la caractéristiques décrites dans la section "Éléments".
+Les zones physiques sont les zones de //contact// indiquée au moteur physique. Elles possèdent toutes la caractéristiques décrites dans la section "Éléments".
 
-À chaque zone physique ajoutée au terrain peut aussi être associée deux fonctions du script qui seront respectivement appelées quand un personnage ou une attaque entre en contact avec la zone physique. Ces fonctions reçoivent deux arguments : l'entité en question et le point de contact. Ça permet de faire des terrains dynamiques avec des pièges ou des mur qui prennent des dégâts avant d'être détruit.
+À chaque zone physique ajoutée au terrain peut aussi être associée deux fonctions du script qui seront respectivement appelées quand un personnage ou une attaque entre en contact avec la zone physique. Ces fonctions reçoivent deux arguments : l'entité en question et le point de contact. Cela permet de faire des terrains dynamiques avec des pièges ou des murs qui prennent des dégâts avant d'être détruits.
 
-Il est aussi possible de créer des zones dites //virtuelles// : ces zones ne sont pas considérées lors des calculs de collision, et ne possèdent dont pas de facteurs de glissement ou de rebondissement. Cependant, on peut leur définir les deux callbacks présenter ci-dessus. Ces zones sont juste des capteurs de présence d'entités. Cependant, leurs fonctions de callback ont trois arguments. Le premier reste le même. Cependant, le second n'est pas un point mais l'intersection de la zone virtuelle et de l'espace de l'entité : c'est leur surface commune. Le troisième est le nombre de fois que la fonction de callback est appelée pour cette collision. En effet, l'entité peut rester à l'intérieur de cette zone et donc la collision peut durer. La fonction sera donc réappellée à chaque FPS jusqu'à la fin de la collision : le troisième argument peut être considéré comme la durée en FPS depuis le début de la collision.
+Il est aussi possible de créer des zones dites //virtuelles// : ces zones ne sont pas considérées lors des calculs de collision, et ne possèdent donc pas de facteurs de glissement ou de rebondissement. Cependant, on peut leur définir les deux callbacks présentées ci-dessus. Ces zones sont juste des capteurs de présence d'entités. Cependant, leurs fonctions de callback ont trois arguments. Le premier reste le même. Cependant, le second n'est pas un point mais l'intersection de la zone virtuelle et de l'espace de l'entité : c'est leur surface commune. Le troisième est le nombre de fois que la fonction de callback est appelée pour cette collision. En effet, l'entité peut rester à l'intérieur de cette zone et donc la collision peut durer. La fonction sera donc réappellée à chaque FPS jusqu'à la fin de la collision : le troisième argument peut être considéré comme la durée en FPS depuis le début de la collision.
 
-Toutes les zones peuvent être modifiées, ajoutées et/ou supprimées dynamiquement durant la partie. Si la suppression ne pose pas de problème, l'ajout et la modification peuvent. En effet, dans le cas d'un ajout ou d'un déplacement trop rapide, des bugs de collision peuvent apparaitre. Il est donc conseillé de tester l'apparition d'un objet avec une zone virtuelle avant de faire apparaitre une zone de contact. Dans le cas des déplacements, un déplacement (relativement) lent déplacera les entités en contact avec lui, mais un déplacement trop rapide aura les mêmes risques qu'une apparition.
+Toutes les zones peuvent être modifiées, ajoutées et/ou supprimées dynamiquement durant la partie. Si la suppression ne pose pas de problème, l'ajout et la modification peuvent. En effet, dans le cas d'un ajout ou d'un déplacement trop rapide, des bugs de collision peuvent apparaître. Il est donc conseillé de tester l'apparition d'un objet avec une zone virtuelle avant de faire apparaître une zone de contact. Dans le cas des déplacements, un déplacement (relativement) lent déplacera les entités en contact avec lui, mais un déplacement trop rapide aura les mêmes risques qu'une apparition.
 
 ==== Timers ====
 
-Les timers définissent des fonctions de callback qui sont appelées au bout d'un certain temps. Un timer peut être remis à zéro à n'importe quel moment. Un timer remis à zéro par son callback se réappelleras donc à intervalles régulier.
+Les timers définissent des fonctions de callback qui sont appelées au bout d'un certain temps. Un timer peut être remis à zéro à n'importe quel moment. Un timer remis à zéro par son callback se réappellera donc à intervalles réguliers.
 
-Un exemple d'utilisation serait l'apparition d'une zone de contact : le script va créer une zone virtuelle à la position de la zone de contact avec comme callback une fonction qui remet à zéro le timer et lancer un timer court avec comme callback une fonction qui va supprimer la zone virtuelle et créer la zone de contact. Le timer sera donc remis à zéro tant qu'il y aura une entité dans la zone virtuelle et la zone de contact sera créée quand il n'y aura plus de contact durant le laps de temps du timer.
+Un exemple d'utilisation serait l'apparition d'une zone de contact : le script va créer une zone virtuelle à la position de la zone de contact avec pour callback une fonction qui remet à zéro le timer et lance un timer court avec comme callback une fonction qui va supprimer la zone virtuelle et créer la zone de contact. Le timer sera donc remis à zéro tant qu'il y aura une entité dans la zone virtuelle et la zone de contact sera créée quand il n'y aura plus de contact durant le laps de temps du timer.
 
 
 === Liste des terrains ===
@@ -276,7 +342,7 @@ Le jeu pourra utiliser d'autres bibliothèques comme //boost// si jugé utile : 
 
 === Scripting ===
 
-Project Warrior devra être scriptable en //lua//. Cette capacité sera utilisée notemment lors du chargement des personnages ou des stages. À cette fin, une API //lua// pour permettre à ces scripts de communiquer avec le programme devra être dévellopée. Elle devra permettre d'accéder au moteur graphique mais aussi au moteur physique et à certaines informations comme les positions des différents personnages.
+Project Warrior devra être scriptable en //lua//. Cette capacité sera utilisée notemment lors du chargement des personnages et des stages. À cette fin, une API //lua// pour permettre à ces scripts de communiquer avec le programme devra être développée. Elle devra permettre d'accéder au moteur graphique mais aussi au moteur physique et à certaines informations comme les positions des différents personnages.
 
 À travers son accès au moteur graphique, un script doit pouvoir charger une image, une animation ou encore une texture et l'afficher à l'écran avec certaines transformations comme des rotations ou des zooms. Le script peut aussi dessiner des primitives avec une texture préalablement chargée. Toutes les ressources chargées par le script seront libérées automatiquement à la fin du script.
 
