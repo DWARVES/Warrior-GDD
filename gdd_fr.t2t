@@ -317,12 +317,13 @@ Les timers définissent des fonctions de callback qui sont appelées au bout d'u
 Un exemple d'utilisation serait l'apparition d'une zone de contact : le script va créer une zone virtuelle à la position de la zone de contact avec pour callback une fonction qui remet à zéro le timer et lance un timer court avec comme callback une fonction qui va supprimer la zone virtuelle et créer la zone de contact. Le timer sera donc remis à zéro tant qu'il y aura une entité dans la zone virtuelle et la zone de contact sera créée quand il n'y aura plus de contact durant le laps de temps du timer.
 
 
-=== Liste des terrains ===
+=== Liste des stages ===
 
-La liste suivante présente les terrains //officiels// qui devront être présents dans la version 1 :
+La liste suivante présente les stages //officiels// qui devront être présents dans la version 1 :
 
-| **Nom du terrain** | **Description** |
-| Space platform     | Ce terrain est similaire au terrain //destination finale// de SSB : c'est un terrain plat, de taille moyenne, sans reliefs ni piège ni aucune interractivité. C'est le terrain neutre par excellence. |
+| **Nom du stage** | **Description** |
+| Space platform   | Ce stage est similaire au terrain //destination finale// de SSB : c'est un terrain plat, de taille moyenne, sans reliefs ni piège ni aucune interactivité. C'est le terrain neutre par excellence. |
+| Jungle           | Ce stage est une jungle, avec du relief et de nombreux pièges sous la forme de plantes carnivores qui attaquent les personnages qui passent à proximité ou de trous avec des pics. Ce stage permet de tester l'interactivité des terrain et le dynamisme des terrains. |
 
 TODO finir la liste.
 
