@@ -204,7 +204,7 @@ Chaque personnage possède différentes caractéristiques qui influencent la fa�
 
 ==== Attaques ====
 
-TODO desription des différentes caractéristiques liées aux attaques (dégâts, vitesse, portée...).
+La puissance d'une attaque et son utilité sont définit par les CC et dégâts qu'elle inflige, mais aussi par d'autres caractéristiques telles que la portée ou encore la vitesse. Cependant, ces valeurs n'ont aucune répercussion technique directe : aucune vitesse n'est définit pour une attaque, par exemple. Ces valeurs dépendent du script de l'attaque, qui va la faire évoluer et se déplacer sur une plus ou moins grande distance et plus ou moins vite. Ces caractéristiques seront utilisée à titre indicatif dans la liste des personnages.
 
 ==== Physique ====
 
