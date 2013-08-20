@@ -200,8 +200,6 @@ Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donn
 | Immobilisation | Le nom est assez explicite : la cible est tout simplement immobilisée et ne peut donc plus marcher, courir ou sauter ; néanmoins elle peut toujours attaquer ou se défendre. Un personnage immobilisé en l'air voit toutes les forces qui lui étaient appliquées réinitialisées, dont la gravité qui se réapplique donc par la suite selon sa position. La durée de l'immobilisation peut ou non être réduite par des mouvements de stick. | L'immobilisation est un CC lien distance 0 avec une ZA statique et non solidaire de l'attaquant. |
 | Étourdissement | Le contrôle le plus puissant du jeu : la cible est totalement incapacitée, c'est-à-dire à la fois immobilisée, aveuglée et réduite au silence. | Il consiste donc en la combinaison des CC immobilisation, aveuglement et silence. |
 
-//Les cibles subissant les contrôles sont toujours des personnages.//
-
 
 == Personnages ==
 
