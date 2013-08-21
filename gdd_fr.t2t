@@ -205,7 +205,7 @@ Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donn
 
 === Caractéristiques communes ===
 
-Chaque personnage possède différentes caractéristiques qui influencent la façon dont il intéragit avec l'environnement et les autres personnages. 
+Chaque personnage possède différentes caractéristiques qui influencent la façon dont il intéragit avec l'environnement et les autres personnages.
 
 ==== Attaques ====
 
@@ -214,6 +214,40 @@ La puissance d'une attaque et son utilité sont définit par les CC et dégâts 
 ==== Physique ====
 
 Chaque personnage possède un poids : plus le poids est élevé, plus le personnage sera lent, mais il sera aussi plus difficile à projeter, et donc à vaincre.
+
+
+
+=== Représentation en mémoire ===
+
+Les personnages sont placés dans le même dossier, dont le contenu est scanné au début du jeu. Chaque personnage est un dossier contenant une image ``preview.png``, un fichier texte ``name`` de deux lignes, la première étant le nom et la deuxième une courte description, un script ``perso.lua`` et ``preview.lua`` et différentes ressources chargées et utilisées par le script. Le nom du dossier n'a pas d'importance mais il ne doit contenir ni caractères spéciaux, ni espaces, ni caractères non-ascii.
+
+Le stage est constitué de différentes fonctions. Ces fonctions sont regroupées en différentes catégories. Toutes les ressources chargées dans le script sont automatiquement libérées par le programme à la fin du script, elle ne doivent pas l'être depuis le script.
+
+==== Sélection du personnage ====
+
+Lors de l'écran de sélection des personnages, le fichier ``perso.lua`` n'est pas chargé. L'image ``preview.png`` est utilisée pour afficher la miniature dans la liste des personnages. Le fichier ``name`` est utilisé pour afficher la nom et la description du personnage quand il est sélectionné.
+
+Enfin, le script ``preview.lua`` contient plusieurs fonctions :
+
+- ``init`` : cette fonction est la première à être appelée dans le script, pouvant servir à initialiser certaines ressources. Elle est complètement facultative, et une fonction init trop lourde ralentira l'ouverture de l'écran de sélection des personnages.
+- ``loadPreview`` : cette fonction prend en paramètre la couleur du personnages (une énumération), et charge sous le nom de ``preview`` l'image correspondante. Cette image est affichée dans la zone des joueurs : c'est une image plus grande et plus détaillée que ``preview.png``.
+
+
+==== Mouvements du personnages ====
+
+Durant le jeu, seul le script ``perso.lua`` est chargé. Il possède une fonction ``init.lua`` qui doit charger toutes les ressources utilisées par le personnage durant le jeu, définissant aussi son poids et qui est appelée lors du début d'une partie. Il possède en plus d'autres fonctions utilisées à différents moments et dans différentes occasions :
+
+- ``moveLeft``, ``moveRight`` : ces deux fonctions définissent l'image qui est affichée pour chacune les déplacements à droite et à gauche. Elles doivent aussi déplacer à chaque fois les zones de collision si nécessaire.
+- ``stop`` : cette fonction correspond à l'animation lorsqu'un personnage arrête de courir.
+- ``jump``, ``jumpAir`` : ces fonctions marche de la même façon que ``move*`` et correspondent respectivement à un saut et un double saut.
+- ``down``, ``fastDown`` : ces fonctions correspondent respectivement à l'animation de descente après un saut et de descente rapide.
+- ``land`` : cette fonction correspond à l'atterrissage du personnage.
+
+
+Toutes ces fonctions ne prennent qu'un seul paramètre : le pourcentage d'accomplissement de l'action. La dernière image chargée (donc celle avec un paramètre de 1.0) correspond à l'image qui restera affichée tant qu'aucune autre fonction n'est appelée.
+
+TODO finir la liste par catégorie des différentes fonctions.
+
 
 
 === Liste des personnages ===
