@@ -183,6 +183,7 @@ Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un
 - L'esquive statique, équivalente à l'esquive latérale, sans la notion de mouvement. Le coût en mana est moindre. On l'effectue à partir du bouclier en inclinant complètement le stick vers le bas.
 - L'esquive statique aérienne, qui correspond à une esquive statique effectuée dans les airs. Elle conserve les forces déjà appliquées au personnage et s'effectue en appuyant sur le bouton du bouclier.
 
+
 Chaque type d'esquive possède deux animations distinctes pour chaque direction latérale. Techniquement, l'esquive correspond en fait à cette animation associée à un déplacement ou non selon que l'esquive soit statique ou non.
 
 
@@ -236,7 +237,7 @@ Le stage est constitué de différentes fonctions. Ces fonctions sont regroupée
 
 Lors de l'écran de sélection des personnages, le fichier ``perso.lua`` n'est pas chargé. L'image ``preview.png`` est utilisée pour afficher la miniature dans la liste des personnages. Le fichier ``name`` est utilisé pour afficher la nom et la description du personnage quand il est sélectionné.
 
-Enfin, le script ``preview.lua`` contient plusieurs fonctions :
+Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 
 - ``init`` : cette fonction est la première à être appelée dans le script, pouvant servir à initialiser certaines ressources. Elle est complètement facultative, et une fonction init trop lourde ralentira l'ouverture de l'écran de sélection des personnages.
 - ``loadPreview`` : cette fonction prend en paramètre la couleur du personnages (une énumération), et charge sous le nom de ``preview`` l'image correspondante. Cette image est affichée dans la zone des joueurs : c'est une image plus grande et plus détaillée que ``preview.png``.
