@@ -247,8 +247,8 @@ Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 
 Durant le jeu, seul le script ``perso.lua`` est chargé. Il possède une fonction ``init`` qui doit charger toutes les ressources utilisées par le personnage durant le jeu, définissant aussi son poids et qui est appelée lors du début d'une partie. Cette fonction reçoit un argument qui est la couleur du personnage : elle doit adapter les ressources chargées en fonction. Il possède en plus d'autres fonctions utilisées à différents moments et dans différentes occasions :
 
-- ``moveLeft``, ``moveRight`` : ces deux fonctions définissent l'image qui est affichée pour les déplacements respectivement à gauche et à droite. Elles doivent aussi déplacer à chaque fois les zones de collision si nécessaire.
-- ``runLeft``, ``runRight`` : comme ``move*``, sauf que le personnage se déplace en courant.
+- ``move`` : cette fonction définit l'image qui est affichée pour les déplacements. Elle doit aussi déplacer à chaque fois les zones de collision si nécessaire. Elle reçoit en argument la direction (LEFT ou RIGHT) du déplacement.
+- ``run`` : comme ``move*``, sauf que le personnage se déplace en courant.
 - ``stop`` : cette fonction correspond à l'animation lorsqu'un personnage arrête de courir.
 - ``jump``, ``jumpAir`` : ces fonctions marche de la même façon que ``move*`` et correspondent respectivement à un saut et un double saut.
 - ``down``, ``fastDown`` : ces fonctions correspondent respectivement à l'animation de descente après un saut et de descente rapide.
@@ -266,6 +266,14 @@ Cette partie décrit les fonctions correspondant aux animations spéciales des p
 - ``won`` : cette fonction correspond à l'animation d'un personnage qui se vante après sa victoire. Cette animation doit pouvoir boucler.
 - ``lost`` : cette fonction correspond à l'animation d'un personnage qui se lamente après sa défaite. Cette animation doit pouvoir boucler.
 - ``sent`` : cette animation correspond à un personnage qui est projeté. Elle reçoit en second argument un vecteur correspondant à la direction et à la force de la projection.
+
+==== Défenses ====
+
+Cette partie est dédiée aux fonctions de défense, telles la parade ou le bouclier :
+
+- ``shield`` : cette fonction doit dessiner le personnage avec le bouclier activé. Le premier et seul argument est bien sûr le nombre de FPS écoulés depuis le premier appel.
+- ``staticDodge``, ``flyingStaticDodge`` : correspondent respectivement à l'esquive statique et l'esquive statique aérienne. Ces fonctions ne reçoivent pas le nombre de FPS écoulés mais le pourcentage d'accomplissement de l'action sous la forme d'une nombre entre 0 et 1.
+- ``dashDodge``, ``flyingDashDodge`` : correspondent respectivement à l'esquive latérale et l'esquive latérale aérienne. Ces fonctions reçoivent aussi le pourcentage d'accomplissement de l'action.
 
 
 TODO finir la liste par catégorie des différentes fonctions.
