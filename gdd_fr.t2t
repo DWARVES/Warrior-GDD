@@ -213,10 +213,10 @@ Chaque personnage possède différentes caractéristiques qui influencent la fa�
 
 La puissance d'une attaque et son utilité sont définies par les CC et dégâts qu'elle inflige, mais aussi par d'autres caractéristiques telles que la portée ou encore la vitesse. Cependant, ces valeurs n'ont aucune répercussion technique directe : aucune vitesse n'est définie pour une attaque, par exemple. Ces valeurs dépendent du script de l'attaque, qui va la faire évoluer et se déplacer sur une plus ou moins grande distance et plus ou moins vite. Ces caractéristiques seront utilisées à titre indicatif dans la liste des personnages. Voici un tableau décrivant chaque caractéristique :
 
-| **Caractéristique**	| **Description** |
-| Dégâts				| Définit les dégâts en pourcentage que va infliger l'attaque. |
-| Vitesse				| Définit le temps d'animation de l'attaque, temps durant lequel le personnage est vulnérable car dans l'impossibilité d'effectuer une quelconque autre action. |
-| Portée				| Définit la distance de l'attaque par rapport à l'attaquant, permettant à celui-ci de toucher des cibles situées plus ou moins loin. |
+| **Caractéristique** | **Description** |
+| Dégâts              | Définit les dégâts en pourcentage que va infliger l'attaque. |
+| Vitesse             | Définit le temps d'animation de l'attaque, temps durant lequel le personnage est vulnérable car dans l'impossibilité d'effectuer une quelconque autre action. |
+| Portée              | Définit la distance de l'attaque par rapport à l'attaquant, permettant à celui-ci de toucher des cibles situées plus ou moins loin. |
 
 ==== Physique ====
 
