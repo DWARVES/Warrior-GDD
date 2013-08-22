@@ -23,34 +23,7 @@ Dans cette partie sont présentés les différents objectifs fixés initialement
 
 
 
-== Règles du jeu ==
-
-=== Déroulement d'une partie ===
-
-Project Warrior consiste comme vu dans la présentation en un jeu de combat dynamique reprenant de nombreuses mécaniques de SSB. Étudions le déroulement d'une partie //Local Melee// au travers d'un des joueurs pour mieux comprendre :
-
-- Le joueur choisit parmi une liste de //héros// charismatiques celui qu'il souhaite incarner ;
-- Il choisit ensuite dans quel stage (appelé aussi terrain) il souhaite combattre ; un stage est constitué de différentes plateformes sur lesquelles les personnages peuvent se mouvoir ;
-- Le combat commence : l'objectif est d'éliminer les autres joueurs en les envoyant hors du terrain. Pour cela il est d'abord nécessaire d'affaiblir les ennemis en leur infligeant des pourcentages de dégâts plus ou moins importants selon les attaques utilisées, puis d'asséner une attaque appliquant une force de projection afin de faire totalement sortir l'ennemi de l'écran. Bien-entendu, plus les dégâts ayant été pris par la cible auparavant sont importants, et plus celle-ci sera projetée loin et donc susceptible de mourir.
-
-
-=== Modes de combat ===
-
-Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépendre du mode de combat :
-
-- Timelaps : le combat dure pendant un temps défini par le joueur, et celui qui à la fin possède le meilleur score gagne la partie. Le joueur gagne 1 point en tuant un adversaire, c'est-à-dire lorsque celui-ci meurt moins de 10 secondes après avoir pris des dommages venant de son agresseur. La mort entraîne la perte d'un point. Si jamais deux ou plus de joueurs possèdent des scores égaux, un combat de //mort subite// sera alors engagé uniquement entre ces joueurs, une attaque suffisamment puissante sur un ennemi le projetant directement hors du terrain.
-- Survie : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
-
-
-
-
-=== Classement final ===
-
-Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en Survie).
-
-
-
-== Interface ==
+== Règles et interface ==
 
 L'interface est contrôlable aussi bien à la manette qu'au clavier ou à la souris.
 
@@ -72,11 +45,35 @@ Permet de configurer les paramètres audio, vidéo, ainsi que les paramètres de
 Quitte le jeu (ferme le programme).
 
 
-=== Custom Melee ===
+=== Déroulement d'une partie en Custom Melee ===
+
+Project Warrior consiste comme vu dans la présentation en un jeu de combat dynamique reprenant de nombreuses mécaniques de SSB. Étudions le déroulement d'une partie //Custom Melee// au travers d'un des joueurs pour mieux comprendre :
+
+- Le joueur choisit parmi une liste de //héros// charismatiques celui qu'il souhaite incarner ;
+- Il modifie les règles à son goût (cf. section "Custom Melee") ;
+- Il choisit ensuite dans quel stage (appelé aussi terrain) il souhaite combattre ;
+- Le combat commence : l'objectif est d'éliminer les autres joueurs en les envoyant hors du terrain. Pour cela il est d'abord nécessaire d'affaiblir les ennemis en leur infligeant des pourcentages de dégâts plus ou moins importants selon les attaques utilisées, puis d'asséner une attaque appliquant une force de projection afin de faire totalement sortir l'ennemi de l'écran. Bien-entendu, plus les dégâts ayant été pris par la cible auparavant sont importants, et plus celle-ci sera projetée loin et donc susceptible de mourir.
+
+
+==== Modes de combat ====
+
+Reste à savoir comment déterminer qui est le gagnant... cela va en fait dépendre du mode de combat :
+
+- Timelaps : le combat dure pendant un temps défini par le joueur, et celui qui à la fin possède le meilleur score gagne la partie. Le joueur gagne 1 point en tuant un adversaire, c'est-à-dire lorsque celui-ci meurt moins de 10 secondes après avoir pris des dommages venant de son agresseur. La mort entraîne la perte d'un point. Si jamais deux ou plus de joueurs possèdent des scores égaux, un combat de //mort subite// sera alors engagé uniquement entre ces joueurs, une attaque suffisamment puissante sur un ennemi le projetant directement hors du terrain.
+- Survie : Tous les joueurs possèdent le même nombre de vies préalablement choisi, et le gagnant est le dernier à survivre (donc le seul qui n'a pas perdu toutes ses vies).
+
+
+==== Classement final ====
+
+Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fin de la partie un classement résumant les nombres de kills, de morts et même de suicides effectués par chaque joueur, ainsi que la position de chaque joueur dans le-dit classement (position qui dépendra du score en Timelaps ou de l'ordre de mort des joueurs en Survie).
+
+
+
+=== Caractéristiques du mode Custom Melee ===
 
 //Custom Melee// est un mode de jeu convivial, ouvert et complet. Voici ces différentes caractéristiques :
 
-==== Multijoueurs ====
+==== Réseau ====
 
 Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4 joueurs, qu'ils soient connectés directement à l'ordinateur via des contrôleurs supplémentaires, ou qu'ils se connectent depuis d'autres postes via TCP/IP. Cela est possible grâce à l'architecture client/serveur adoptée, où un client représente une instance de jeu comptabilisant un ou plusieurs joueurs et devant se connecter, que ce soit en local ou en réseau, à un serveur gérant la partie ; ce serveur est hébergé sur la même machine qu'un des clients.
 
@@ -92,6 +89,7 @@ Comme dans SSB, il est aussi possible d'accéder au menu de modification des rè
 
 En //Custom Melee//, certaines règles du jeu sont modifiables avant chaque partie, afin de diversifier l'expérience de jeu :
 
+- Il est possible de choisir le mode de combat (Timelaps ou Survie).
 - Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survie, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de combat.
 - La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
 - Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
@@ -170,9 +168,11 @@ Techniquement, une prise est une ZA solidaire du personnage qui ne possède pas 
 
 Le bouclier, tout comme dans SSB, entoure le personnage d'une zone qui encaisse les attaques ennemies. Néanmoins, son utilisation diffère de par son coût en mana : contrairement à SSB, le bouclier ne se réduira pas tant qu'il n'aura pas encaissé de coups, mais le joueur se voit dans l'obligation de l'activer au bon moment pour éviter de perdre inutilement de sa ressource bleue préférée. Le bouclier guérit automatiquement de ses blessures, mais bien plus lentement que dans SSB ; si un ennemi en vient à bout, alors le joueur est étourdi pendant quelques secondes, puis le bouclier est complètement réinitialisé.
 
-Pour activer le bouclier, on pressera l'une des gâchettes arrières de la manette. Cette touche étant assignée à l'esquive statique aérienne, il n'est pas possible d'activer les bouclier dans les airs. 
+Lors du lancement du bouclier, une courte animation est lancée, durant laquelle le bouclier n'est pas encore actif, et ne consomme donc pas de mana ni ne protège des attaques ennemies. Ensuite, il prend son image normale, à laquelle est appliquée un masque de blanchissement des couleurs qui augmente en fonction des PV manquants du bouclier. Lorsqu'il éclate, l'image normale du bouclier disparaît et l'animation correspondante est lancée, en même temps que le personnage devient étourdi.
 
-Techniquement, le bouclier est une zone de collision sphérique englobant le personnage, possédant une courte animation graphique à son lancement durant laquelle le bouclier n'est pas actif, et donc ne consomme pas de mana. Le bouclier possèdent un nombre de PV limité, qui diminue lorsqu'il encaisse des coups ; la taille de l'image et de la zone de collision est fonction du nombre de PV restants, ce qui signifie que lorsque le bouclier n'englobe plus totalement le personnage
+Le bouclier absorbe tous les CC sauf la projection, qu'il transmet au personnage. Néanmoins cette projection sera moindre car le bouclier rajoute beaucoup de poids au personnage. Si le joueur maintient le bouclier, il pourra le conserver dans les airs.
+
+Pour activer le bouclier, on pressera l'une des gâchettes arrières de la manette. Cette touche étant assignée à l'esquive statique aérienne, il n'est pas possible d'activer les bouclier dans les airs.
 
 ==== Esquives ====
 
@@ -344,7 +344,7 @@ Les stages peuvent être animés, avec des murs qui bougent, formant des platefo
 
 Les stages sont tous placés dans le même dossier, dont le contenu est scanné au lancement du jeu. Chaque stage est un dossier contenant une image ``preview.png`` et un fichier texte ``name`` d'une seule ligne, utilisés lors de l'écran de chargement de stage pour le présenter, un script ``stage.lua`` et différentes ressources qui seront chargées et utilisées par le script lors d'une partie sur le terrain. Le nom du dossier n'a pas d'importance, mais il est conseillé de ne pas y inclure de caractère spéciaux, non-ascii ni d'espaces.
 
-Le script ``stage.lua`` est constitué de différentes fonctions qui seront appelées par le programme. La première fonction appelée est la fonction ``init``, sans arguments : elle va initialiser les différentes variables globales du script (si nécessaire), charger les ressources graphiques à travers le moteur graphique, définir les zones de collisions dans le moteur physique, les zones d'apparition des personnages et la taille du maximale du terrain à travers l'interface fournie par le programme.
+Le script ``stage.lua`` est constitué de différentes fonctions qui seront appelées par le programme. La première fonction appelée est la fonction ``init``, sans arguments : elle va initialiser les différentes variables globales du script (si nécessaire), charger les ressources graphiques à travers le moteur graphique, définir les zones de collisions dans le moteur physique, les zones d'apparition des personnages et la taille maximale du terrain à travers l'interface fournie par le programme.
 
 ==== Physique ====
 
