@@ -168,9 +168,11 @@ Techniquement, une prise est une ZA solidaire du personnage qui ne possède pas 
 
 ==== Bouclier ====
 
-Le bouclier, tout comme dans SSB, entoure le personnage d'une bulle qui encaisse les attaques ennemies. Néanmoins, son utilisation diffère de par son coût en mana : contrairement à SSB, le bouclier ne se réduira pas tant qu'il n'aura pas encaissé de coups, mais le joueur se voit dans l'obligation de l'activer au bon moment pour éviter de perdre inutilement de sa ressource bleue préférée. Le bouclier guérit automatiquement de ses blessures, mais bien plus lentement que dans SSB ; si un ennemi en vient à bout, alors le joueur est étourdi pendant quelques secondes, puis le bouclier est complètement réinitialisé.
+Le bouclier, tout comme dans SSB, entoure le personnage d'une zone qui encaisse les attaques ennemies. Néanmoins, son utilisation diffère de par son coût en mana : contrairement à SSB, le bouclier ne se réduira pas tant qu'il n'aura pas encaissé de coups, mais le joueur se voit dans l'obligation de l'activer au bon moment pour éviter de perdre inutilement de sa ressource bleue préférée. Le bouclier guérit automatiquement de ses blessures, mais bien plus lentement que dans SSB ; si un ennemi en vient à bout, alors le joueur est étourdi pendant quelques secondes, puis le bouclier est complètement réinitialisé.
 
-Pour activer le bouclier, on pressera l'une des gâchettes avant de la manette.
+Pour activer le bouclier, on pressera l'une des gâchettes arrières de la manette. Cette touche étant assignée à l'esquive statique aérienne, il n'est pas possible d'activer les bouclier dans les airs. 
+
+Techniquement, le bouclier est une zone de collision sphérique englobant le personnage, possédant une courte animation graphique à son lancement durant laquelle le bouclier n'est pas actif, et donc ne consomme pas de mana. Le bouclier possèdent un nombre de PV limité, qui diminue lorsqu'il encaisse des coups ; la taille de l'image et de la zone de collision est fonction du nombre de PV restants, ce qui signifie que lorsque le bouclier n'englobe plus totalement le personnage
 
 ==== Esquives ====
 
@@ -209,7 +211,12 @@ Chaque personnage possède différentes caractéristiques qui influencent la fa�
 
 ==== Attaques ====
 
-La puissance d'une attaque et son utilité sont définit par les CC et dégâts qu'elle inflige, mais aussi par d'autres caractéristiques telles que la portée ou encore la vitesse. Cependant, ces valeurs n'ont aucune répercussion technique directe : aucune vitesse n'est définit pour une attaque, par exemple. Ces valeurs dépendent du script de l'attaque, qui va la faire évoluer et se déplacer sur une plus ou moins grande distance et plus ou moins vite. Ces caractéristiques seront utilisée à titre indicatif dans la liste des personnages.
+La puissance d'une attaque et son utilité sont définies par les CC et dégâts qu'elle inflige, mais aussi par d'autres caractéristiques telles que la portée ou encore la vitesse. Cependant, ces valeurs n'ont aucune répercussion technique directe : aucune vitesse n'est définie pour une attaque, par exemple. Ces valeurs dépendent du script de l'attaque, qui va la faire évoluer et se déplacer sur une plus ou moins grande distance et plus ou moins vite. Ces caractéristiques seront utilisées à titre indicatif dans la liste des personnages. Voici un tableau décrivant chaque caractéristique :
+
+| **Caractéristique**	| **Description** |
+| Dégâts				| Définit les dégâts en pourcentage que va infliger l'attaque. |
+| Vitesse				| Définit le temps d'animation de l'attaque, temps durant lequel le personnage est vulnérable car dans l'impossibilité d'effectuer une quelconque autre action. |
+| Portée				| Définit la distance de l'attaque par rapport à l'attaquant, permettant à celui-ci de toucher des cibles situées plus ou moins loin. |
 
 ==== Physique ====
 
@@ -237,7 +244,7 @@ Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 
 Durant le jeu, seul le script ``perso.lua`` est chargé. Il possède une fonction ``init.lua`` qui doit charger toutes les ressources utilisées par le personnage durant le jeu, définissant aussi son poids et qui est appelée lors du début d'une partie. Il possède en plus d'autres fonctions utilisées à différents moments et dans différentes occasions :
 
-- ``moveLeft``, ``moveRight`` : ces deux fonctions définissent l'image qui est affichée pour chacune les déplacements à droite et à gauche. Elles doivent aussi déplacer à chaque fois les zones de collision si nécessaire.
+- ``moveLeft``, ``moveRight`` : ces deux fonctions définissent l'image qui est affichée pour les déplacements respectivement à gauche et à droite. Elles doivent aussi déplacer à chaque fois les zones de collision si nécessaire.
 - ``stop`` : cette fonction correspond à l'animation lorsqu'un personnage arrête de courir.
 - ``jump``, ``jumpAir`` : ces fonctions marche de la même façon que ``move*`` et correspondent respectivement à un saut et un double saut.
 - ``down``, ``fastDown`` : ces fonctions correspondent respectivement à l'animation de descente après un saut et de descente rapide.
@@ -254,7 +261,7 @@ TODO finir la liste par catégorie des différentes fonctions.
 
 Dans un premier temps, l'objectif est de développer 4 personnages équilibrés, charismatiques et aux gameplays très différents.
 
-//Les indicateurs// ``LOW, MEDIUM, HIGH`` //ne sont pas applicables à toutes les attaques et représentent une moyenne générale définissant le gameplay global du personnage.//
+//Les indicateurs// ``LOW, MEDIUM, HIGH`` //ne sont pas applicables à toutes les attaques et représentent une moyenne générale définissant le gameplay global du personnage. De plus, deux indicateurs similaires ne réprésenteront pas les mêmes valeurs selon le type d'attaque auquel ils s'appliquent.//
 
 ==== Hybride ====
 
@@ -361,7 +368,7 @@ Un exemple d'utilisation serait l'apparition d'une zone de contact : le script v
 La liste suivante présente les stages //officiels// qui devront être présents dans la version 1 :
 
 | **Nom du stage** | **Description** |
-| Space platform   | Ce stage est similaire au terrain //destination finale// de SSB : c'est un terrain plat, de taille moyenne, sans reliefs ni piège ni aucune interactivité. C'est le terrain neutre par excellence. |
+| Space platform   | Ce stage est similaire au terrain //destination finale// de SSB : c'est un terrain plat, de taille moyenne, sans reliefs ni pièges ni aucune interactivité. C'est le terrain neutre par excellence. |
 | Jungle           | Ce stage est une jungle, avec du relief et de nombreux pièges sous la forme de plantes carnivores qui attaquent les personnages qui passent à proximité ou de trous avec des pics. Ce stage permet de tester l'interactivité des terrain et le dynamisme des terrains. |
 
 TODO finir la liste.
