@@ -178,10 +178,12 @@ Pour activer le bouclier, on pressera l'une des gâchettes arrières de la manet
 
 Les esquives permettent au personnage d'éviter toute attaque ennemie pendant un court laps de temps. Les esquives, tout comme le bouclier, coûtent du mana, obligeant le joueur à s'en servir à bon escient. Il existe 4 types d'esquives :
 
-- L'esquive latérale, qui consiste en une esquive effectuée en mouvement sur une courte distance ; le personnage ignore alors toutes les collisions. Elle s'effectue à partir du bouclier en inclinant au maximum le stick vers la gauche ou vers la droite, selon la direction souhaitée.
+- L'esquive latérale, qui consiste en une esquive effectuée en mouvement sur une courte distance ; le personnage ignore alors toutes les collisions avec les autres entités. Elle s'effectue à partir du bouclier en inclinant au maximum le stick vers la gauche ou vers la droite, selon la direction souhaitée.
 - L'esquive latérale aérienne, qui correspond à une esquive latérale effectuée dans les airs. Le personnage ne peut effectuer qu'une seule esquive de ce genre avant de retoucher le sol, pour éviter d'en faire un outil de mobilité et de rattrapage sur le terrain. Aussi, cette esquive réinitialise toutes les forces que le personnage subissait (dont la gravité qui se réapplique donc selon sa position à la fin de l'esquive). Le bouclier n'étant pas utilisable dans les airs, on utilisera les mêmes touches que l'esquive latérale, mais en commençant par incliner le stick.
 - L'esquive statique, équivalente à l'esquive latérale, sans la notion de mouvement. Le coût en mana est moindre. On l'effectue à partir du bouclier en inclinant complètement le stick vers le bas.
 - L'esquive statique aérienne, qui correspond à une esquive statique effectuée dans les airs. Elle conserve les forces déjà appliquées au personnage et s'effectue en appuyant sur le bouton du bouclier.
+
+Chaque type d'esquive possède deux animations distinctes pour chaque direction latérale. Techniquement, l'esquive correspond en fait à cette animation associée à un déplacement ou non selon que l'esquive soit statique ou non.
 
 
 === Contrôles de foule (CC) ===
