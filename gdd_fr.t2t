@@ -245,13 +245,15 @@ Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 Durant le jeu, seul le script ``perso.lua`` est chargé. Il possède une fonction ``init.lua`` qui doit charger toutes les ressources utilisées par le personnage durant le jeu, définissant aussi son poids et qui est appelée lors du début d'une partie. Il possède en plus d'autres fonctions utilisées à différents moments et dans différentes occasions :
 
 - ``moveLeft``, ``moveRight`` : ces deux fonctions définissent l'image qui est affichée pour les déplacements respectivement à gauche et à droite. Elles doivent aussi déplacer à chaque fois les zones de collision si nécessaire.
+- ``runLeft``, ``runRight`` : comme ``move*``, sauf que le personnage se déplace ne courrant.
 - ``stop`` : cette fonction correspond à l'animation lorsqu'un personnage arrête de courir.
 - ``jump``, ``jumpAir`` : ces fonctions marche de la même façon que ``move*`` et correspondent respectivement à un saut et un double saut.
 - ``down``, ``fastDown`` : ces fonctions correspondent respectivement à l'animation de descente après un saut et de descente rapide.
 - ``land`` : cette fonction correspond à l'atterrissage du personnage.
+- ``stand`` : cette fonction correspond au personnage qui reste sur place.
 
 
-Toutes ces fonctions ne prennent qu'un seul paramètre : le pourcentage d'accomplissement de l'action. La dernière image chargée (donc celle avec un paramètre de 1.0) correspond à l'image qui restera affichée tant qu'aucune autre fonction n'est appelée.
+Toutes ces fonctions ne prennent qu'un seul paramètre : le nombre de FPS depuis le début de l'animation. La valeur de retour est un booléen (un nombre, 0 ou 1), qui indique si l'animation est terminée. La dernière image chargée correspond à l'image qui restera affichée tant qu'aucune autre fonction n'est appelée, donc après la fin d'une fonction de mouvement qui a retournée 1.
 
 TODO finir la liste par catégorie des différentes fonctions.
 
