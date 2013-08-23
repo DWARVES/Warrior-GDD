@@ -137,7 +137,7 @@ Techniquement, une attaque physique consiste en une ou plusieurs ZA solidaires d
 
 ==== Magiques ====
 
-Les attaques magiques se lancent en appuyant sur la touche qui leur est associée (que nous appellerons par convention ``M``) tout en inclinant (ou pas) le stick dans une certaine direction pour choisir le sort à lancer. On compte ainsi 4 sorts par personnage : ``M``, ``M+Côté``, ``M+Haut`` et ``M+Bas``.
+Les attaques magiques (ou sorts) se lancent en appuyant sur la touche qui leur est associée (que nous appellerons par convention ``M``) tout en inclinant (ou pas) le stick dans une certaine direction pour choisir le sort à lancer. On compte ainsi 4 sorts par personnage : ``M``, ``M+Côté``, ``M+Haut`` et ``M+Bas``.
 
 Les attaques magiques diffèrent des attaques physiques de par un élément essentiel : la jauge de mana. Ainsi l'utilisation d'une compétence magique aura-t-elle un coût lié à sa puissance en termes de dégâts et/ou d'utilité, diminuant les ressources en mana du personnage ; si celui-ci ne possède pas assez de mana pour lancer sa compétence, il doit attendre que sa jauge se recharge. La récupération de mana est assez rapide pour permettre un gameplay dynamique et une utilisation fréquente des sorts, tout en demandant une gestion intelligente de cette ressource de par sa faible quantité. Ainsi un sort infligeant de lourds dégâts de zone et étourdissant brièvement les ennemis sera considéré puissant, et pourra par conséquent nécessiter toutes les ressources en mana du personnage, empêchant le joueur d'abuser du sort, d'autant plus qu'il devra utiliser d'autres sorts qui retarderont le moment où sa jauge de mana sera pleine.
 
