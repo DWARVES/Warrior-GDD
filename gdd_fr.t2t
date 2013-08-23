@@ -9,6 +9,8 @@ Pablo Donato, Luc Chabassier
 %!postproc(tex): "\\end{tabular}"   "\\end{tabularx}"
 %!postproc(tex): "\\clearpage"  ""
 %!postproc(tex): "\\tableofcontents" "\\tableofcontents\\clearpage"
+%!postproc(tex): "\\begin{document}" "\\DeclareTextSymbol{\degre}{OT1}{23}\\begin{document}"
+%!postproc(tex): "°" "\degre"
 
 
 
