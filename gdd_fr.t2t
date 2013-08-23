@@ -84,7 +84,7 @@ Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4
 
 L'écran de sélection des personnages est similaire dans l'organisation à celui de SSB, à ceci près qu'avant de choisir son personnage, le joueur doit associer son périphérique en maintenant une touche durant 1 seconde, comme cela se fait dans le jeu indépendant //Jamestown//. Il choisit ensuite son personnage à l'aide d'un curseur qui lui est propre, identifié par la couleur associée au numéro de joueur.
 
-- Il est possible de choisir le mode de combat (Timelaps ou Survie).
+Il est possible de choisir le mode de combat (Timelaps ou Survie).
 Si la partie ne contient pas déjà 4 joueurs en local, un joueur externe peut se connecter en réseau durant la phase de sélection des personnages.
 
 Comme dans SSB, il sera possible de switcher via un bouton entre les modes //Real Melee// et //Team Melee//. Le premier mode correspond à un combat //chacun pour soi//, où tous les joueurs peuvent s'infliger des dégâts et chacun joue pour son propre score. Le second mode permet de former des équipes de 1 à 3 joueurs identifiées par leur couleur (bleu, rouge ou vert). Durant le combat, chaque personnage possède un costume reprenant les couleurs de son équipe. Au classement final, en Timelaps, les scores des équipes sont calculées en additionnant les scores de chaque joueur, et l'équipe gagnante étant celle possédant le meilleur score ; en Survie, c'est l'équipe qui survit qui gagne, tout simplement.
@@ -101,6 +101,7 @@ En //Custom Melee//, certaines règles du jeu sont modifiables avant chaque part
 - Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
 
 Il est aussi possible de choisir dans le même écran le mode de sélection du stage (cf partie "Sélection du stage" ci-après).
+
 
 L'écran de modification des règles reprendra l'interface de celui de SSB, c'est-à-dire une liste contrôlable par tous les joueurs en même temps.
 
