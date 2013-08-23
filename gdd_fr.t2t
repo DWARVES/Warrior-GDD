@@ -283,10 +283,9 @@ Cette partie est dédiée à la description du fonctionnement d'une attaque. Ell
 
 ===== Callbacks =====
 
-- ``attack`` : cette fonction affiche l'animation d'une attaque physique. Son premier argument est le nombre de FPS écoulés depuis le début de l'attaque (lors du premier appel de l'attaque elle reçoit 0). Elle doit retourner 1 quand l'attaque est terminée. Sont deuxième argument est la direction de l'attaque : ``NONE``, ``RIGHT``, ``LEFT``, ``UP`` ou ``DOWN``. La façon dont l'attaque est créée est décrite dans la partie suivante.
-- ``spell`` : cette fonction affiche l'animation du personnage lorsqu'il lance un sort. Elle reçoit les deux mêmes arguments que ``attack`` et doit elle aussi retourner 1 lorsque l'animation est terminée.
-- ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Les paramètres sont les même que pour la fonction ``attack``.
-- ``smashRelease`` : cette fonction affiche l'animation du relâchement du smash. Elle reçoit comme arguments supplémentaires, par rapport à attaque, le nombre de pourcentage et le CC projection à infliger. Ce callback, lorsqu'appelé avec une durée de 0, doit créer l'attaque avec les dégâts et la CC indiqués.
+- ``attack`` : cette fonction affiche l'animation d'une attaque physique. Son premier argument est le nombre de FPS écoulés depuis le début de l'attaque (lors du premier appel de l'attaque elle reçoit 0). Elle doit retourner 1 quand l'attaque est terminée. Son deuxième argument est la direction de l'attaque : ``NONE``, ``RIGHT``, ``LEFT``, ``UP`` ou ``DOWN``. La façon dont l'attaque est créée est décrite dans la partie suivante.
+- ``spell`` : cette fonction affiche l'animation du personnage lorsqu'il lance un sort. Elle reçoit les deux mêmes arguments que ``attack`` et doit elle aussi retourner 1 lorsque l'animation est terminée. Elle reçoit en plus un argument indiquant si la touche est toujours appuyée ou pas, permettant entre autre de faire des chargements.
+- ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Les paramètres sont les même que pour la fonction ``spell``.
 - ``catch`` : cette fonction affiche l'animation d'une prise. Elle doit créer une attaque avec une ZA qui s'éloigne du personnage et n'inflige qu'un CC lien, puis revient vers le personnage et là lui inflige un étourdissement.
 
 
@@ -313,6 +312,7 @@ Cette partie est dédiée aux fonctions de défense, telles l'esquive ou le bouc
 - ``shield`` : cette fonction doit dessiner le personnage avec le bouclier activé. Le premier et seul argument est bien sûr le nombre de FPS écoulés depuis le premier appel.
 - ``staticDodge``, ``flyingStaticDodge`` : correspondent respectivement à l'esquive statique et l'esquive statique aérienne. Ces fonctions ne reçoivent pas le nombre de FPS écoulés mais le pourcentage d'accomplissement de l'action sous la forme d'une nombre entre 0 et 1.
 - ``dashDodge``, ``flyingDashDodge`` : correspondent respectivement à l'esquive latérale et l'esquive latérale aérienne. Ces fonctions reçoivent aussi le pourcentage d'accomplissement de l'action.
+
 
 ==== Animations spéciales ====
 
