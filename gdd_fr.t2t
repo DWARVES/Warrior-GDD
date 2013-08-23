@@ -47,7 +47,7 @@ Permet de configurer les paramètres audio, vidéo, ainsi que les paramètres de
 Quitte le jeu (ferme le programme).
 
 
-=== Déroulement d'une partie en Custom Melee ===
+=== Déroulement d'une partie ===
 
 Project Warrior consiste comme vu dans la présentation en un jeu de combat dynamique reprenant de nombreuses mécaniques de SSB. Étudions le déroulement d'une partie //Custom Melee// au travers d'un des joueurs pour mieux comprendre :
 
@@ -71,7 +71,7 @@ Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fi
 
 
 
-=== Caractéristiques du mode Custom Melee ===
+=== Custom Melee ===
 
 //Custom Melee// est un mode de jeu convivial, ouvert et complet. Voici ces différentes caractéristiques :
 
