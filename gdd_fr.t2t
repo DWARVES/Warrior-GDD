@@ -267,7 +267,7 @@ Cette partie décrit les fonctions correspondant aux animations spéciales des p
 
 ==== Défenses ====
 
-Cette partie est dédiée aux fonctions de défense, telles la parade ou le bouclier :
+Cette partie est dédiée aux fonctions de défense, telles l'esquive ou le bouclier :
 
 - ``shield`` : cette fonction doit dessiner le personnage avec le bouclier activé. Le premier et seul argument est bien sûr le nombre de FPS écoulés depuis le premier appel.
 - ``staticDodge``, ``flyingStaticDodge`` : correspondent respectivement à l'esquive statique et l'esquive statique aérienne. Ces fonctions ne reçoivent pas le nombre de FPS écoulés mais le pourcentage d'accomplissement de l'action sous la forme d'une nombre entre 0 et 1.
