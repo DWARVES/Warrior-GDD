@@ -28,7 +28,7 @@ Dans cette partie sont présentés les différents objectifs fixés initialement
 
 == Règles et interface ==
 
-L'interface est contrôlable aussi bien à la manette qu'au clavier ou à la souris.
+L'interface est contrôlable aussi bien à la manette qu'au clavier.
 
 
 === Menu principal ===
@@ -82,20 +82,37 @@ Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4
 
 ==== Sélection des personnages ====
 
-L'écran de sélection des personnages est similaire dans l'organisation à celui de SSB, à ceci près qu'avant de choisir son personnage, le joueur doit associer son périphérique en maintenant une touche durant 1 seconde, comme cela se fait dans le jeu indépendant //Jamestown//.
+L'écran de sélection des personnages est similaire dans l'organisation à celui de SSB, à ceci près qu'avant de choisir son personnage, le joueur doit associer son périphérique en maintenant une touche durant 1 seconde, comme cela se fait dans le jeu indépendant //Jamestown//. Il choisit ensuite son personnage à l'aide d'un curseur qui lui est propre, identifié par la couleur associée au numéro de joueur.
 
+- Il est possible de choisir le mode de combat (Timelaps ou Survie).
 Si la partie ne contient pas déjà 4 joueurs en local, un joueur externe peut se connecter en réseau durant la phase de sélection des personnages.
 
-Comme dans SSB, il est aussi possible d'accéder au menu de modification des règles, dont les caractéristiques sont présentées ci-après.
+Comme dans SSB, il sera possible de switcher via un bouton entre les modes //Real Melee// et //Team Melee//. Le premier mode correspond à un combat //chacun pour soi//, où tous les joueurs peuvent s'infliger des dégâts et chacun joue pour son propre score. Le second mode permet de former des équipes de 1 à 3 joueurs identifiées par leur couleur (bleu, rouge ou vert). Durant le combat, chaque personnage possède un costume reprenant les couleurs de son équipe. Au classement final, en Timelaps, les scores des équipes sont calculées en additionnant les scores de chaque joueur, et l'équipe gagnante étant celle possédant le meilleur score ; en Survie, c'est l'équipe qui survit qui gagne, tout simplement.
+
+Il est aussi possible d'accéder au menu de modification des règles, dont les caractéristiques sont présentées ci-après.
 
 ==== Règles modifiables ====
 
 En //Custom Melee//, certaines règles du jeu sont modifiables avant chaque partie, afin de diversifier l'expérience de jeu :
 
-- Il est possible de choisir le mode de combat (Timelaps ou Survie).
+- On peut choisir le mode de combat (Timelaps ou Survie).
 - Il est possible de donner des handicaps aux joueurs, afin de compenser des niveaux trop différents. Par exemple, dans le cas d'une partie Timelaps, certains joueurs peuvent avoir des points des le débuts, ou d'autres partir avec un malus, c'est à dire des points dans les négatifs. Dans le cas d'une partie Survie, le nombre de vie peut être différent entre les joueurs. Le malus le plus commun reste cependant d'augmenter les pourcentages de dégâts initiaux des joueurs les plus expérimentés, malus valable quelque soit le mode de combat.
 - La gravité peut aussi être modifiée : par défaut elle est de 1, une valeur plus grande rendant les personnages plus difficiles à éjecter mais aussi à déplacer. Une valeur plus faible rend les personages plus légers, donc ils sautent plus haut, se déplacent plus vite mais sont aussi éliminés plus vite. Attention cependant, les stages sont testés avec une gravité de 1 et la modification de cette valeur peut rendre le jeu très désagréable sur certains stages.
 - Un coefficient sur les dégâts des attaques peut être attribué. Avec une valeur supérieure à 1, les personnages prendront plus de dégâts et seront donc éliminés plus vite.
+
+Il est aussi possible de choisir dans le même écran le mode de sélection du stage (cf partie "Sélection du stage" ci-après).
+
+L'écran de modification des règles reprendra l'interface de celui de SSB, c'est-à-dire une liste contrôlable par tous les joueurs en même temps.
+
+==== Sélection du stage ====
+
+Comme pour l'écran de sélection des personnages, l'écran de sélection des stages est similaire à celui de SSB, avec les stages sélectionnables sous forme de vignettes organisées en grille à l'aide d'un curseur, contrôlable aussi bien à la manette qu'au clavier. Il est aussi possible de choisir un stage aléatoire à l'aide d'un bouton prévu à cet effet.
+
+Pour déterminer le joueur qui sélectionne le stage, on choisira un des 3 modes suivants dans l'écran de modification des règles :
+
+- **Tour de rôle** : le joueur contrôlant le curseur tourne après chaque partie par ordre décroissant (joueur 1, puis 2, etc)
+- **Joueur n°#** : c'est toujours le joueur n°# (le chiffre '#' étant choisi par les joueurs) qui choisit le stage
+- **Libre** : tous les joueurs peuvent contrôler le curseur ; le mode le plus enthropique :p
 
 
 
