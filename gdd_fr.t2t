@@ -281,8 +281,8 @@ Cette partie est dédiée à la description du fonctionnement d'une attaque. Ell
 ===== Callbacks =====
 
 - ``attack`` : cette fonction affiche l'animation d'une attaque physique. Son premier argument est le nombre de FPS écoulés depuis le début de l'attaque (lors du premier appel de l'attaque elle reçoit 0). Elle doit retourner 1 quand l'attaque est terminée. Sont deuxième argument est la direction de l'attaque : ``NONE``, ``RIGHT``, ``LEFT``, ``UP`` ou ``DOWN``. La façon dont l'attaque est créée est décrite dans la partie suivante.
-- ``special`` : cette fonction affiche l'animation du personnage lors d'une attaque magique. Elle reçoit les deux mêmes arguments  que ``attack`` et doit elle aussi retourner 1 lorsque l'animation est terminée.
-
+- ``spell`` : cette fonction affiche l'animation du personnage lorsqu'il lance un sort. Elle reçoit les deux mêmes arguments que ``attack`` et doit elle aussi retourner 1 lorsque l'animation est terminée.
+- ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Lorsque le joueur a terminé de charger, la fonction affiche l'animation du smash. Les paramètres sont les même que pour la fonction ``attack``, et elle doit retourner 0 si l'attaque n'est pas terminée, ou le temps de charge du smash en FPS dans le cas contraire, afin de pouvoir par la suite adapter les dégâts et la puissance du CC de projection.
 
 ===== Fonctionnement =====
 
