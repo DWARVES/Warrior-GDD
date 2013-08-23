@@ -267,6 +267,7 @@ Cette partie décrit les fonctions correspondant aux animations spéciales des p
 - ``lost`` : cette fonction correspond à l'animation d'un personnage qui se lamente après sa défaite. Cette animation doit pouvoir boucler.
 - ``sent`` : cette animation correspond à un personnage qui est projeté. Elle reçoit en second argument un vecteur correspondant à la direction et à la force de la projection.
 
+
 ==== Défenses ====
 
 Cette partie est dédiée aux fonctions de défense, telles la parade ou le bouclier :
@@ -276,8 +277,31 @@ Cette partie est dédiée aux fonctions de défense, telles la parade ou le bouc
 - ``dashDodge``, ``flyingDashDodge`` : correspondent respectivement à l'esquive latérale et l'esquive latérale aérienne. Ces fonctions reçoivent aussi le pourcentage d'accomplissement de l'action.
 
 
-TODO finir la liste par catégorie des différentes fonctions.
+==== Attaques ====
 
+Cette partie est dédiée à la description du fonctionnement d'une attaque. Elle est assez complexe puisqu'elle va décrire les fonction lançant les attaques, mais aussi comment une attaque est créée.
+
+===== Callbacks =====
+
+- ``attack`` : cette fonction affiche l'animation d'une attaque physique. Son premier argument est le nombre de FPS écoulés depuis le début de l'attaque (lors du premier appel de l'attaque elle reçoit 0). Elle doit retourner 1 quand l'attaque est terminée. Sont deuxième argument est la direction de l'attaque : ``NONE``, ``RIGHT``, ``LEFT``, ``UP`` ou ``DOWN``. La façon dont l'attaque est créée est décrite dans la partie suivante.
+- ``special`` : cette fonction affiche l'animation du personnage lors d'une attaque magique. Elle reçoit les deux mêmes arguments  que ``attack`` et doit elle aussi retourner 1 lorsque l'animation est terminée.
+
+
+===== Fonctionnement =====
+
+Lors de l'appel d'une des fonctions citées ci-dessus, le script doit se charger de l'animation du personnage mais aussi et surtout créer l'attaque. Une attaque est donc constituée d'une ou plusieurs ZA.
+
+Lors de la création d'une ZA, on y associe quatre fonctions de callback :
+
++ Une fonction qui est appelée à chaque FPS : elle doit déplacer la ZA et la dessiner à l'écran. Elle reçoit comme argument le nombre de FPS écoulés depuis la création de la ZA et doit retourner -1 quand la ZA est détruite, 0 sinon. Le déplacement d'une ZA peut se faire dans deux repères : local ou global, mais est toujours relatif (il n'y a pas de fonction ``setPosition`` par exemple). Le repère local dépend si la ZA est solidaire ou non du personnage. Si oui, c'est le repère du personnage, sinon, c'est le repère de la ZA. Le repère global est celui du terrain, mais il est déconseillé de trop l'utiliser (une attaque va tout droit par rapport à sa direction, non parallèlement au sol).
++ Une fonction qui est appelée quand la ZA entre en contact avec quelque chose. Ça peut être le terrain (donc un mur), un personnage ou une autre ZA. Le premier argument est donc une énumération qui indique le type du second argument, qui lui est l'entité avec laquelle la ZA est entrée en contact. Elle peut donc essayer de lui appliquer des CC et/ou des dégâts, changer sa trajectoire ... Cette fonction doit retourner 1 si la ZA est détruite après le contact.
++ Une fonction qui est appelée lorsque la ZA reçoit des dégâts. Ça permet à la ZA de les transmettre normalement au personnage, de les atténuer, de les absorber, de les convertir en soin ... Cette fonction doit retourner 1 si la ZA est détruite.
++ Une fonction qui est appelée lorsque la ZA reçoit un CC. Elle sera donc appelée autant de fois que la ZA reçoit de CC. Elle peut décider de les ignorer, de se les appliquer vraiment, de changer légèrement leurs effets, de les transmettre au personnage ... Cette fonction doit retourner 1 si la ZA est détruite.
+
+
+Lors de la création de la ZA, on doit aussi préciser si elle est fantôme. La fonction de création de ZA retourne un entier, l'identifiant de la ZA, qui est passé en premier argument aux quatre fonctions de la ZA.
+
+Nous allons maintenant détailler ce qu'il se passe lors du contact entre deux ZA. Lors du contact, la fonction de callback de contact (#2 dans la liste) est appelée pour chacune des ZA avec en argument l'autre ZA. Dans cette fonction, chacune inflige des dégâts et/ou des CC à l'autre : toutes ces attaques ne sont pas appliquées immédiatement, elles sont stockées. À la fin de l'exécution de ces deux fonctions, si une retourne 1, la ZA est détruite et ne reçoit donc ni les dégâts ni les CC. Les (ou la) ZA restantes vont maintenant recevoir les dégâts, à travers l'appel à leur callback #3. Si une de ces fonctions retourne 1, la ZA correspondante est détruite avant de recevoir les CC. Enfin, les CC sont appliqués dans l'ordre dans lequel ils ont été infligé et la callback #4 est donc appelée une ou plusieurs fois. Si un appel retourne 1, la ZA correspondante est détruite avant de recevoir les CC restants.
 
 
 === Liste des personnages ===
