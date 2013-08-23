@@ -12,6 +12,7 @@ Pablo Donato, Luc Chabassier
 
 
 
+
 = Présentation =
 
 Project Warrior est le nom de code pour désigner un projet de jeu de combat multijoueurs développé par le collectif DWARVES, constituant par ailleurs son premier projet d'envergure. Project Warrior peut être qualifié de Super Smash Bros. like dans la dynamique et le système de combat. Néanmoins il possède ses caractéristiques propres telles qu'un gameplay où les sorts (attaques spéciales dans SSB) prennent une place plus importante, notamment via leur coût en mana qui demande une gestion plus intelligente de leur utilisation. Un soin tout particulier sera aussi apporté au background, à l'univers et donc à l'ambiance générale du jeu afin d'en dégager une personnalité propre d'inspirations diverses. On cherchera aussi un style de préférence un peu décalé et humoristique, pour conserver l'ambiance //joyeux bordel// propre aux SSB, avec des personnages et des stages totalement nouveaux à la patte graphique et à l'ambiance sonore marquées.
@@ -203,7 +204,9 @@ Il existe d'autres CC qui sont réalisés à partir des CC de base. On leur donn
 | Étourdissement | Le contrôle le plus puissant du jeu : la cible est totalement incapacitée, c'est-à-dire à la fois immobilisée, aveuglée et réduite au silence. | Il consiste donc en la combinaison des CC immobilisation, aveuglement et silence. |
 
 
+
 == Personnages ==
+
 
 === Caractéristiques communes ===
 
@@ -223,7 +226,6 @@ La puissance d'une attaque et son utilité sont définies par les CC et dégâts
 Chaque personnage possède un poids : plus le poids est élevé, plus le personnage sera lent, mais il sera aussi plus difficile à projeter, et donc à vaincre.
 
 
-
 === Représentation en mémoire ===
 
 Les personnages sont placés dans le même dossier, dont le contenu est scanné au début du jeu. Chaque personnage est un dossier contenant une image ``preview.png``, un fichier texte ``name`` de deux lignes, la première étant le nom et la deuxième une courte description, un script ``perso.lua`` et ``preview.lua`` et différentes ressources chargées et utilisées par le script. Le nom du dossier n'a pas d'importance mais il ne doit contenir ni caractères spéciaux, ni espaces, ni caractères non-ascii.
@@ -238,7 +240,6 @@ Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 
 - ``init`` : cette fonction est la première à être appelée dans le script, pouvant servir à initialiser certaines ressources. Elle est complètement facultative, et une fonction init trop lourde ralentira l'ouverture de l'écran de sélection des personnages.
 - ``loadPreview`` : cette fonction prend en paramètre la couleur du personnages (une énumération), et charge sous le nom de ``preview`` l'image correspondante. Cette image est affichée dans la zone des joueurs : c'est une image plus grande et plus détaillée que ``preview.png``.
-
 
 ==== Déplacements ====
 
@@ -255,25 +256,6 @@ Durant le jeu, seul le script ``perso.lua`` est chargé. Il possède une fonctio
 
 Toutes ces fonctions ne prennent qu'un seul paramètre : le nombre de FPS depuis le début de l'animation. La valeur de retour est un booléen (un nombre, 0 ou 1), qui indique si l'animation est terminée. La dernière image chargée correspond à l'image qui restera affichée tant qu'aucune autre fonction n'est appelée, donc après la fin d'une fonction de mouvement qui a retournée 1.
 
-==== Animations ====
-
-Cette partie décrit les fonctions correspondant aux animations spéciales des personnages, ces fonctions reçoivent en premier argument le nombre de FPS depuis le début de l'animation :
-
-- ``appear`` : cette fonction correspond à l'animation du personnage lorsqu'il apparait sur le terrain. Elle doit retourner 1 lorsque l'animation est terminée.
-- ``won`` : cette fonction correspond à l'animation d'un personnage qui se vante après sa victoire. Cette animation doit pouvoir boucler.
-- ``lost`` : cette fonction correspond à l'animation d'un personnage qui se lamente après sa défaite. Cette animation doit pouvoir boucler.
-- ``sent`` : cette animation correspond à un personnage qui est projeté. Elle reçoit en second argument un vecteur correspondant à la direction et à la force de la projection.
-
-
-==== Défenses ====
-
-Cette partie est dédiée aux fonctions de défense, telles l'esquive ou le bouclier :
-
-- ``shield`` : cette fonction doit dessiner le personnage avec le bouclier activé. Le premier et seul argument est bien sûr le nombre de FPS écoulés depuis le premier appel.
-- ``staticDodge``, ``flyingStaticDodge`` : correspondent respectivement à l'esquive statique et l'esquive statique aérienne. Ces fonctions ne reçoivent pas le nombre de FPS écoulés mais le pourcentage d'accomplissement de l'action sous la forme d'une nombre entre 0 et 1.
-- ``dashDodge``, ``flyingDashDodge`` : correspondent respectivement à l'esquive latérale et l'esquive latérale aérienne. Ces fonctions reçoivent aussi le pourcentage d'accomplissement de l'action.
-
-
 ==== Attaques ====
 
 Cette partie est dédiée à la description du fonctionnement d'une attaque. Elle est assez complexe puisqu'elle va décrire les fonctions lançant les attaques, mais aussi comment une attaque est créée.
@@ -282,7 +264,8 @@ Cette partie est dédiée à la description du fonctionnement d'une attaque. Ell
 
 - ``attack`` : cette fonction affiche l'animation d'une attaque physique. Son premier argument est le nombre de FPS écoulés depuis le début de l'attaque (lors du premier appel de l'attaque elle reçoit 0). Elle doit retourner 1 quand l'attaque est terminée. Sont deuxième argument est la direction de l'attaque : ``NONE``, ``RIGHT``, ``LEFT``, ``UP`` ou ``DOWN``. La façon dont l'attaque est créée est décrite dans la partie suivante.
 - ``spell`` : cette fonction affiche l'animation du personnage lorsqu'il lance un sort. Elle reçoit les deux mêmes arguments que ``attack`` et doit elle aussi retourner 1 lorsque l'animation est terminée.
-- ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Lorsque le joueur a terminé de charger, la fonction affiche l'animation du smash. Les paramètres sont les même que pour la fonction ``attack``, et elle doit retourner 0 si l'attaque n'est pas terminée, ou le temps de charge du smash en FPS dans le cas contraire, afin de pouvoir par la suite adapter les dégâts et la puissance du CC de projection.
+- ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Lorsque le joueur a terminé de charger, la fonction affiche l'animation du smash. Les paramètres sont les même que pour la fonction ``attack``. La fonction doit retourner 1 quand l'attaque est terminée.
+- ``catch`` : cette fonction affiche l'animation d'une prise.
 
 ===== Fonctionnement =====
 
@@ -299,6 +282,23 @@ Lors de la création d'une ZA, on y associe quatre fonctions de callback :
 Lors de la création de la ZA, on doit aussi préciser si elle est fantôme. La fonction de création de ZA retourne un entier, l'identifiant de la ZA, qui est passé en premier argument aux quatre fonctions de la ZA.
 
 Nous allons maintenant détailler ce qu'il se passe lors du contact entre deux ZA. Lors du contact, la fonction de callback de contact (#2 dans la liste) est appelée pour chacune des ZA avec en argument l'autre ZA . Dans le cas d'une ZA fantôme, seule la callback de cette dernière est appelée, l'autre ZA ignorant la collision. Si les deux ZA sont fantômes, aucune callback n'est appelée. Dans cette fonction, chacune inflige des dégâts et/ou des CC à l'autre : toutes ces attaques ne sont pas appliquées immédiatement, elles sont stockées. À la fin de l'exécution de ces deux fonctions, si une retourne 1, la ZA est détruite et ne reçoit donc ni les dégâts ni les CC. Les (ou la) ZA restantes vont maintenant recevoir les dégâts, à travers l'appel à leur callback #3. Si une de ces fonctions retourne 1, la ZA correspondante est détruite avant de recevoir les CC. Enfin, les CC sont appliqués dans l'ordre dans lequel ils ont été infligé et la callback #4 est donc appelée une ou plusieurs fois. Si un appel retourne 1, la ZA correspondante est détruite avant de recevoir les CC restants.
+
+==== Défenses ====
+
+Cette partie est dédiée aux fonctions de défense, telles l'esquive ou le bouclier :
+
+- ``shield`` : cette fonction doit dessiner le personnage avec le bouclier activé. Le premier et seul argument est bien sûr le nombre de FPS écoulés depuis le premier appel.
+- ``staticDodge``, ``flyingStaticDodge`` : correspondent respectivement à l'esquive statique et l'esquive statique aérienne. Ces fonctions ne reçoivent pas le nombre de FPS écoulés mais le pourcentage d'accomplissement de l'action sous la forme d'une nombre entre 0 et 1.
+- ``dashDodge``, ``flyingDashDodge`` : correspondent respectivement à l'esquive latérale et l'esquive latérale aérienne. Ces fonctions reçoivent aussi le pourcentage d'accomplissement de l'action.
+
+==== Animations spéciales ====
+
+Cette partie décrit les fonctions correspondant aux animations spéciales des personnages, ces fonctions reçoivent en premier argument le nombre de FPS depuis le début de l'animation :
+
+- ``appear`` : cette fonction correspond à l'animation du personnage lorsqu'il apparait sur le terrain. Elle doit retourner 1 lorsque l'animation est terminée.
+- ``won`` : cette fonction correspond à l'animation d'un personnage qui se vante après sa victoire. Cette animation doit pouvoir boucler.
+- ``lost`` : cette fonction correspond à l'animation d'un personnage qui se lamente après sa défaite. Cette animation doit pouvoir boucler.
+- ``sent`` : cette animation correspond à un personnage qui est projeté. Elle reçoit en second argument un vecteur correspondant à la direction et à la force de la projection.
 
 
 === Liste des personnages ===
@@ -364,7 +364,9 @@ Un personnage assez équilibré, qui à la différence de l'hybride basera beauc
 | Vitesse de déplacement         |   ``MEDIUM``   |
 
 
+
 == Stages ==
+
 
 === Description ===
 
@@ -419,9 +421,13 @@ TODO finir la liste.
 
 
 
+
 = Détails techniques =
 
+
+
 == Programmation ==
+
 
 === Outils ===
 
@@ -444,32 +450,28 @@ Project Warrior devra être scriptable en //lua//. Cette capacité sera utilisé
 
 Les variables commencent par des minuscules. Dans le cas d'une variable composée de plusieurs mots, on met une majuscule au début des chaque mot à l'exception du premier. Par exemple, une variable stockant des vies pourra s'appeler ``nombreDeVies``. Si la variable est un membre privé d'une classe, elle sera préfixée par ``m_``. Si la variable est globale à l'ensemble du programme, elle sera préfixée par ``G_``. Enfin, si elle est globale à un fichier uniquement (c'est à dire déclarée avec ``static``), elle sera préfixée avec ``Gs_``. Dans la mesure du possible, les noms de variable devront être suffisamment explicites pour ne pas nécessiter d'explications. Dans le cas contraire, la description se fera dans un commentaire à la déclaration de la variable.
 
-
 Les constantes globales, ou les defines, sont écrites intégralement en majuscules, et les mots sont séparés par des ``_``. Le nombre maximum de vies pourrait par exemple être nommé ``NOMBRE_MAX_VIES``.
 
-
 Les fonctions sont nommées de la même façon que les variables. Les classes sont quand à elles nommées de la même façon que les variable normales, à l'exception qu'elles commencent par une majuscule. Il en va de même pour les structures et les énumérations. Les namespaces sont nommés entièrement en minuscule, si possible en un seul mot, sinon les mots sont séparés par des ``_``.
-
 
 ==== Placement des accolades ====
 
 Lors de la création d'une classe, il y a un retour à la ligne avant les accolades ouvrantes et fermantes. Il en va de même pour la déclaration des fonctions et les blocs simples.
 
-
 Cependant, pour les blocs conditionnels et de boucle, l'accolade est sur la même ligne que la condition ou la boucle. Dans le cas où le contenu du bloc ne fait qu'une ligne, il est possible de ne pas mettre d'accolades. Cependant, même s'il n'y a qu'une instruction, si elle fait plusieurs ligne ou si il y a des commentaires, les accolades sont obligatoires.
-
 
 ==== Espaces ====
 
 Lors d'une copie de valeur, il faut des espaces simples autourt du ``=``. Dans les conditions, les instructions de comparaison doivent aussi être entourées d'espaces, ainsi que les différents opérateurs. Il ne faut cependant pas d'espaces entre les parenthèses et les conditions intérieures dans les boucles et les conditions.
 
-
 L'indentation n'est pas faite avec des tabulations mais avec 4 espaces.
+
 
 
 == Licence ==
 
 L'ensemble du code du jeu sera sous licence GPLv3. À terme la licence pourra évoluer vers une GPLv3+. La licence des autres éléments du jeu tels que les images, les sons et autres ressources est laissée à la discrétion des créateurs de ces ressources. Il doivent néanmoins choisir au minimum une licence de libre distribution (par exemple une CC-BY-NC-ND) si leurs créations doivent être intégrés comme ressources officielles du jeu.
+
 
 
 
