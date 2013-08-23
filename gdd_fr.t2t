@@ -267,6 +267,7 @@ Cette partie est dédiée à la description du fonctionnement d'une attaque. Ell
 - ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Lorsque le joueur a terminé de charger, la fonction affiche l'animation du smash. Les paramètres sont les même que pour la fonction ``attack``. La fonction doit retourner 1 quand l'attaque est terminée.
 - ``catch`` : cette fonction affiche l'animation d'une prise.
 
+
 ===== Fonctionnement =====
 
 Lors de l'appel d'une des fonctions citées ci-dessus, le script doit se charger de l'animation du personnage mais aussi et surtout créer l'attaque. Une attaque est donc constituée d'une ou plusieurs ZA.
@@ -319,7 +320,6 @@ Il serait l'objectif premier de développement car exploitant la plupart des mé
 | Vitesse des sorts              |   ``MEDIUM``   |
 | Portée des sorts               |   ``MEDIUM``   |
 | Poids                          |   ``MEDIUM``   |
-| Vitesse de déplacement         |   ``MEDIUM``   |
 
 ==== Brute ====
 
@@ -333,7 +333,6 @@ Un personnage possédant d'importants dégâts physiques et magiques, avec une c
 | Vitesse des sorts              |    ``LOW``     |
 | Portée des sorts               |    ``LOW``     |
 | Poids                          |    ``HIGH``    |
-| Vitesse de déplacement         |    ``LOW``     |
 
 ==== Assassin ====
 
@@ -347,7 +346,6 @@ Un personnage opposé à la brute de par son gameplay nerveux et très rapide. I
 | Vitesse des sorts              |    ``HIGH``    |
 | Portée des sorts               |    ``HIGH``    |
 | Poids                          |    ``LOW``     |
-| Vitesse de déplacement         |    ``HIGH``    |
 
 ==== Mage ====
 
@@ -361,7 +359,6 @@ Un personnage assez équilibré, qui à la différence de l'hybride basera beauc
 | Vitesse des sorts              |   ``MEDIUM``   |
 | Portée des sorts               |   ``MEDIUM``   |
 | Poids                          |   ``MEDIUM``   |
-| Vitesse de déplacement         |   ``MEDIUM``   |
 
 
 
