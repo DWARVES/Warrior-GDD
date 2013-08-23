@@ -259,6 +259,7 @@ Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 - ``init`` : cette fonction est la première à être appelée dans le script, pouvant servir à initialiser certaines ressources. Elle est complètement facultative, et une fonction init trop lourde ralentira l'ouverture de l'écran de sélection des personnages.
 - ``loadPreview`` : cette fonction prend en paramètre la couleur du personnages (une énumération), et charge sous le nom de ``preview`` l'image correspondante. Cette image est affichée dans la zone des joueurs : c'est une image plus grande et plus détaillée que ``preview.png``.
 
+
 ==== Déplacements ====
 
 Durant le jeu, seul le script ``perso.lua`` est chargé. Il possède une fonction ``init`` qui doit charger toutes les ressources utilisées par le personnage durant le jeu, définissant aussi son poids et qui est appelée lors du début d'une partie. Cette fonction reçoit un argument qui est la couleur du personnage : elle doit adapter les ressources chargées en fonction. Il possède en plus d'autres fonctions utilisées à différents moments et dans différentes occasions :
@@ -282,8 +283,9 @@ Cette partie est dédiée à la description du fonctionnement d'une attaque. Ell
 
 - ``attack`` : cette fonction affiche l'animation d'une attaque physique. Son premier argument est le nombre de FPS écoulés depuis le début de l'attaque (lors du premier appel de l'attaque elle reçoit 0). Elle doit retourner 1 quand l'attaque est terminée. Sont deuxième argument est la direction de l'attaque : ``NONE``, ``RIGHT``, ``LEFT``, ``UP`` ou ``DOWN``. La façon dont l'attaque est créée est décrite dans la partie suivante.
 - ``spell`` : cette fonction affiche l'animation du personnage lorsqu'il lance un sort. Elle reçoit les deux mêmes arguments que ``attack`` et doit elle aussi retourner 1 lorsque l'animation est terminée.
-- ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Lorsque le joueur a terminé de charger, la fonction affiche l'animation du smash. Les paramètres sont les même que pour la fonction ``attack``. La fonction doit retourner 1 quand l'attaque est terminée.
-- ``catch`` : cette fonction affiche l'animation d'une prise.
+- ``smash`` : cette fonction affiche l'animation du personnage lorsqu'il charge un smash. Les paramètres sont les même que pour la fonction ``attack``.
+- ``smashRelease`` : cette fonction affiche l'animation du relâchement du smash. Elle reçoit comme arguments supplémentaires, par rapport à attaque, le nombre de pourcentage et le CC projection à infliger. Ce callback, lorsqu'appelé avec une durée de 0, doit créer l'attaque avec les dégâts et la CC indiqués.
+- ``catch`` : cette fonction affiche l'animation d'une prise. Elle doit créer une attaque avec une ZA qui s'éloigne du personnage et n'inflige qu'un CC lien, puis revient vers le personnage et là lui inflige un étourdissement.
 
 
 ===== Fonctionnement =====
