@@ -7,6 +7,8 @@ Pablo Donato, Luc Chabassier
 %!postproc(tex): "\\begin{tabular}" "\\begin{tabularx}{\linewidth}"
 %!postproc(tex): "l\|" "X|"
 %!postproc(tex): "\\end{tabular}"   "\\end{tabularx}"
+%!postproc(tex): "\\clearpage"  ""
+%!postproc(tex): "\\tableofcontents" "\\tableofcontents\\clearpage"
 
 
 
