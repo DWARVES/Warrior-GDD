@@ -120,15 +120,15 @@ Pour déterminer le joueur qui sélectionne le stage, on choisira un des 3 modes
 
 === GUI ===
 
-L'ensemble de la GUI du programme peut être personnalisée avec un thème, chargé au lancement du programme. Nous allons détailler ici les différents éléments de la GUI est les paramètres qui peuvent leur être appliqué.
+L'ensemble de la GUI du programme peut être personnalisé avec un thème, chargé au lancement du programme. Nous allons détailler ici les différents éléments de la GUI et les paramètres qui peuvent leur être appliqués.
 
 ==== Les listes ====
 
-Les listes sont un élément centrale la GUI puisqu'elles constituent la majorité des menus. Le but étant d'avoir une interface proche de celle de SSB melee, une liste occupe une surface donnée et chaque item possède un offset, un décalage sur l'axe x par rapport au centre de cette zone. Les items de la liste sont placés les uns au dessus des autres. L'item sélectionné subit un léger zoom et décale les autres items. Si il y a trop d'item pour qu'ils rentrent tous dans la zone prévue, seul un certain nombre est affiché et on peut scroller en passant d'un item à un autre.
+Les listes sont un élément centrale de la GUI puisqu'elles constituent la majorité des menus. Le but étant d'avoir une interface proche de celle de SSB melee, une liste occupe une surface donnée et chaque item possède un offset, un décalage sur l'axe x par rapport au centre de cette zone. Les items de la liste sont placés les uns au dessus des autres. L'item sélectionné subit un léger zoom et décale les autres items. Si il y a trop d'item pour qu'ils rentrent tous dans la zone prévue, seul un certain nombre est affiché et on peut scroller en passant d'un item à un autre.
 
-Les items sont constitués de plusieurs images. Une image pour la partie droite, une pour la partie gauche et une de un pixel de large qui est répétée sur l'axe x pour former l'item en entier. Le texte est affiché entre les parties droites et gauches. Si il est trop long, il est tronqué, et des points de suspension sont rajouté. Le texte peut être décalé manuellement avec les touches droites et gauches lorsque l'item est sélectionné. S'il n'est pas sélectionné, seul le début du texte est toujours affiché. Trois autres images sont utilisées pour créer un item sélectionné. Ces trois images doivent avoir exactement la même taille que celle utilisées par un item non sélectionné.
+Les items sont constitués de plusieurs images. Une image pour la partie droite, une pour la partie gauche et une de un pixel de large qui est répétée sur l'axe x pour former l'item en entier. Le texte est affiché entre les parties droites et gauches. Si il est trop long, il est tronqué, et des points de suspension sont rajouté. Le texte peut être décalé manuellement avec les touches droites et gauches lorsque l'item est sélectionné. S'il n'est pas sélectionné, seul le début du texte est toujours affiché. Trois autres images sont utilisées pour créer un item sélectionné. Ces trois images doivent avoir exactement la même taille que celle utilisée par un item non sélectionné.
 
-TODO finir gui avec zones de texte, grilles (pour persos) ...
+TODO finir GUI avec zones de texte, grilles (pour persos)...
 
 
 
