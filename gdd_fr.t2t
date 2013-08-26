@@ -137,7 +137,11 @@ Les //events// sont comme leur nom l'indique des évènements qui s'active dans 
 
 ==== Représentation en mémoire ====
 
-TODO part (LUC).
+Les events sont tous placés dans le même dossier. Chaque event est un dossier constitué de différents fichiers :
+
+- ``name`` : c'est un fichier dont la première ligne est la nom complet de l'event, celui affiché dans les menus. La seconde ligne du fichier contient le nom interne de l'event. C'est un nom qui doit être unique et qui est utilisé par les personnages et stages pour se référer à cet event. Ce nom ne doit contenir ni espaces, ni caractères spéciaux, ni caractères non ascii. Enfin, la troisième ligne contient une description de l'event pour le joueur.
+- ``preview.png`` : c'est l'image utilisée pour représenter l'event.
+- ``event.lua`` : c'est un script exécuté à la fin de chaque partie. Il peut accéder à différentes informations comme le stage, les personnages et différentes statistiques du combat (durée, suicides ...) via l'API du programme. Il peut aussi enregistrer des variables numériques qui seront sauvegardées d'une exécution du script à une autre. Ces variables ne seront modifiées que par le script. Enfin, il peut se valider, indiquant au programme que les conditions ont été remplies. Le script peut posséder une fonction ``displayWin``. S'il n'en possède pas, un message sobre avec la description de l'event apparait lors de la validation de l'event. Sinon, la fonction de callback peut utiliser le moteur graphique pour afficher une cinématique/des informations particulières ... signalant la réussite de l'event.
 
 
 === GUI ===
