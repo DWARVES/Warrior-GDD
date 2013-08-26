@@ -135,11 +135,6 @@ Pour déterminer le joueur qui sélectionne le stage, on choisira un des 3 modes
 
 Les //events// sont comme leur nom l'indique des évènements qui s'active dans le jeu sous certaines conditions. Ils peuvent faire office de simples //achievements// à débloquer, mais leur utilité majeure est de permettre de débloquer du contenu, c'est-à-dire de nouveaux stages et personnages. La progression dans l'obtention des events est aussi synonyme de progression narrative, avec notamment des cinématiques explicatives lors de l'accomplissement d'un event important (par exemple lorsqu'un personnage important dans l'histoire est débloqué). Ce système permet donc de concilier gameplay uniquement multijoueurs et progression narrative, innovation notable par rapport à SSB.
 
-
-==== Types d'events ====
-
-TODO liste des types d'events.
-
 ==== Représentation en mémoire ====
 
 TODO part (LUC).
