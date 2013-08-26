@@ -137,7 +137,15 @@ Les listes sont un élément centrale de la GUI puisqu'elles constituent la majo
 
 Les items sont constitués de plusieurs images. Une image pour la partie droite, une pour la partie gauche et une de un pixel de large qui est répétée sur l'axe x pour former l'item en entier. Le texte est affiché entre les parties droites et gauches. Si il est trop long, il est tronqué, et des points de suspension sont rajouté. Le texte peut être décalé manuellement avec les touches droites et gauches lorsque l'item est sélectionné. S'il n'est pas sélectionné, seul le début du texte est toujours affiché. Trois autres images sont utilisées pour créer un item sélectionné. Ces trois images doivent avoir exactement la même taille que celle utilisée par un item non sélectionné.
 
-TODO finir GUI avec zones de texte, grilles (pour persos)...
+==== Les grilles ====
+
+Une grille est élément qui affiche des éléments en tableau à deux dimensions dans une zone particulière. On peut préciser une image de fond la grille. Chaque élément est un rectangle affichant une image. Le nombre d'image par ligne est calculé automatiquement pour avoir un espace minimum mais supérieur à 3 pixels. Chaque élément dérive d'une classe qui possède des méthodes permettant à cet élément de se modifier lors de la sélection.
+
+==== Les zones de texte ====
+
+Les zones de texte sont des zones permettant d'afficher du texte //formaté//. Le texte formaté est juste un texte dont les lettres peuvent posséder un attribut ``EM``, indiquant qu'elles sont importantes et donc doivent être affichées avec une police différente. Le texte passé en argument peut posséder des retour à la ligne et des tabulations (qui n'alignent pas mais sont l'équivalent de quatre espaces). Il doit être formaté de la façon suivante : ``Du texte normal [em]du texte important[em]\nUne nouvelle ligne avec du texte normal``.
+
+TODO finir GUI
 
 
 
