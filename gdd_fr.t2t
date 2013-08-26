@@ -50,6 +50,10 @@ Quand le jeu est lancé, il affiche un menu principal permettant d'accéder aux 
 
 Permet d'accéder aux différents modes de jeu disponibles afin de lancer une partie. Dans la version alpha de Project Warrior, on pourra accéder uniquement au mode //Custom Melee//, car c'est le mode de jeu le plus convivial et le plus complet, par conséquent il constitue un choix judicieux en tant qu'objectif premier de développement.
 
+==== Events ====
+
+Permet d'accéder à la liste des events. À côté des items de la liste, on peut voir l'image et la description associées à l'event sélectionné.
+
 ==== Settings ====
 
 Permet de configurer les paramètres audio, vidéo, ainsi que les paramètres de contrôleurs.
@@ -89,7 +93,7 @@ Selon le mode de combat choisi et le nombre de joueurs, il sera établi à la fi
 
 ==== Réseau ====
 
-Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4 joueurs, qu'ils soient connectés directement à l'ordinateur via des contrôleurs supplémentaires, ou qu'ils se connectent depuis d'autres postes via TCP/IP. Cela est possible grâce à l'architecture client/serveur adoptée, où un client représente une instance de jeu comptabilisant un ou plusieurs joueurs et devant se connecter, que ce soit en local ou en réseau, à un serveur gérant la partie ; ce serveur est hébergé sur la même machine qu'un des clients.
+Le mode //Custom Melee// permet d'effectuer des parties comptabilisant de 2 à 4 joueurs, qu'ils soient connectés directement à l'ordinateur via des contrôleurs supplémentaires, ou qu'ils se connectent depuis d'autres postes via TCP/IP. Cela est possible grâce à l'architecture client/serveur adoptée, où un client représente une instance de jeu comptabilisant un ou plusieurs joueurs et devant se connecter, que ce soit en local ou en réseau, à un serveur gérant la partie ; ce serveur est hébergé sur la même machine qu'un des clients. La progression des events est sauvegardée sur le serveur gérant la partie ; cela inclut donc la progression des différents contenus débloquables.
 
 ==== Sélection des personnages ====
 
@@ -125,6 +129,20 @@ Pour déterminer le joueur qui sélectionne le stage, on choisira un des 3 modes
 - **Tour de rôle** : le joueur contrôlant le curseur tourne après chaque partie par ordre décroissant (joueur 1, puis 2, etc)
 - **Joueur n°#** : c'est toujours le joueur n°# (le chiffre '#' étant choisi par les joueurs) qui choisit le stage
 - **Libre** : tous les joueurs peuvent contrôler le curseur ; le mode le plus enthropique :p
+
+
+=== Events ===
+
+Les //events// sont comme leur nom l'indique des évènements qui s'active dans le jeu sous certaines conditions. Ils peuvent faire office de simples //achievements// à débloquer, mais leur utilité majeure est de permettre de débloquer du contenu, c'est-à-dire de nouveaux stages et personnages. La progression dans l'obtention des events est aussi synonyme de progression narrative, avec notamment des cinématiques explicatives lors de l'accomplissement d'un event important (par exemple lorsqu'un personnage important dans l'histoire est débloqué). Ce système permet donc de concilier gameplay uniquement multijoueurs et progression narrative, innovation notable par rapport à SSB.
+
+
+==== Types d'events ====
+
+TODO liste des types d'events.
+
+==== Représentation en mémoire ====
+
+TODO part (LUC).
 
 
 === GUI ===
