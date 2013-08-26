@@ -305,7 +305,8 @@ Lors de l'écran de sélection des personnages, le fichier ``perso.lua`` n'est p
 
 Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 
-- ``init`` : cette fonction est la première à être appelée dans le script, pouvant servir à initialiser certaines ressources. Elle est complètement facultative, et une fonction init trop lourde ralentira l'ouverture de l'écran de sélection des personnages.
+- ``validate`` : cette fonction retourne un booléen indiquant si le personnage a été débloqué ou non. À cette fin, le script utilise l'API du programme permettant de vérifier quels events on étés validés. C'est la première fonction du script. Si elle n'est pas présente, le personnage sera considéré toujours débloqué.
+- ``init`` : cette fonction est la deuxième à être appelée dans le script après ``validate``, donc potentiellement la première, pouvant servir à initialiser certaines ressources. Elle est complètement facultative, et une fonction init trop lourde ralentira l'ouverture de l'écran de sélection des personnages.
 - ``loadPreview`` : cette fonction prend en paramètre la couleur du personnages (une énumération), et charge sous le nom de ``preview`` l'image correspondante. Cette image est affichée dans la zone des joueurs : c'est une image plus grande et plus détaillée que ``preview.png``.
 
 
@@ -478,7 +479,9 @@ Les stages peuvent être animés, avec des murs qui bougent, formant des platefo
 
 === Représentation en mémoire ===
 
-Les stages sont tous placés dans le même dossier, dont le contenu est scanné au lancement du jeu. Chaque stage est un dossier contenant une image ``preview.png`` et un fichier texte ``name`` d'une seule ligne, utilisés lors de l'écran de chargement de stage pour le présenter, un script ``stage.lua`` et différentes ressources qui seront chargées et utilisées par le script lors d'une partie sur le terrain. Le nom du dossier n'a pas d'importance, mais il est conseillé de ne pas y inclure de caractère spéciaux, non-ascii ni d'espaces.
+Les stages sont tous placés dans le même dossier, dont le contenu est scanné au lancement du jeu. Chaque stage est un dossier contenant une image ``preview.png`` et un fichier texte ``name`` d'une seule ligne, utilisés lors de l'écran de chargement de stage pour le présenter, deux scripts ``validate.lua`` et ``stage.lua`` et différentes ressources qui seront chargées et utilisées par le script lors d'une partie sur le terrain. Le nom du dossier n'a pas d'importance, mais il est conseillé de ne pas y inclure de caractère spéciaux, non-ascii ni d'espaces.
+
+Le script ``validate.lua`` ne doit contenir qu'une seule fonction, ``validate``, qui retourne un booléen indiquant si le stage a été débloqué ou non. À cette fin, le script utilise l'API du programme permettant de vérifier quels events on étés validés. Si la fonction ou le script n'existent pas, le stage est considéré comme toujours débloqué.
 
 Le script ``stage.lua`` est constitué de différentes fonctions qui seront appelées par le programme. La première fonction appelée est la fonction ``init``, sans arguments : elle va initialiser les différentes variables globales du script (si nécessaire), charger les ressources graphiques à travers le moteur graphique, définir les zones de collisions dans le moteur physique, les zones d'apparition des personnages et la taille maximale du terrain à travers l'interface fournie par le programme.
 
