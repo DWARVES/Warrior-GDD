@@ -575,11 +575,15 @@ Il permet de charger et d'afficher n'importe quel format d'image géré par //SD
 
 À l'instar d'un système de fichier UNIX, il est aussi possible de créer des liens entre des ressources graphique. Une ressource graphique pourra donc être adressée par plusieurs noms. La ressource n'est libérée que quand il n'y a plus un seul lien qui pointe vers elle.
 
+Il est possible de définir un //hotpoint// pour chaque image chargée. Cette valeur est un point de l'image qui correspondra à sa valeur (0;0), c'est à dire que lorsque l'on affiche l'image à une coordonnée donnée, c'est ce point que aura la coordonnée indiquée, et le reste de l'image sera dessinée autour.
+
 Le moteur graphique permet aussi de charger des fonts bitmap, et de s'en servir pour afficher du texte.
 
 Le moteur graphique doit aussi permettre de dessiner toute forme de primitive graphique, que ce soit des points, traits ou polygones pleins ou vides. Il sera possible de leur attribuer ou une couleur ou une texture indiquée par son nom.
 
 Le moteur graphique peut aussi charger et afficher des vidéos. Cependant, les vidéos ne peuvent pas être utilisées comme texture et doivent être évitée la majorité du temps car elles consomment beaucoup de CPU. Elles peuvent notamment être utilisées pour les accomplissement d'event ou encore pour le fond des stages.
+
+Comme on pouvait le faire avec //openGL 2//, le moteur permet d'effectuer des transformations sur le repère. Ces transformations sont la rotation, la translation et le redimensionnement. Ces transformations se font bien évidemment en deux dimension seulement. Le système de pile de la matrice est aussi rendu : l'état de transformation peut être sauvegardé et restauré.
 
 
 === Sonore ===
