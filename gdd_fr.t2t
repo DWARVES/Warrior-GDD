@@ -592,7 +592,14 @@ Il est possible de définir des callbacks qui s'exécutent à la fin d'un son ou
 
 Le moteur offre aussi une gestion du volume différenciée pour la musique et les sons.
 
-TODO moteurs physique et lua.
+
+=== Sauvegarde ===
+
+Le moteur de sauvegarde est celui utilisé par les events pour enregistrer leurs variables et se valider. Il permet de créer et déclarer des variables numériques avec un nom. Ces variables sont organisée de la même façon que les images dans le moteur graphique, à l'exception que les liens sont interdits.
+
+En plus de permettre la lecture et la modification de ces variables, il peut les sauvegarder et les charger depuis un fichier, garantissant que d'une exécution à l'autre, l'état soit toujours le même.
+
+TODO moteurs physique, temporel et lua.
 
 
 
