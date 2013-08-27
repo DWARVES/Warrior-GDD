@@ -581,7 +581,18 @@ Le moteur graphique doit aussi permettre de dessiner toute forme de primitive gr
 
 Le moteur graphique peut aussi charger et afficher des vidéos. Cependant, les vidéos ne peuvent pas être utilisées comme texture et doivent être évitée la majorité du temps car elles consomment beaucoup de CPU. Elles peuvent notamment être utilisées pour les accomplissement d'event ou encore pour le fond des stages.
 
-TODO moteurs sonore, physique et lua.
+
+=== Sonore ===
+
+Le moteur sonore est celui qui s'occupe de charger et jouer les sons et musiques du jeu.
+
+Le moteur permet de charger les sons au format ``wav`` et les musiques au format ``ogg`` et ``mp3`` au moins (le support pour d'autres formats pourra être ajouté). À l'instar du moteur graphique, le moteur sonore charge chaque ressource avec un nom, et on y retrouve le même système de namespace et de liens.
+
+Il est possible de définir des callbacks qui s'exécutent à la fin d'un son ou d'une musique. Une musique peut être jouée en boucle, mais seule une partie d'elle peut aussi être jouée en boucle : elle est jouée du début la première fois mais quand elle recommence elle reprend à un moment donné, pas du début. Le moteur sonore peut jouer jusqu'à une musique et huit sons simultanés.
+
+Le moteur offre aussi une gestion du volume différenciée pour la musique et les sons.
+
+TODO moteurs physique et lua.
 
 
 
