@@ -585,7 +585,19 @@ Le moteur graphique doit aussi permettre de dessiner toute forme de primitive gr
 
 Le moteur graphique peut aussi charger et afficher des vidéos. Cependant, les vidéos ne peuvent pas être utilisées comme texture et doivent être évitée la majorité du temps car elles consomment beaucoup de CPU. Elles peuvent notamment être utilisées pour les accomplissement d'event ou encore pour le fond des stages.
 
-Comme on pouvait le faire avec //openGL 2//, le moteur permet d'effectuer des transformations sur le repère. Ces transformations sont la rotation, la translation et le redimensionnement. Ces transformations se font bien évidemment en deux dimension seulement. Le système de pile de la matrice est aussi rendu : l'état de transformation peut être sauvegardé et restauré.
+Comme on pouvait le faire avec //OpenGL 2//, le moteur permet d'effectuer des transformations sur le repère. Ces transformations sont la rotation, la translation et le redimensionnement. Ces transformations se font bien évidemment en deux dimension seulement. Le système de pile de la matrice est aussi rendu : l'état de transformation peut être sauvegardé et restauré.
+
+=== Physique ===
+
+Le moteur physique s'occupe de la gestion des différents paramètres physiques de l'environnement et des personnages. Cela comprend la gravité, le poids des personnages, la gestion des collisions, des fonctions utilitaires pour appliquer des forces aux différentes entités, le tout au service d'une dynamique des combats plus ou moins réaliste dans la simulation physique.
+
+Le moteur physique doit permettre de créer des entités physiques composées de différentes formes géométriques possédant des liaisons spécifiques entre elles, ainsi que des caractéristiques particulières telles que masse, densité, taux de friction avec les autres entités, etc.
+
+Comme dit précédemment, il doit aussi permettre d'appliquer des forces sur les entités en question, mais aussi de modifier directement des propriétés des entités telles que la vélocité, selon le niveau de réalisme dans la simulation, des mouvements moins réalistes pouvant être plus adaptés en termes de maniabilité ou de lisibilité dans le gameplay.
+
+Le moteur physique permet d'implémenter des callbacks qui s'exécutent lors de collisions entre certains types d'entités. On doit pouvoir aussi définir des masques de collisions afin d'en autoriser uniquement certaines, toujours selon les types d'entités.
+
+Le moteur physique ne peut être instancié qu'une seule fois, lorsque le serveur gère le combat.
 
 
 === Sonore ===
