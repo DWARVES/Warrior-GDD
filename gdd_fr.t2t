@@ -148,11 +148,25 @@ Les events sont tous placés dans le même dossier. Chaque event est un dossier 
 
 L'ensemble de la GUI du programme peut être personnalisé avec un thème, chargé au lancement du programme. Nous allons détailler ici les différents éléments de la GUI et les paramètres qui peuvent leur être appliqués.
 
+L'ensemble de la GUI est faite pour être parcourue avec la manette, donc les éléments possèdent aux moins deux états : sélectionné (ils ont le focus) et neutre.
+
+La GUI est gérée par une instance d'une classe, unique, qui référence tous les éléments affichés et se charge de leur faire passer les évènements lorsque c'est nécessaire.
+
+==== Les Layouts ====
+
+Les layouts sont un élément essentiel de la GUI puisqu'ils permettent d'organiser les éléments de la GUI indépendamment de la résolution de l'écran. Un layout est en faite une grille dans laquelle chaque élément possède une position et une taille. Lorsque la grille est adaptée à l'écran, tous les éléments à l'intérieur le sont aussi.
+
 ==== Les listes ====
 
 Les listes sont un élément centrale de la GUI puisqu'elles constituent la majorité des menus. Le but étant d'avoir une interface proche de celle de SSB melee, une liste occupe une surface donnée et chaque item possède un offset, un décalage sur l'axe x par rapport au centre de cette zone. Les items de la liste sont placés les uns au dessus des autres. L'item sélectionné subit un léger zoom et décale les autres items. Si il y a trop d'item pour qu'ils rentrent tous dans la zone prévue, seul un certain nombre est affiché et on peut scroller en passant d'un item à un autre.
 
 Les items sont constitués de plusieurs images. Une image pour la partie droite, une pour la partie gauche et une de un pixel de large qui est répétée sur l'axe x pour former l'item en entier. Le texte est affiché entre les parties droites et gauches. Si il est trop long, il est tronqué, et des points de suspension sont rajouté. Le texte peut être décalé manuellement avec les touches droites et gauches lorsque l'item est sélectionné. S'il n'est pas sélectionné, seul le début du texte est toujours affiché. Trois autres images sont utilisées pour créer un item sélectionné. Ces trois images doivent avoir exactement la même taille que celle utilisée par un item non sélectionné.
+
+==== Les cadres ====
+
+Les cadres sont des container qui encadrent un ou plusieurs autres éléments de la GUI. Ils sont créés à partir de huit images. Une pour chaque coins, qui doivent être des images carrés, et une pour chaque bordure. Les images des bordures haut et bas doivent faire un pixel de large et le même nombre de pixel de haut que les coins. Pour les images des bordures droites et gauche, c'est l'inverse.
+
+Une texture peut aussi être appliquée à l'intérieur. Dans le cas contraire l'intérieur est transparent.
 
 ==== Les grilles ====
 
@@ -162,7 +176,25 @@ Une grille est élément qui affiche des éléments en tableau à deux dimension
 
 Les zones de texte sont des zones permettant d'afficher du texte //formaté//. Le texte formaté est juste un texte dont les lettres peuvent posséder un attribut ``EM``, indiquant qu'elles sont importantes et donc doivent être affichées avec une police différente. Le texte passé en argument peut posséder des retour à la ligne et des tabulations (qui n'alignent pas mais sont l'équivalent de quatre espaces). Il doit être formaté de la façon suivante : ``Du texte normal [em]du texte important[em]\nUne nouvelle ligne avec du texte normal``.
 
-TODO finir GUI
+==== Les entrées ====
+
+Les entrées sont des zones qui permettent d'entrer du texte. La seule méthode d'entrée disponible est la clavier : il n'est pas prévu de supporter un système d'entrée de texte à la manette. Une entrée peut avoir un nombre maximum de lettres fixé, auquel cas un ``_`` est placé pour toutes les lettres qui n'ont pas été entrées. Dans ce cas, la taille de l'entrée est fixe : on précise un largeur maximale et la hauteur est automatiquement calculée. Dans le cas contraire, on doit aussi préciser la hauteur maximale : si le texte dépasse cette hauteur, un scrolling sera mis en place, mais sans barre de scrolling.
+
+==== Les barres de scrolling ====
+
+Une barre de scrolling est composée de quatre images. Une qui représente le haut de la barre de scrolling, une qui représente la bas, une de un pixel de haut qui sera répétée pour former la barre et une de un pixel de haut qui est répétée pour former la partie de la barre qui est scrollée. La barre possède trois informations : la hauteur totale de ce qui est scrollable, la hauteur de ce qui est affiché et la position haute de ce qui est affiché. Une barre de scrolling peut être non interactive, auquel cas elle sert juste d'information.
+
+==== Les barres de remplissage ====
+
+Une barre de remplissage est une barre qui représente une partie remplit de quelque chose. Elle est formée de deux images : une de la barre complètement vide et une de la barre complètement remplie. Seules une partie de chaque image sont affichées pour formée une barre remplit seulement en parties. Les deux informations contenues sont la valeur maximale et la valeur actuelle. À l'instar des barres de scrolling, les barres de remplissages peuvent être en mode non interactif.
+
+==== Les checkboxes ====
+
+Une checkbox est simplement une boite qui peut avoir deux états : activé et éteint. Elle est créée avec quatre image : une pour la checkbox éteinte, une pour la checkbox allumée, une pour la checkbox allumée et sélectionnée et une pour la checkbox allumée et éteinte.
+
+==== Les boutons radio ====
+
+Les boutons radio sont composés de quatre images comme les checkbox. La seule différence dans leur fonctionnement est qu'il ne peut y avoir qu'un seul radio activé à la fois dans un même groupe de radio. Lors de la création d'un radio, on précise le groupe auquel il appartient, identifié par une chaine de caractère.
 
 
 
