@@ -649,7 +649,14 @@ Le moteur de sauvegarde est celui utilisé par les events pour enregistrer leurs
 
 En plus de permettre la lecture et la modification de ces variables, il peut les sauvegarder et les charger depuis un fichier, garantissant que d'une exécution à l'autre, l'état soit toujours le même.
 
-TODO temporel et lua.
+
+=== Lua ===
+
+Le moteur lua est utilisé par le jeu pour gérer tous les scripts (personnages, stages, events ...). Il a deux types de possibilités.
+
+Il permet d'instancier une classe qui représente un script et permet de contrôler son exécution : permet d'accéder à des variables du script, de modifier leur valeur, de tester la présence de fonction et de la exécuter en récupérant leur valeur de retour et en leur passant des arguments.
+
+Ce moteur permet aussi de rendre accessible au code des scripts les différents moteurs du jeu. Pour cela, il permet //d'enregistrer// dans l'exécuteur lua des fonctions et des classes, avec ou non un nom différent de celui dans le code c++. Cependant, la notion d'héritage n'est pas gérée lors de l'exposition aux scripts. De plus, l'enregistrement des moteurs doit être fait pour chaque script, il ne peut pas être fait une fois puis utilisé par tous les scripts.
 
 
 
