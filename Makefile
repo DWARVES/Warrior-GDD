@@ -24,6 +24,7 @@ $(NAME).html: $(USED).t2t
 
 $(NAME).pdf: $(NAME).tex
 	pdflatex $<
+	pdflatex $<
 
 $(NAME).tex: $(USED).t2t
 	txt2tags -t tex $(FLAGS) -o $@ $<
