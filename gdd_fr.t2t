@@ -26,7 +26,29 @@ Project Warrior est le nom de code pour désigner un projet de jeu de combat mul
 
 Le //background// correspond à tous les éléments de l'univers dans lequel prend place le jeu, incluant les lieux représentés dans les stages, les personnages et leurs histoires, le contexte dans lequel les combats se déroulent, un scénario dans un possible mode aventure... Cette partie va donc regrouper et décrire ces différents éléments, ainsi que leurs aspects graphiques et sonores. Tout ce qui se rapporte au gameplay, à l'interface ou à la programmation est situé dans la partie "Gameplay, interface et programmation".
 
-TODO univers et contexte scénaristique.
+
+
+== Scénario ==
+
+//Ce scénario n'est en aucun cas figé et définitif : il peut évoluer, aussi bien avec des changements mineurs qu'avec d'importantes modifications à sa structure et à son contenu.//
+
+
+=== Contexte ===
+
+ L'histoire du jeu se construit autour de la renconte entre les deux monde des rêves et de la réalité.
+
+==== Dans le vrai monde réel de la vérité véritable ====
+
+Le monde réel est plongé dans une guerre permanente que nul ne peut arrêter : toute l'économie du monde est basé sur la vente d'armes, le mercenariat et le pillage. La technologie de guerre et de destruction a pris une place pré-dominante sur l'ensemble des autres sciences, les nations étant plongés dans un effort de guerre permanent.
+
+==== Dans le monde des rêves ====
+
+Les habitants du monde des rêves – immortels – plongés dans la mélancolie et l'ennui de leurs vies sans fin tombent tous peu a peu dans la Torpeur, une léthargie d'où personne ne revient. Les émotions ont déserté leur monde et tout instinct de progès ou d'amélioration de leur condition les ont quittés. Dans leur antique jeunesse, ils avaient pourtant la puissance des dieux et pouvaient manipuler à partir du "fluide" tout leur univers ; certains habitants ont encore une part de ce fluide mais dans une forme bien dégradée du pouvoir originel.
+
+
+=== Élément déclencheur ===
+
+ Un personnage mystérieux, le Prophète, parvient a créer un portail entre les deux mondes ; le monde réel aperçoit dans son alter ego la conquête d'une vie infinie et la création de soldats immortels, tandis que le monde des rêves redécouvre les émotions qui les ont abandonnés. Néanmoins de cette union des deux mondes un personnage naît qui pourra changer la face de ce nouveau monde : il a entre ses mains le pouvoir ultime et pourra au sacrifice de sa vie accorder un voeu...
 
 
 
