@@ -369,13 +369,14 @@ Enfin, le script ``preview.lua`` contient plusieurs fonctions :
 
 Durant le jeu, seul le script ``perso.lua`` est chargé. Il possède une fonction ``init`` qui doit charger toutes les ressources utilisées par le personnage durant le jeu, définissant aussi son poids et qui est appelée lors du début d'une partie. Cette fonction reçoit un argument qui est la couleur du personnage : elle doit adapter les ressources chargées en fonction. Il possède en plus d'autres fonctions utilisées à différents moments et dans différentes occasions :
 
+- ``stand`` : cette fonction correspond au personnage qui reste sur place.
 - ``walk`` : cette fonction définit l'image qui est affichée lorsque le personnage marche. Elle doit aussi déplacer à chaque fois les zones de collision si nécessaire. Elle reçoit en argument la direction (LEFT ou RIGHT) du déplacement.
 - ``run`` : comme ``walk*``, sauf que le personnage se déplace en courant.
 - ``stop`` : cette fonction correspond à l'animation lorsqu'un personnage arrête de courir.
 - ``jump``, ``jumpAir`` : ces fonctions marche de la même façon que ``walk*`` et correspondent respectivement à un saut et un double saut.
 - ``down``, ``fastDown`` : ces fonctions correspondent respectivement à l'animation de descente après un saut et de descente rapide.
 - ``land`` : cette fonction correspond à l'atterrissage du personnage.
-- ``stand`` : cette fonction correspond au personnage qui reste sur place.
+- ``turn`` : cette fonction définit l'animation affichée lorsque le personnage change de direction. Elle prend en paramètre la direction (LEFT ou RIGHT) ainsi qu'une des fonctions précédentes correspondant au déplacement actuel, afin de choisir l'animation adaptée. Pour les fonctions ``stand``, ``walk``, ``jump``, ``jumpAir``, ``down``, ``fastDown``, l'animation sera spécifique au déplacement. Pour la fonction ``run``, ``turn`` fera appel à ``stop``. Pour les fonctions ``stop`` et ``land``, ``turn`` ne lance aucune animation.
 
 
 Toutes ces fonctions ne prennent qu'un seul paramètre : le nombre de FPS depuis le début de l'animation. La valeur de retour est un booléen (un nombre, 0 ou 1), qui indique si l'animation est terminée. La dernière image chargée correspond à l'image qui restera affichée tant qu'aucune autre fonction n'est appelée, donc après la fin d'une fonction de mouvement qui a retournée 1.
